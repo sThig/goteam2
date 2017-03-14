@@ -7,38 +7,45 @@
 <body>
     <h2>Create Your Team</h2>
     <input type="text" class="player" name="Player" data-player-type="player" value="enter name" />
-    <input type="text" class="player" name="Player" data-player-type="player" value="enter name1"/>
-    <input type="text" class="player" name="Player" data-player-type="player" value="enter name2"/>
-    <input type="text" class="player" name="Player" data-player-type="player" value="enter name3"/>
-    <input type="text" class="player" name="Player" data-player-type="player" value="enter name4"/>
-    <input type="text" class="player" name="Player" data-player-type="player" value="enter name5"/><br />
-    <input type="button" id="go" value="Go >>"  />
+    <input type="text" class="player" name="Player" data-player-type="player" value="enter name1" />
+    <input type="text" class="player" name="Player" data-player-type="player" value="enter name2" />
+    <input type="text" class="player" name="Player" data-player-type="player" value="enter name3" />
+    <input type="text" class="player" name="Player" data-player-type="player" value="enter name4" />
+    <input type="text" class="player" name="Player" data-player-type="player" value="enter name5" /><br />
+
+
+    <button type="reset" value="Reset"></button>
     <h2 id="captain" class="captain"></h2>
     <br />
     <h2 id="cocaptain" class="captain"></h2>
-    <ul>
-      <li id="teammateys"></li>
+    <ul id="teammateys">
+
     </ul>
     <script>
+        function shuffle(a) {
+            for (let i = a.length; i; i--) {
+                let j = Math.floor(Math.random() * i);
+                [a[i - 1], a[j]] = [a[j], a[i - 1]];
+            }
+        }
 
+        document.getElementById("go").addEventListener("click", function() {
+            const inputs = document.querySelectorAll(".player")
+            const team = Array.from(inputs).map(input => input.value)
+            shuffle(team);
+            const [captain, id, ...teammates] = team;
 
-    document.getElementById("go").addEventListener("click", function() {
-      const inputs = document.querySelectorAll(".player")
-      const team = Array.from(inputs).map(input => input.value)
-      const [captain, id, ...teammates] = team;
-      teammates.forEach(function(teammates){
-        console.log(teammates);
-      });
+            document.getElementById('captain').innerHTML += (`<h2>${captain} is the captain!</h2>`);
+            document.getElementById('cocaptain').innerHTML += (`<h2>${id} is the co-captain!</h2>`);
 
+            teammates.forEach(function(teammates) {
+                // console.log(teammates);
+                document.getElementById('teammateys').innerHTML += (`<li>${teammates}</li>`);
+                // teammates += "<li>"  + teammates[i] + "</li>";
+            });
 
-      document.getElementById('captain').innerHTML += (`<h2>${captain} is the captain!</h2>`);
-      document.getElementById('cocaptain').innerHTML += (`<h2>${id} is the co-captain!</h2>`);
-
-      //need to add for each loop, but confused
-      document.getElementById('teammateys').innerHTML += (`<li>${teammates}</li>`);
-    });
-
-
+        });
     </script>
 </body>
+
 </html>
