@@ -5,6 +5,9 @@
 </head>
 
 <body>
+    <h2>Testing Binding Here</h2>
+    <input type="text" class="player" name="Player" id="bind" value="bind name" />
+
     <h2>Create Your Team</h2>
     <input type="text" class="player" name="Player" data-player-type="player" value="enter name" />
     <input type="text" class="player" name="Player" data-player-type="player" value="enter name1" />
@@ -12,7 +15,7 @@
     <input type="text" class="player" name="Player" data-player-type="player" value="enter name3" />
     <input type="text" class="player" name="Player" data-player-type="player" value="enter name4" />
     <input type="text" class="player" name="Player" data-player-type="player" value="enter name5" /><br />
-
+    <input type="button" id="go" value="Go >>" /><br />
 
     <button type="reset" value="Reset"></button>
     <h2 id="captain" class="captain"></h2>
@@ -22,6 +25,15 @@
 
     </ul>
     <script>
+      let el = document.getElementById('bind');
+      console.log('bind', bind);
+      bind[window.addEventListener ? 'addEventListener' : 'attachEvent']( window.addEventListener ? 'click' : 'onclick', myClickFunc, false);
+
+      function myClickFunc()
+        {
+          console.log('bind');
+        }
+
         function shuffle(a) {
             for (let i = a.length; i; i--) {
                 let j = Math.floor(Math.random() * i);
