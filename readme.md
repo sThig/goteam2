@@ -12,3 +12,4 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
 # Notes
 * having a hard time with the forEach loop when I know is basic stuff, it's just that this is hard for me right now (being completely transparent).
 * learning about the rest operator, that's fun, I like that
+* added start of my bind child to the list.  This may be a bit of a headache
