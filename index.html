@@ -5,10 +5,11 @@
 </head>
 
 <body>
-    <h2>Testing Binding Here</h2>
-    <input type="text" class="theplayer" name="Player" id="bind" value="Scott Thigpen" /><input type="button" id="thego" value="Go >>" /><br />
+  <h2>I'd like to bind here</h2>
+  <input type="text" class="theplayer" name="Player" id="bind" value="Player-name" />
+  <input type="button" id="thego" value="Go" /><br />
 
-    <h2>Create Your Team</h2>
+  <h2>This Was my first test</h2>
     <input type="text" class="player" name="Player" data-player-type="player" value="enter name" />
     <input type="text" class="player" name="Player" data-player-type="player" value="enter name1" />
     <input type="text" class="player" name="Player" data-player-type="player" value="enter name2" />
@@ -16,52 +17,46 @@
     <input type="text" class="player" name="Player" data-player-type="player" value="enter name4" />
     <input type="text" class="player" name="Player" data-player-type="player" value="enter name5" /><br />
     <input type="button" id="go" value="Go >>" /><br />
-
     <button type="reset" value="Reset"></button>
-    <h2 id="captain" class="captain"></h2>
-    <br />
-    <h2 id="cocaptain" class="captain"></h2>
-    <ul id="teammateys">
+  <h2 id="captain" class="captain"></h2>
+  <br />
+  <h2 id="cocaptain" class="captain"></h2>
+  <ul id="teammateys"></ul>
 
-    </ul>
-    <script>
-      let el = document.getElementById('bind');
-      let nameOfPlayer = el.value;
-      console.log('You are:', nameOfPlayer);
-      bind[window.addEventListener ? 'addEventListener' : 'attachEvent']( window.addEventListener ? 'click' : 'onclick', myClickFunc, false);
+  <script>
+    const el = document.getElementById('bind');
+    const gobutton = document.getElementById('thego')
+    let nameOfPlayer = el.value;
+    gobutton[window.addEventListener ? 'addEventListener' : 'attachEvent']( window.addEventListener ? 'click' : 'onclick', myClickFunc, false);
+    function myClickFunc()
+      {
+        var x = document.createElement("LI");
+        var t = document.createTextNode(nameOfPlayer);
+        x.appendChild(t);
+        document.getElementById("teammateys").appendChild(x);
+      }
 
-      function myClickFunc()
-        {
-          console.log(nameOfPlayer);
-          var x = document.createElement("LI");
-          var t = document.createTextNode(nameOfPlayer);
-          x.appendChild(t);
-          document.getElementById("teammateys").appendChild(x);
-        }
 
-        function shuffle(a) {
-            for (let i = a.length; i; i--) {
-                let j = Math.floor(Math.random() * i);
-                [a[i - 1], a[j]] = [a[j], a[i - 1]];
-            }
-        }
 
-        document.getElementById("go").addEventListener("click", function() {
-            const inputs = document.querySelectorAll(".player")
-            const team = Array.from(inputs).map(input => input.value)
-            shuffle(team);
-            const [captain, id, ...teammates] = team;
 
-            document.getElementById('captain').innerHTML += (`<h2>${captain} is the captain!</h2>`);
-            document.getElementById('cocaptain').innerHTML += (`<h2>${id} is the co-captain!</h2>`);
+      function shuffle(a) {
+          for (let i = a.length; i; i--) {
+              let j = Math.floor(Math.random() * i);
+              [a[i - 1], a[j]] = [a[j], a[i - 1]];
+          }
+      }
 
-            teammates.forEach(function(teammates) {
-                // console.log(teammates);
-                document.getElementById('teammateys').innerHTML += (`<li>${teammates}</li>`);
-                // teammates += "<li>"  + teammates[i] + "</li>";
-            });
-
-        });
+      document.getElementById("go").addEventListener("click", function() {
+          const inputs = document.querySelectorAll(".player")
+          const team = Array.from(inputs).map(input => input.value)
+          shuffle(team);
+          const [captain, id, ...teammates] = team;
+          document.getElementById('captain').innerHTML += (`<h2>${captain} is the captain!</h2>`);
+          document.getElementById('cocaptain').innerHTML += (`<h2>${id} is the co-captain!</h2>`);
+          teammates.forEach(function(teammates) {
+              document.getElementById('teammateys').innerHTML += (`<li>${teammates}</li>`);
+          });
+      });
     </script>
 </body>
 
