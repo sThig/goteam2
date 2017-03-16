@@ -6,7 +6,7 @@
 
 <body>
     <h2>Testing Binding Here</h2>
-    <input type="text" class="player" name="Player" id="bind" value="Scott Thigpen" />
+    <input type="text" class="theplayer" name="Player" id="bind" value="Scott Thigpen" /><input type="button" id="thego" value="Go >>" /><br />
 
     <h2>Create Your Team</h2>
     <input type="text" class="player" name="Player" data-player-type="player" value="enter name" />
@@ -27,12 +27,16 @@
     <script>
       let el = document.getElementById('bind');
       let nameOfPlayer = el.value;
-      console.log('Name of Player', nameOfPlayer);
+      console.log('You are:', nameOfPlayer);
       bind[window.addEventListener ? 'addEventListener' : 'attachEvent']( window.addEventListener ? 'click' : 'onclick', myClickFunc, false);
 
       function myClickFunc()
         {
-          console.log('nameOfPlayer');
+          console.log(nameOfPlayer);
+          var x = document.createElement("LI");
+          var t = document.createTextNode(nameOfPlayer);
+          x.appendChild(t);
+          document.getElementById("teammateys").appendChild(x);
         }
 
         function shuffle(a) {
