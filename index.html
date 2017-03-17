@@ -5,22 +5,14 @@
 </head>
 
 <body>
-  <h2>I'd like to bind here</h2>
+  <h2>Enter The Team</h2>
   <input type="text" class="theplayer" name="Player" id="bind" value="Player-name" />
   <input type="button" id="thego" value="Go" /><br />
+  <input type="button" id="go" value="Go >>" /><br />
 
-  <h2>This Was my first test</h2>
-    <input type="text" class="player" name="Player" data-player-type="player" value="enter name" />
-    <input type="text" class="player" name="Player" data-player-type="player" value="enter name1" />
-    <input type="text" class="player" name="Player" data-player-type="player" value="enter name2" />
-    <input type="text" class="player" name="Player" data-player-type="player" value="enter name3" />
-    <input type="text" class="player" name="Player" data-player-type="player" value="enter name4" />
-    <input type="text" class="player" name="Player" data-player-type="player" value="enter name5" /><br />
-    <input type="button" id="go" value="Go >>" /><br />
-    <button type="reset" value="Reset"></button>
   <h2 id="captain" class="captain"></h2>
   <br />
-  <h2 id="cocaptain" class="captain"></h2>
+  <h2 id="cocaptain" class="cocaptain"></h2>
   <ul id="teammateys"></ul>
 
   <script>
@@ -30,13 +22,39 @@
     gobutton[window.addEventListener ? 'addEventListener' : 'attachEvent']( window.addEventListener ? 'click' : 'onclick', myClickFunc, false);
     function myClickFunc()
       {
+        var currentValue = document.getElementById("bind").value;
         var x = document.createElement("LI");
-        var t = document.createTextNode(nameOfPlayer);
+        var t = document.createTextNode(currentValue);
         x.appendChild(t);
         document.getElementById("teammateys").appendChild(x);
       }
 
 
+      var listItems = document.getElementById('teammateys').getElementsByTagName('li'),
+
+      //     myArray = map(listItems, getText);
+      //
+      // function map(arrayLike, fn) {
+      //     var ret = [], i = -1, len = arrayLike.length;
+      //     while (++i < len) ret[i] = fn(arrayLike[i]);
+      //     return ret;
+      // }
+      //
+      // function getText(node) {
+      //     if (node.nodeType === 3) return node.data;
+      //     var txt = '';
+      //     if (node = node.firstChild) do {
+      //         txt += getText(node);
+      //     } while (node = node.nextSibling);
+      //     return txt;
+      // }
+
+document.addEventListener('event', function (e) {
+
+});
+
+// console.log(myArray);
+console.log(listItems);
 
 
       function shuffle(a) {
@@ -47,16 +65,23 @@
       }
 
       document.getElementById("go").addEventListener("click", function() {
-          const inputs = document.querySelectorAll(".player")
-          const team = Array.from(inputs).map(input => input.value)
-          shuffle(team);
-          const [captain, id, ...teammates] = team;
+          const inputs = document.querySelectorAll(".theplayer")
+          // const team = Array.from(inputs).map(input => input.value)
+          let listItems = Array.from(inputs).map(input => input.value)
+          shuffle(listItems);
+          const [captain, id, ...teammates] = listItems;
           document.getElementById('captain').innerHTML += (`<h2>${captain} is the captain!</h2>`);
           document.getElementById('cocaptain').innerHTML += (`<h2>${id} is the co-captain!</h2>`);
           teammates.forEach(function(teammates) {
               document.getElementById('teammateys').innerHTML += (`<li>${teammates}</li>`);
           });
       });
+
+    document.getElementById('bind').onkeydown = function(e){
+      if(e.keyCode == 13){
+        console.log('yo');
+      }
+};
     </script>
 </body>
 
