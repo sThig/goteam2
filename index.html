@@ -9,9 +9,9 @@
     <p>
       Enter 3 or more names to form a team then hit submit.  A team captain and co-captain will be chosen at random while the other names will form the team.
     </p>
-    <input type="text" class="theplayer" name="Player" id="bind" value="Player-name" />
-    <input type="button" id="thego" value="Go" /><br />
-    <input type="button" id="go" value="Submit" /><br />
+    <input type="text" class="theplayer pre" name="Player" id="bind" value="Player-name" onclick='javascript: this.value = ""'/>
+    <input type="button" id="thego" class="pre" value="Go" /><br />
+    <input type="button" id="go" class="pre" value="Submit" /><br />
 
     <ol id="load"></ol>
     <h2 id="captain" class="captain"></h2>
