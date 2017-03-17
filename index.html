@@ -5,88 +5,77 @@
 </head>
 
 <body>
-  <h2>Enter The Team</h2>
-  <input type="text" class="theplayer" name="Player" id="bind" value="Player-name" />
-  <input type="button" id="thego" value="Go" /><br />
-  <input type="button" id="go" value="Go >>" /><br />
+    <h2>Enter The Team</h2>
+    <input type="text" class="theplayer" name="Player" id="bind" value="Player-name" />
+    <input type="button" id="thego" value="Go" /><br />
+    <input type="button" id="go" value="Go >>" /><br />
 
-  <h2 id="captain" class="captain"></h2>
-  <br />
-  <h2 id="cocaptain" class="cocaptain"></h2>
-  <ul id="teammateys"></ul>
+    <h2 id="captain" class="captain"></h2><br />
+    <h2 id="cocaptain" class="cocaptain"></h2>
+    <ul id="teammateys"></ul>
 
-  <script>
-    const el = document.getElementById('bind');
-    const gobutton = document.getElementById('thego')
-    let nameOfPlayer = el.value;
-    gobutton[window.addEventListener ? 'addEventListener' : 'attachEvent']( window.addEventListener ? 'click' : 'onclick', myClickFunc, false);
-    function myClickFunc()
-      {
-        var currentValue = document.getElementById("bind").value;
-        var x = document.createElement("LI");
-        var t = document.createTextNode(currentValue);
-        x.appendChild(t);
-        document.getElementById("teammateys").appendChild(x);
+    <script>
+    function myClickFunc() {
+      var currentValue = document.getElementById("bind").value;
+      var x = document.createElement("LI");
+      var t = document.createTextNode(currentValue);
+      x.appendChild(t);
+      document.getElementById("teammateys").appendChild(x);
+    }
+
+    function map(arrayLike, fn) {
+      var ret = [],
+      i = -1,
+      len = arrayLike.length;
+      while (++i < len) ret[i] = fn(arrayLike[i]);
+      return ret;
+    }
+
+    function getText(node) {
+      if (node.nodeType === 3) return node.data;
+      var txt = '';
+      if (node = node.firstChild)
+      do {
+        txt += getText(node);
+      } while (node = node.nextSibling);
+      return txt;
+    }
+
+    function shuffle(a) {
+      for (let i = a.length; i; i--) {
+        let j = Math.floor(Math.random() * i);
+        [a[i - 1], a[j]] = [a[j], a[i - 1]];
       }
+    }
 
-
+      const el = document.getElementById('bind');
+      const gobutton = document.getElementById('thego')
+      let nameOfPlayer = el.value;
       var listItems = document.getElementById('teammateys').getElementsByTagName('li'),
 
-          myArray = map(listItems, getText);
+      gobutton[window.addEventListener ? 'addEventListener' : 'attachEvent'](window.addEventListener ? 'click' : 'onclick', myClickFunc, false);
+      var myArray = map(listItems, getText);
 
-      function map(arrayLike, fn) {
-          var ret = [], i = -1, len = arrayLike.length;
-          while (++i < len) ret[i] = fn(arrayLike[i]);
-          return ret;
-      }
-
-      function getText(node) {
-          if (node.nodeType === 3) return node.data;
-          var txt = '';
-          if (node = node.firstChild) do {
-              txt += getText(node);
-          } while (node = node.nextSibling);
-          return txt;
-      }
-
-document.addEventListener('event', function (e) {
-
-});
-
-// console.log(myArray);
-console.log(listItems);
-
-
-      function shuffle(a) {
-          for (let i = a.length; i; i--) {
-              let j = Math.floor(Math.random() * i);
-              [a[i - 1], a[j]] = [a[j], a[i - 1]];
-          }
-      }
+      console.log(listItems);
 
       // var arr = [].slice.call(htmlCollection);
-
       document.getElementById("go").addEventListener("click", function() {
           const inputs = document.querySelectorAll(".theplayer")
           let listItems = Array.from(inputs).map(input => input.value)
           shuffle(listItems);
-          console.log('listItems', listItems);
           const [captain, id, ...teammates] = listItems;
+
           document.getElementById('captain').innerHTML += (`<h2>${captain} is the captain!</h2>`);
           document.getElementById('cocaptain').innerHTML += (`<h2>${id} is the co-captain!</h2>`);
           teammates.forEach(function(teammates) {
               document.getElementById('teammateys').innerHTML += (`<li>${teammates}</li>`);
           });
       });
-
-    document.getElementById('bind').onkeydown = function(e){
-      if(e.keyCode == 13){
-        myClickFunc();
-      }
-};
-
-
+      document.getElementById('bind').onkeydown = function(e) {
+          if (e.keyCode == 13) {
+              myClickFunc();
+          }
+      };
     </script>
-</body>
-
+  </body>
 </html>
