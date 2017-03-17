@@ -6,11 +6,15 @@
 
 <body>
     <h2>Enter The Team</h2>
+    <p>
+      Enter 3 or more names to form a tame then hit submit.  A team captain and co-captain will be chosen at random while the other names will form the team.
+    </p>
     <input type="text" class="theplayer" name="Player" id="bind" value="Player-name" />
     <input type="button" id="thego" value="Go" /><br />
-    <input type="button" id="go" value="Go >>" /><br />
+    <input type="button" id="go" value="Submit" /><br />
 
-    <h2 id="captain" class="captain"></h2><br />
+    <ol id="load"></ol>
+    <h2 id="captain" class="captain"></h2>
     <h2 id="cocaptain" class="cocaptain"></h2>
     <ul id="teammateys"></ul>
 
@@ -19,8 +23,10 @@
       var currentValue = document.getElementById("bind").value;
       var x = document.createElement("LI");
       var t = document.createTextNode(currentValue);
+      x.className = 'player'
       x.appendChild(t);
-      document.getElementById("teammateys").appendChild(x);
+      document.getElementById("load").appendChild(x);
+      document.getElementById('bind').value= "";
     }
 
     function map(arrayLike, fn) {
@@ -49,22 +55,23 @@
     }
 
       const el = document.getElementById('bind');
-      const gobutton = document.getElementById('thego')
+      const gobutton = document.getElementById('thego');
       let nameOfPlayer = el.value;
-      var listItems = document.getElementById('teammateys').getElementsByTagName('li'),
+      var listItems = document.getElementById('teammateys').getElementsByTagName('li');
 
-      gobutton[window.addEventListener ? 'addEventListener' : 'attachEvent'](window.addEventListener ? 'click' : 'onclick', myClickFunc, false);
+      gobutton[window.addEventListener ? 'addEventListener' : 'attachEvent']( window.addEventListener ? 'click' : 'onclick', myClickFunc, false);
       var myArray = map(listItems, getText);
 
       console.log(listItems);
 
       // var arr = [].slice.call(htmlCollection);
       document.getElementById("go").addEventListener("click", function() {
-          const inputs = document.querySelectorAll(".theplayer")
-          let listItems = Array.from(inputs).map(input => input.value)
+          const inputs = document.querySelectorAll(".player")
+          let listItems = Array.from(inputs).map(input => input.innerHTML)
           shuffle(listItems);
           const [captain, id, ...teammates] = listItems;
-
+          const elem = document.getElementById("load");
+          elem.remove();
           document.getElementById('captain').innerHTML += (`<h2>${captain} is the captain!</h2>`);
           document.getElementById('cocaptain').innerHTML += (`<h2>${id} is the co-captain!</h2>`);
           teammates.forEach(function(teammates) {
