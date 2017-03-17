@@ -5,18 +5,27 @@
 </head>
 
 <body>
-    <h2>Enter The Team</h2>
-    <p>
-      Enter 3 or more names to form a team then hit submit.  A team captain and co-captain will be chosen at random while the other names will form the team.
-    </p>
-    <input type="text" class="theplayer pre" name="Player" id="bind" value="Player-name" onclick='javascript: this.value = ""'/>
-    <input type="button" id="thego" class="pre" value="Go" /><br />
-    <input type="button" id="go" class="pre" value="Submit" /><br />
+  <container id="form">
+    <header>
+      <h1>Team Maker</h1>
+      <p>
+        Need to make a team? Who's the team captain? co-captain? Enter three or more names and hit submit to make your dream team!
+      </p>
 
-    <ol id="load"></ol>
-    <h2 id="captain" class="captain"></h2>
-    <h2 id="cocaptain" class="cocaptain"></h2>
-    <ul id="teammateys"></ul>
+    </header>
+    <div id="pre">
+      <input type="text" class="theplayer pre" name="Player" id="bind" value="Player-name" onclick='javascript: this.value = ""'/>
+      <input type="button" id="thego" class="pre" value="Go" /><br />
+      <ol id="load"></ol>
+      <input type="button" id="go" class="pre" value="Press For Team" /><br />
+    </div>
+    <div id="result">
+      <h3 id="captain" class="captain"></h2>
+      <h3 id="cocaptain" class="cocaptain"></h2>
+      <ul id="teammateys"></ul>
+      <input type="button" id="reset" value="Reset" />
+    </div>
+  </container>
 
     <script>
     function myClickFunc() {
@@ -54,6 +63,12 @@
       }
     }
 
+    function reset() {
+      const elem = document.getElementById("result");
+      elem.remove();
+    }
+
+      const formreset = document.getElementById('result')
       const el = document.getElementById('bind');
       const gobutton = document.getElementById('thego');
       let nameOfPlayer = el.value;
@@ -70,7 +85,7 @@
           let listItems = Array.from(inputs).map(input => input.innerHTML)
           shuffle(listItems);
           const [captain, id, ...teammates] = listItems;
-          const elem = document.getElementById("load");
+          const elem = document.getElementById("pre");
           elem.remove();
           document.getElementById('captain').innerHTML += (`<h2>${captain} is the captain!</h2>`);
           document.getElementById('cocaptain').innerHTML += (`<h2>${id} is the co-captain!</h2>`);
