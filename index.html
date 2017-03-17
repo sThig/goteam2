@@ -2,6 +2,7 @@
 
 <head>
     <title>ARRAY TEST</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 </head>
 
 <body>
@@ -23,7 +24,7 @@
       <h3 id="captain" class="captain"></h2>
       <h3 id="cocaptain" class="cocaptain"></h2>
       <ul id="teammateys"></ul>
-      <input type="button" id="reset" value="Reset" />
+      <!-- <button id="resetform" onclick="reload()">Reset</button> -->
     </div>
   </container>
 
@@ -63,9 +64,8 @@
       }
     }
 
-    function reset() {
-      const elem = document.getElementById("result");
-      elem.remove();
+    function reload() {
+        location.reload();
     }
 
       const formreset = document.getElementById('result')
@@ -77,7 +77,12 @@
       gobutton[window.addEventListener ? 'addEventListener' : 'attachEvent']( window.addEventListener ? 'click' : 'onclick', myClickFunc, false);
       var myArray = map(listItems, getText);
 
-      console.log(listItems);
+      document.getElementById('bind').onkeydown = function(e) {
+        if (e.keyCode == 13) {
+          myClickFunc();
+        }
+      };
+
 
       // var arr = [].slice.call(htmlCollection);
       document.getElementById("go").addEventListener("click", function() {
@@ -85,19 +90,19 @@
           let listItems = Array.from(inputs).map(input => input.innerHTML)
           shuffle(listItems);
           const [captain, id, ...teammates] = listItems;
+          // #THIS WORKS#
           const elem = document.getElementById("pre");
-          elem.remove();
+          elem.className = 'hide';
+          // elem.remove();
+
           document.getElementById('captain').innerHTML += (`<h2>${captain} is the captain!</h2>`);
           document.getElementById('cocaptain').innerHTML += (`<h2>${id} is the co-captain!</h2>`);
           teammates.forEach(function(teammates) {
               document.getElementById('teammateys').innerHTML += (`<li>${teammates}</li>`);
           });
+          document.getElementById("result").innerHTML += (`<button id="resetform" onclick="reload()">Reset</button>`);
       });
-      document.getElementById('bind').onkeydown = function(e) {
-          if (e.keyCode == 13) {
-              myClickFunc();
-          }
-      };
+
     </script>
   </body>
 </html>
