@@ -1,4 +1,6 @@
 ## 🏀 GO TEAM ⚽
+Working link (in progress) can be found [here](https://sthig.github.io/goteam2/).
+
 This is a Js/UI/UX project where I'm going to have it to enter in several names and it creates a team with a captain and co-captain (chosen at random).  Also a randomly generated team name will be added as well (for added humor and to keep the user engaged).
 
 # March 18 Update
