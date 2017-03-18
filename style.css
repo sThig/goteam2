@@ -1,7 +1,16 @@
+body {
+
+}
+
 .hide {
   display: none;
 }
 
-.show {
-  display: block;
+container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 500px;
+  justify-content: center;
+  align-content: center;
 }
