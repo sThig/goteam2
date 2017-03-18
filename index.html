@@ -15,10 +15,10 @@
 
     </header>
     <div id="pre">
-      <input type="text" class="theplayer pre" name="Player" id="bind" value="Player-name" onclick='javascript: this.value = ""'/>
+      <input type="text" class="theplayer pre" name="Player" id="bind" value="Enter Names" onclick='javascript: this.value = ""'/>
       <input type="button" id="thego" class="pre" value="Go" /><br />
       <ol id="load"></ol>
-      <input type="button" id="go" class="pre" value="Press For Team" /><br />
+      <input type="button" id="go" class="pre" value="Press For Team"/><br />
     </div>
     <div id="result">
       <h3 id="captain" class="captain"></h2>
@@ -29,7 +29,29 @@
   </container>
 
     <script>
+
     function myClickFunc() {
+      var input = document.getElementById("bind");
+      var mapObj = {
+        cat:"🐱",
+        dog:"🐶",
+        goat:"🐐",
+        bryan:"💩",
+        emma:("🐷 Pork Fatty Britches"),
+        melissa:("Melissa, Satan's Little Helper ♨️"),
+        kate:("Kate, The Hottest Gal On Earth ❤️ ❤️ ❤️"),
+        matt:("Matt Jaeh, most awesome boss in the world 💯"),
+        justin:("Justin 🍎 Licata"),
+        kevin:("OMG Kevin go away, no one asked you 🐴"),
+        chris:("/r/onesneakymofo 😆"),
+        kyle:("Kyle has pwnd u, 💻"),
+        andrew:("Bromera"),
+        kelsy:("K-🐶 who is cooler than Porky Britches Fatty Pants Oinker 🐖"),
+        kelsey:("K-🐶 who is cooler than Porky Britches Fatty Pants Oinker 🐖")
+      };
+      input.value = input.value.replace(/cat|dog|goat|bryan|emma|melissa|kate|matt|justin|kevin|chris|kyle|andrew|kelsy|kelsey/gi, function(matched){
+        return mapObj[matched];
+      });
       var currentValue = document.getElementById("bind").value;
       var x = document.createElement("LI");
       var t = document.createTextNode(currentValue);
@@ -68,6 +90,7 @@
         location.reload();
     }
 
+
       const formreset = document.getElementById('result')
       const el = document.getElementById('bind');
       const gobutton = document.getElementById('thego');
@@ -84,17 +107,15 @@
       };
 
 
-      // var arr = [].slice.call(htmlCollection);
+
       document.getElementById("go").addEventListener("click", function() {
           const inputs = document.querySelectorAll(".player")
           let listItems = Array.from(inputs).map(input => input.innerHTML)
           shuffle(listItems);
           const [captain, id, ...teammates] = listItems;
-          // #THIS WORKS#
           const elem = document.getElementById("pre");
           elem.className = 'hide';
-          // elem.remove();
-
+          // document.body.innerHTML = document.body.innerHTML.replace('Bryan', '💩');
           document.getElementById('captain').innerHTML += (`<h2>${captain} is the captain!</h2>`);
           document.getElementById('cocaptain').innerHTML += (`<h2>${id} is the co-captain!</h2>`);
           teammates.forEach(function(teammates) {
