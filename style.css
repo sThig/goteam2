@@ -27,6 +27,22 @@ p {
   display: inline-block;
   color: 878787;
   font-size: 16px;
+  border: 1px solid #878787;
+
+}
+
+footer {
+  background: white;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: right;
+  padding: 2%;
+  color: #878787;
+}
+
+.submit {
+  border: 1px solid #878787;
 }
 
 .enterteam {
@@ -72,10 +88,13 @@ header h1 {
     margin-top: 5%;
     margin-bottom: 0;
     position: relative;
+
 }
 
 header p {
     margin: 1%;
+    text-align: center;
+    width: 100%;
 }
 
 entry {
@@ -84,7 +103,6 @@ entry {
     /*height: 400px;*/
     padding: 1% 5% 5% 5%;
       min-height: 300px;
-        margin-bottom: 30px;
 }
 
 
@@ -105,12 +123,12 @@ result {
 
 .ball {
     display: block;
-    position: absolute;
+    /*position: absolute;*/
     width: 55px;
     height: 55px;
     background-color: orange;
     border-radius: 100%;
-    margin: 9% 0;
+    /*margin: 9% 0;*/
 }
 
 entry p{

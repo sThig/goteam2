@@ -9,10 +9,15 @@
 <body>
     <container id="form">
         <header>
+          <div class="headitem1">
+
           <h1>SPORTS!</h1>
           <p>GO TEAM GO</p>
+        </div>
           <div class="ball"></div>
-          <p>Do the thing, make the point!</p>
+          <div class="headitem2">
+            <p>Do the thing, make the point!</p>
+          </div>
         </header>
         <entry id="pre">
             <h3>Create your team</h3>
@@ -22,13 +27,19 @@
             <input type="text" class="theplayer pre" name="Player" id="bind" value="Enter Names" onclick='javascript: this.value = ""' />
             <input type="button" id="thego" class="pre enterteam" value="Go" /><br />
             <ol id="load"></ol>
-            <input type="button" id="go" class="pre" value="Press For Team" /><br />
+            <input type="button" id="go" class="pre submit" value="Press For Team" /><br />
         </entry>
         <result id="result">
             <h3 id="captain" class="captain"></h3>
             <h3 id="cocaptain" class="cocaptain"></h3>
             <ul id="teammateys"></ul>
-
+        </result>
+        <footer>
+          <hr />
+          <p>
+          By Scott Thigpen
+          </p>
+        </footer>
     </container>
     <script src="main.js"></script>
 </body>
