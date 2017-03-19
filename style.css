@@ -1,16 +1,90 @@
 body {
-
+    background: #ffa84c;
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, #ffa84c 0%, #ff7b0d 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #ffa84c 0%, #ff7b0d 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #ffa84c 0%, #ff7b0d 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#ff7b0d', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
 }
 
 .hide {
-  display: none;
+    display: none;
 }
 
 container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 500px;
-  justify-content: center;
-  align-content: center;
+    display: flex;
+    justify-content: center;
+    /*flex-direction: column;*/
+    flex-wrap: wrap;
+    width: 100%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background: #78DE92;
+    height: 191px;
+    flex-basis: 100%;
+}
+
+header h1 {
+    position: margin-top: 15px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 0;
+}
+
+header p {
+    font-family: 'Slabo 27px', serif;
+    margin: 1%;
+}
+
+entry {
+    background: white;
+    flex-basis: 100%;
+    /*height: 400px;*/
+    padding: 1% 5% 5% 5%;
+      min-height: 400px;
+        margin-bottom: 30px;
+}
+
+result {
+  display: none;
+  background: white;
+  flex-basis: 100%;
+  /*height: 400px;*/
+  padding: 1% 5% 5% 5%;
+  min-height: 400px;
+  margin-bottom: 50px;
+
+}
+
+.see {
+  display: block;
+}
+
+.ball {
+    display: block;
+    width: 55px;
+    height: 55px;
+    background-color: orange;
+    border-radius: 100%;
+}
+
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 792px) {
+    container {
+        width: 50%;
+    }
 }
