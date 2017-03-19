@@ -20,7 +20,7 @@ p {
 }
 
 .theplayer {
-  width: 75%;
+  width: 89%;
   border-radius: 4;
   height: 50px;
   padding: 5px;
@@ -42,7 +42,17 @@ footer {
 }
 
 .submit {
-  border: 1px solid #878787;
+  border: 0 solid #878787;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffa84c;
+  width: 25%;
+  height: 50px;
+  color: white;
+}
+
+.maketeam {
+  display: flex;
 }
 
 .enterteam {
@@ -113,7 +123,6 @@ result {
   /*height: 400px;*/
   padding: 1% 5% 5% 5%;
   min-height: 300px;
-  margin-bottom: 50px;
 
 }
 
@@ -135,12 +144,18 @@ entry p{
   color: #878787;
 }
 
+.congrats {
+  color: #878787;
+}
+
 
 
 @media all and (max-width:1000px) {
   container {
       width: 100%;
   }
+
+  body { font-size: 2em; }
 
   header {
     background: #78DE92;

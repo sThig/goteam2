@@ -106,11 +106,11 @@ function reload() {
     elem.className = 'hide';
 
     document.getElementById('captain').innerHTML += (`<h1>Team ${namedteam}!</h1>`);
-    document.getElementById('captain').innerHTML += (`<p>Congrats! You're <b>${namedteam}</b> possibly one of the top teams in the NHFL Basketball league around most of the world. Here is your captain, co-captain and teammates.  Now go do the thing, win the touchdown and sink the goals!</p>`);
+    document.getElementById('captain').innerHTML += (`<p class="congrats">Congrats! You're <b>${namedteam}</b> possibly one of the top teams in the NHFL Basketball league around most of the world. Here is your captain, co-captain and teammates.  Now go do the thing, win the touchdown and sink the goals!</p>`);
     document.getElementById('captain').innerHTML += (`<h2>${captain} is the captain!</h3>`);
     document.getElementById('cocaptain').innerHTML += (`<h3>${id} is the co-captain!</h3>`);
     teammates.forEach(function(teammates) {
       document.getElementById('teammateys').innerHTML += (`<li>${teammates}</li>`);
     });
-    document.getElementById("result").innerHTML += (`<button id="resetform" onclick="reload()">Reset</button>`);
+    document.getElementById("result").innerHTML += (`<div id="maketeam" class="maketeam"><button class="submit" id="resetform" onclick="reload()">Reset</button></div>`);
   });
