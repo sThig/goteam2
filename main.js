@@ -12,7 +12,7 @@ function myClickFunc() {
     andrew:("Bromera"),
   };
 
-  input.value = input.value.toLowerCase().replace(/cat|dog|goat|bryan|ethan|emma|melissa|kate|matt|justin|kevin|chris|kyle|andrew|kelsy|kelsey/gi, function(matched){
+  input.value = input.value.toLowerCase().replace(/bryan|ethan|emma|melissa|kate|matt|justin|kevin|chris|andrew/gi, function(matched){
     return mapObj[matched];
   });
 
