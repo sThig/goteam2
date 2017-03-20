@@ -4,9 +4,25 @@ Working link (in progress) can be found [here](https://sthig.github.io/goteam2/)
 This is a Js/UI/UX project where I'm going to have it to enter in several names and it creates a team with a captain and co-captain (chosen at random).  Also a randomly generated team name will be added as well (for added humor and to keep the user engaged).
 
 ### Immediate Todo:
-  * Capitalize the first letter of name
-  * Fix flexbox centering in css
-  * Make style sheet in Sketch 
+  * Capitalize the first letter of name with this way:
+  ```  
+  const toSlug = input => encodeURIComponent(
+    join('-')(
+      map(toLowerCase)(
+        split(' ')(
+          input
+        )
+      )
+    )
+  );
+
+  console.log(toSlug('JS Cheerleader')); // 'js-cheerleader'
+   ```
+  * Fix flexbox centering in css (✅)
+  * Make style sheet in Sketch
+  * have make-team button fade in
+  * highlight the `<li>` button in full green
+
 
 # March 18 Update
 I have completed a fair amount of code with the help of Justin, Bryan and Kevin (I used their expertise sparingly).  I was surprised that Stack Overflow was receptive to my questions (as well as super quick) without getting slammed for asking the wrong thing.  You can see my questions asked [here](http://stackoverflow.com/questions/42772179/create-an-array-from-text-input-when-submitted-only-using-vanilla-javascript) and [here](http://stackoverflow.com/questions/42846637/pure-javascript-add-the-value-of-text-input-to-li-when-button-clicked-enter).  Big thanks to [Thomas Konings](https://gist.github.com/tkon99/4c98af713acc73bed74c) on his Random Name Generator which will provide endless entertainment
