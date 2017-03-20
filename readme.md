@@ -20,8 +20,17 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
    ```
   * Fix flexbox centering in css (✅)
   * Make style sheet in Sketch
-  * have make-team button fade in
+  * have make-team button fade in (✅)
   * highlight the `<li>` button in full green
+  * fix spacing
+  * animated gif for the sports ball
+  * space sports title out
+  * update footer
+  * make copy paragraph funnier and more concise (enlist Kate on that)
+
+
+# March 19 Update
+I added a few things by myself without really having to look, most notably I was able to do my own setTimeout() function which I was very happy about. I focused a bit on styling things out too this time as well.  I need to make the color better.  Wes Bos's tutorials are indeed, boss and very helpful.
 
 
 # March 18 Update
