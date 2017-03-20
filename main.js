@@ -76,41 +76,45 @@ function reload() {
 
   }
 
-
   const formreset = document.getElementById('result')
   const el = document.getElementById('bind');
   const gobutton = document.getElementById('thego');
   let nameOfPlayer = el.value;
-  var listItems = document.getElementById('teammateys').getElementsByTagName('li');
+  let listItems = document.getElementById('teammateys').getElementsByTagName('li');
 
   gobutton[window.addEventListener ? 'addEventListener' : 'attachEvent']( window.addEventListener ? 'click' : 'onclick', myClickFunc, false);
-  var myArray = map(listItems, getText);
+  const myArray = map(listItems, getText);
 
   document.getElementById('bind').onkeydown = function(e) {
     if (e.keyCode == 13) {
       myClickFunc();
+      setTimeout(() => {
+        document.getElementById("go").className = "submit";
+
+      }, 800);
     }
   };
 
 
-
   document.getElementById("go").addEventListener("click", function() {
-    const inputs = document.querySelectorAll(".player")
-    let listItems = Array.from(inputs).map(input => input.innerHTML)
-    shuffle(listItems);
-    const [captain, id, ...teammates] = listItems;
-    const elem = document.getElementById("pre");
-    const d = document.getElementById("result");
-    d.className += "see";
-    let namedteam = generateName();
-    elem.className = 'hide';
+    setTimeout(() => {
+      const inputs = document.querySelectorAll(".player")
+      let listItems = Array.from(inputs).map(input => input.innerHTML)
+      shuffle(listItems);
+      const [captain, id, ...teammates] = listItems;
+      const elem = document.getElementById("pre");
+      const d = document.getElementById("result");
+      d.className += "see";
+      let namedteam = generateName();
+      elem.className = 'hide';
 
-    document.getElementById('captain').innerHTML += (`<h1>Team ${namedteam}!</h1>`);
-    document.getElementById('captain').innerHTML += (`<p class="congrats">Congrats! You're <b>${namedteam}</b> possibly one of the top teams in the NHFL Basketball league around most of the world. Here is your captain, co-captain and teammates.  Now go do the thing, win the touchdown and sink the goals!</p>`);
-    document.getElementById('captain').innerHTML += (`<h2>${captain} is the captain!</h3>`);
-    document.getElementById('cocaptain').innerHTML += (`<h3>${id} is the co-captain!</h3>`);
-    teammates.forEach(function(teammates) {
-      document.getElementById('teammateys').innerHTML += (`<li>${teammates}</li>`);
-    });
-    document.getElementById("result").innerHTML += (`<div id="maketeam" class="maketeam"><button class="submit" id="resetform" onclick="reload()">Reset</button></div>`);
+      document.getElementById('captain').innerHTML += (`<h1 style="text-align: center;">Team ${namedteam}!</h1>`);
+      document.getElementById('captain').innerHTML += (`<p class="congrats">Congrats! You're <b style="color: black;">${namedteam}</b> possibly one of the top teams in the NHFL Basketball league around most of the world. Here is your captain, co-captain and teammates.  Now go do the thing, win the touchdown and sink the goals!</p>`);
+      document.getElementById('captain').innerHTML += (`<h2 style="text-align: center;">\u2B50 ${captain} is the captain! \u2B50</h2>`);
+      document.getElementById('cocaptain').innerHTML += (`<h3 style="text-align: center;">\u2B51 ${id} is the co-captain! \u2B51</h3>`);
+      teammates.forEach(function(teammates) {
+        document.getElementById('teammateys').innerHTML += (`<li>${teammates}</li>`);
+      });
+      document.getElementById("result").innerHTML += (`<div id="maketeam" class="maketeam"><button class="submit" id="resetform" onclick="reload()">Reset</button></div>`);
+    }, 500);
   });
