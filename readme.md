@@ -27,6 +27,8 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * space sports title out
   * update footer
   * make copy paragraph funnier and more concise (enlist Kate on that)
+  * add edit button on name
+  * add remove button on name 
 
 
 # March 19 Update
