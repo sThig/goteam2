@@ -28,7 +28,8 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * update footer
   * make copy paragraph funnier and more concise (enlist Kate on that)
   * add edit button on name
-  * add remove button on name 
+  * add remove button on name
+  * draw background for header (the sports field)
 
 
 # March 19 Update
