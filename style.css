@@ -15,7 +15,7 @@ h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
 }
 
-p {
+p, .load, .player {
   font-family: 'Slabo 27px', serif;
 }
 
@@ -25,9 +25,11 @@ p {
   height: 50px;
   padding: 5px;
   display: inline-block;
-  color: 878787;
+  color: #878787;
   font-size: 16px;
   border: 1px solid #878787;
+  border-radius: 4px;
+  padding: 0 0 0 25px;
 
 }
 
@@ -46,9 +48,10 @@ footer {
   margin-left: auto;
   margin-right: auto;
   background: #ffa84c;
-  width: 25%;
   height: 50px;
   color: white;
+  border-radius: 4px;
+  font-size: 15px;
 }
 
 .maketeam {
@@ -63,10 +66,10 @@ footer {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  /*margin: 4px 2px;*/
   width: 10%;
   height: 50px;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .hide {
@@ -120,7 +123,6 @@ result {
   display: none;
   background: white;
   flex-basis: 100%;
-  /*height: 400px;*/
   padding: 1% 5% 5% 5%;
   min-height: 300px;
 
@@ -132,15 +134,13 @@ result {
 
 .ball {
     display: block;
-    /*position: absolute;*/
     width: 55px;
     height: 55px;
     background-color: orange;
     border-radius: 100%;
-    /*margin: 9% 0;*/
 }
 
-entry p{
+entry p {
   color: #878787;
 }
 
@@ -155,7 +155,15 @@ entry p{
       width: 100%;
   }
 
-  body { font-size: 2em; }
+  .theplayer {
+    width: 75%;
+  }
+
+  body { font-size: 1.5em; }
+
+  h1 { font-size: 1em;
+       text-align: center;
+   }
 
   header {
     background: #78DE92;
