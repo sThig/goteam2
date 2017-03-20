@@ -95,6 +95,8 @@ header {
     background: #78DE92;
     height: 191px;
     flex-basis: 100%;
+    padding-top: 10px;
+    margin-top: 25px;
 }
 
 header h1 {
