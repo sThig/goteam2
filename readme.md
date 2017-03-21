@@ -30,6 +30,7 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * add edit button on name
   * add remove button on name
   * draw background for header (the sports field)
+  * somehow get this to share stats on social media
 
 
 # March 19 Update
