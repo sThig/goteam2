@@ -15,14 +15,25 @@ function myClickFunc() {
   input.value = input.value.toLowerCase().replace(/bryan|ethan|emma|melissa|kate|matt|kevin|chris|andrew/gi, function(matched){
     return mapObj[matched];
   });
-
+  // const span = document.createElement('span');
+  // // div.style.text-align = "right";
+  // div.innerHTML = "Delete";
   var currentValue = document.getElementById("bind").value;
+  var eraseit = document.createElement('span');
+  eraseit.innerHTML = "Delete ";
+  eraseit.setAttribute("class", "pushRight")
+  eraseit.id = "eraseit"
+  // delete.innerHTML = "delete";
   var x = document.createElement("LI");
   var t = document.createTextNode(currentValue);
+  x.appendChild(eraseit);
   x.className = 'player'
   x.appendChild(t);
   document.getElementById("load").appendChild(x);
   document.getElementById('bind').value= "";
+  eraseit.addEventListener('click', function () {
+    this.parentNode.remove(x);
+});
 }
 
 
@@ -105,9 +116,9 @@ function reload() {
       const elem = document.getElementById("pre");
       const d = document.getElementById("result");
       d.className += "see";
+
       let namedteam = generateName();
       elem.className = 'hide';
-
       document.getElementById('captain').innerHTML += (`<h1 style="text-align: center;">Team ${namedteam}!</h1>`);
       document.getElementById('captain').innerHTML += (`<p class="congrats">Congrats! You're <b style="color: black;">${namedteam}</b> possibly one of the top teams in the NHFL Basketball league around most of the world. Here is your captain, co-captain and teammates.  Now go do the thing, win the touchdown and sink the goals!</p>`);
       document.getElementById('captain').innerHTML += (`<h2 class="thecaptain" style="text-align: center;">\u2B50 ${captain} is the captain! \u2B50</h2>`);

@@ -233,7 +233,13 @@ entry p {
   }
 }
 
+.pushRight {
+  float: right;
+}
 
+.none {
+  display: none;
+}
 
 @keyframes fadein {
     from { opacity: 0; }
