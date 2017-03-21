@@ -21,10 +21,10 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * Fix flexbox centering in css (✅)
   * Make style sheet in Sketch
   * have make-team button fade in (✅)
-  * highlight the `<li>` button in full green
+  * highlight the `<li>` button in full green (💹)
   * fix spacing
   * animated gif for the sports ball
-  * space sports title out
+  * space sports title out (✅)
   * update footer
   * make copy paragraph funnier and more concise (enlist Kate on that)
   * add edit button on name
