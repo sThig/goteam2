@@ -110,8 +110,8 @@ function reload() {
 
       document.getElementById('captain').innerHTML += (`<h1 style="text-align: center;">Team ${namedteam}!</h1>`);
       document.getElementById('captain').innerHTML += (`<p class="congrats">Congrats! You're <b style="color: black;">${namedteam}</b> possibly one of the top teams in the NHFL Basketball league around most of the world. Here is your captain, co-captain and teammates.  Now go do the thing, win the touchdown and sink the goals!</p>`);
-      document.getElementById('captain').innerHTML += (`<h2 style="text-align: center;">\u2B50 ${captain} is the captain! \u2B50</h2>`);
-      document.getElementById('cocaptain').innerHTML += (`<h3 style="text-align: center;">\u2B51 ${id} is the co-captain! \u2B51</h3>`);
+      document.getElementById('captain').innerHTML += (`<h2 class="thecaptain" style="text-align: center;">\u2B50 ${captain} is the captain! \u2B50</h2>`);
+      document.getElementById('cocaptain').innerHTML += (`<h3 class="thecocaptain" style="text-align: center;">\u2B51 ${id} is the co-captain! \u2B51</h3>`);
       teammates.forEach(function(teammates) {
         document.getElementById('teammateys').innerHTML += (`<li>${teammates}</li>`);
       });

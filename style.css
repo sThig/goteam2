@@ -23,8 +23,20 @@ li {
   font-size: 1.5em;
 }
 
+li:first-letter {
+  text-transform: uppercase;
+}
+
 .theteamresult {
   margin-top: -15px;
+}
+
+.thecaptain:first-letter {
+    text-transform: uppercase;
+}
+
+.thecocaptain:first-letter {
+    text-transform: uppercase;
 }
 
 #teammateys {
