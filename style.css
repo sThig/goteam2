@@ -245,10 +245,10 @@ entry p {
 }
 
 .imgshrink {
-  width: 5%;
+  width: 20px;
   position: relative;
-  top: 5px;
-  padding-right: 2%;
+  top: 3px;
+  padding-right: 3px;
 }
 
 @-moz-keyframes bounce {
