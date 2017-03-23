@@ -33,7 +33,10 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * somehow get this to share stats on social media
   * responsiveness is incorrect on Android phone
   * buttons on iOS are weird AF, but only on the front page.  The second page they are fine. (✅)
+  * fix errors of undefined
 
+# March 23 update
+I'm rolling down on a few extra things before finessing a few things.  There are a few big ticket issues and smaller ones.
 
 # March 19 Update
 I added a few things by myself without really having to look, most notably I was able to do my own setTimeout() function which I was very happy about. I focused a bit on styling things out too this time as well.  I need to make the color better.  Wes Bos's tutorials are indeed, boss and very helpful.
