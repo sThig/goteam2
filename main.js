@@ -22,6 +22,7 @@ function myClickFunc() {
   var eraseit = document.createElement('span');
   eraseit.innerHTML = "Delete ";
   eraseit.setAttribute("class", "pushRight")
+  eraseit.setAttribute("id", "goAway");
   eraseit.id = "eraseit"
   // delete.innerHTML = "delete";
   var x = document.createElement("LI");
@@ -115,10 +116,8 @@ function reload() {
       const [captain, id, ...teammates] = listItems;
       const elem = document.getElementById("pre");
       const d = document.getElementById("result");
+      document.getElementsByClassName("pushRight");
       d.className += "see";
-      const hideDelete = document.querySelector(".pushRight");
-      hideDelete.classList.add('.hide');
-      hideDelete.classList.remove('.pushRight');
       let namedteam = generateName();
       elem.className = 'hide';
       document.getElementById('captain').innerHTML += (`<h1 style="text-align: center;">Team ${namedteam}!</h1>`);
@@ -128,6 +127,7 @@ function reload() {
       teammates.forEach(function(teammates) {
         document.getElementById('teammateys').innerHTML += (`<li>${teammates}</li>`);
       });
+      document.getElementById("eraseit").classList.remove("pushRight");
       document.getElementById("result").innerHTML += (`<div id="maketeam" class="maketeam"><button class="submit" id="resetform" onclick="reload()">Reset</button></div>`);
     }, 500);
   });
