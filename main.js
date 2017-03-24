@@ -116,7 +116,9 @@ function reload() {
       const elem = document.getElementById("pre");
       const d = document.getElementById("result");
       d.className += "see";
-
+      const hideDelete = document.querySelector(".pushRight");
+      hideDelete.classList.add('.hide');
+      hideDelete.classList.remove('.pushRight');
       let namedteam = generateName();
       elem.className = 'hide';
       document.getElementById('captain').innerHTML += (`<h1 style="text-align: center;">Team ${namedteam}!</h1>`);
