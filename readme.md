@@ -34,6 +34,7 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * responsiveness is incorrect on Android phone
   * buttons on iOS are weird AF, but only on the front page.  The second page they are fine. (✅)
   * fix errors of undefined
+  * fix errors that say "delete" on the results 
 
 # March 23 update
 I'm rolling down on a few extra things before finessing a few things.  There are a few big ticket issues and smaller ones.
