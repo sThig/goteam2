@@ -15,12 +15,9 @@ function myClickFunc() {
   input.value = input.value.toLowerCase().replace(/bryan|ethan|emma|melissa|kate|matt|kevin|chris|andrew/gi, function(matched){
     return mapObj[matched];
   });
-  // const span = document.createElement('span');
-  // // div.style.text-align = "right";
-  // div.innerHTML = "Delete";
   var currentValue = document.getElementById("bind").value;
   var eraseit = document.createElement('span');
-  eraseit.innerHTML = "Delete ";
+  eraseit.innerHTML = "X";
   eraseit.setAttribute("class", "pushRight")
   eraseit.id = "goAway"
   // delete.innerHTML = "delete";
