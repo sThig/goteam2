@@ -2,9 +2,9 @@
 
 
 function myClickFunc(e) {
-  if (document.getElementById("bind").value == "")
+  if (document.getElementById("bind").value == ("" || 'Enter Names'))
    {
-       alert("Please enter value");
+       alert("Please enter a name");
    }
   else
    {
@@ -27,19 +27,33 @@ function myClickFunc(e) {
 
     const currentValue = document.getElementById("bind").value;
     const eraseit = document.createElement('span');
+    const textname = document.createElement('span');
+    const editthis = document.createElement('span');
+
+    editthis.innerHTML = "Edit";
+    editthis.setAttribute("class", "pushRight");
+    editthis.id = "edit";
 
     eraseit.innerHTML = "X";
-    eraseit.setAttribute("class", "pushRight")
+    eraseit.setAttribute("class", "pushRight");
     eraseit.id = "goAway"
+
+    textname.setAttribute("contenteditable", "false");
+    textname.id = "editName";
 
     const x = document.createElement("LI");
     const t = document.createTextNode(currentValue);
+    textname.appendChild(t);
 
     x.appendChild(eraseit);
     x.className = 'player'
-    x.appendChild(t);
+    x.appendChild(editthis);
+    x.appendChild(textname);
     document.getElementById("load").appendChild(x);
     document.getElementById('bind').value= "";
+    editthis.addEventListener('click', function () {
+      textname.setAttribute("contenteditable", "true");
+    })
     eraseit.addEventListener('click', function () {
       this.parentNode.remove(x);
   });
@@ -120,7 +134,7 @@ function reload() {
   document.getElementById("go").addEventListener("click", function() {
     if (document.getElementById('load').getElementsByTagName('li').length <= 2)
      {
-         alert("Please enter 3");
+         alert("Please enter at least three names");
      }
     else
      {
