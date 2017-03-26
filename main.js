@@ -1,36 +1,53 @@
-function myClickFunc() {
-  var input = document.getElementById("bind");
-  var mapObj = {
-    bryan:("\uD83D\uDCA9"),
-    ethan:("Ethan Gamer Nerd Cleveland"),
-    emma:("Pork Fatty Britches"),
-    melissa:("Melissa... or Satan"),
-    kate:("Kate Hot Cleveland"),
-    matt:("Matt Jaeh, most awesome boss in the world!"),
-    kevin:("OMG Kevin go away, no one asked you"),
-    chris:("/r/onesneakymofo"),
-    andrew:("Bromera"),
-  };
+// button is greyed out until text is entered
 
-  input.value = input.value.toLowerCase().replace(/bryan|ethan|emma|melissa|kate|matt|kevin|chris|andrew/gi, function(matched){
-    return mapObj[matched];
+
+function myClickFunc(e) {
+
+  if (document.getElementsByName("form")[0].value == "")
+{
+    alert("Please enter value");
+}
+else
+{
+    var form= document.getElementsByName("form")[0];
+    form.submit();
+    const input = document.getElementById("bind");
+    const mapObj = {
+      bryan:("\uD83D\uDCA9"),
+      ethan:("Ethan Gamer Nerd Cleveland"),
+      emma:("Pork Fatty Britches"),
+      melissa:("Melissa... or Satan"),
+      kate:("Kate Hot Cleveland"),
+      matt:("Matt Jaeh, most awesome boss in the world!"),
+      kevin:("OMG Kevin go away, no one asked you"),
+      chris:("/r/onesneakymofo"),
+      andrew:("Bromera"),
+    }
+    };
+
+    input.value = input.value.toLowerCase().replace(/bryan|ethan|emma|melissa|kate|matt|kevin|chris|andrew/gi, function(matched){
+      return mapObj[matched];
+    });
+
+    const currentValue = document.getElementById("bind").value;
+    const eraseit = document.createElement('span');
+
+    eraseit.innerHTML = "X";
+    eraseit.setAttribute("class", "pushRight")
+    eraseit.id = "goAway"
+
+    const x = document.createElement("LI");
+    const t = document.createTextNode(currentValue);
+
+    x.appendChild(eraseit);
+    x.className = 'player'
+    x.appendChild(t);
+    document.getElementById("load").appendChild(x);
+    document.getElementById('bind').value= "";
+    eraseit.addEventListener('click', function () {
+      this.parentNode.remove(x);
   });
-  var currentValue = document.getElementById("bind").value;
-  var eraseit = document.createElement('span');
-  eraseit.innerHTML = "X";
-  eraseit.setAttribute("class", "pushRight")
-  eraseit.id = "goAway"
-  // delete.innerHTML = "delete";
-  var x = document.createElement("LI");
-  var t = document.createTextNode(currentValue);
-  x.appendChild(eraseit);
-  x.className = 'player'
-  x.appendChild(t);
-  document.getElementById("load").appendChild(x);
-  document.getElementById('bind').value= "";
-  eraseit.addEventListener('click', function () {
-    this.parentNode.remove(x);
-});
+
 }
 
 
