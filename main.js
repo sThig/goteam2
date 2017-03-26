@@ -2,15 +2,12 @@
 
 
 function myClickFunc(e) {
-
-  if (document.getElementsByName("form")[0].value == "")
-{
-    alert("Please enter value");
-}
-else
-{
-    var form= document.getElementsByName("form")[0];
-    form.submit();
+  if (document.getElementById("bind").value == "")
+   {
+       alert("Please enter value");
+   }
+  else
+   {
     const input = document.getElementById("bind");
     const mapObj = {
       bryan:("\uD83D\uDCA9"),
@@ -22,7 +19,6 @@ else
       kevin:("OMG Kevin go away, no one asked you"),
       chris:("/r/onesneakymofo"),
       andrew:("Bromera"),
-    }
     };
 
     input.value = input.value.toLowerCase().replace(/bryan|ethan|emma|melissa|kate|matt|kevin|chris|andrew/gi, function(matched){
@@ -47,7 +43,7 @@ else
     eraseit.addEventListener('click', function () {
       this.parentNode.remove(x);
   });
-
+ }
 }
 
 
