@@ -118,6 +118,12 @@ function reload() {
 
 
   document.getElementById("go").addEventListener("click", function() {
+    if (document.getElementById('load').getElementsByTagName('li').length <= 2)
+     {
+         alert("Please enter 3");
+     }
+    else
+     {
     setTimeout(() => {
       const inputs = document.querySelectorAll(".player")
       let listItems = Array.from(inputs).map(input => input.innerHTML)
@@ -141,5 +147,5 @@ function reload() {
         span.className = 'hide';
     }, 500);
     });
-
+}
   });
