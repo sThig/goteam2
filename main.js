@@ -51,10 +51,33 @@ function myClickFunc(e) {
     x.appendChild(textname);
     document.getElementById("load").appendChild(x);
     document.getElementById('bind').value= "";
-    editthis.addEventListener('click', function () {
-      textname.setAttribute("class", "editable");
-      textname.setAttribute("contenteditable", "true");
-    })
+
+
+
+    function toggleClass(){
+      }
+
+      editthis.addEventListener('click', function () {
+        if (textname.contenteditable == false){
+          textname.setAttribute("class", "editable");
+          textname.contenteditable = true;
+
+        }  else {
+          textname.setAttribute("class", "");
+          textname.contenteditable = false;
+        }
+        // textname.setAttribute("class", "editable");
+        // textname.setAttribute("contenteditable", "true");
+      })
+
+
+
+
+
+    const toggleEdit = document.querySelector('#editName') // Using a class instead, see note below.
+    toggleEdit.classList.toggle('hidden-phone');
+
+
     eraseit.addEventListener('click', function () {
       this.parentNode.remove(x);
   });

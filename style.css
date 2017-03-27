@@ -329,6 +329,7 @@ entry p {
 
 .pushRight {
   float: right;
+  margin-right: 15px;
 }
 
 .none {
