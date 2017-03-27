@@ -52,6 +52,7 @@ function myClickFunc(e) {
     document.getElementById("load").appendChild(x);
     document.getElementById('bind').value= "";
     editthis.addEventListener('click', function () {
+      textname.setAttribute("class", "editable");
       textname.setAttribute("contenteditable", "true");
     })
     eraseit.addEventListener('click', function () {
@@ -156,7 +157,7 @@ function reload() {
         document.getElementById('teammateys').innerHTML += (`<li>${teammates}</li>`);
       });
       document.getElementById("result").innerHTML += (`<div id="maketeam" class="maketeam"><button class="submit" id="resetform" onclick="reload()">Reset</button></div>`);
-      const span = document.querySelectorAll('#goAway');
+      const span = document.querySelectorAll('#goAway, #edit');
       [].forEach.call(span, function(span) {
         span.className = 'hide';
     }, 500);

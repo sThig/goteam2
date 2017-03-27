@@ -215,6 +215,14 @@ entry p {
   color: #878787;
 }
 
+.editable {
+  background: white;
+  font-style: italic;
+  padding: 5px;
+  color: #878787;
+  padding: 0 38px 0 15px;
+}
+
 
 @-moz-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {

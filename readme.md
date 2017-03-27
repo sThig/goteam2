@@ -36,6 +36,7 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * fix errors of undefined (💹)
   * prevent user from entering in an empty value on <li> (✅)
   * fix errors that say "delete" on the results (✅)
+  * remove edit on second page (✅)
 
 # March 23 update
 I'm rolling down on a few extra things before finessing a few things.  There are a few big ticket issues and smaller ones.
