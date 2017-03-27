@@ -54,21 +54,28 @@ function myClickFunc(e) {
 
 
 
+
+
+
     function toggleClass(){
       }
 
-      editthis.addEventListener('click', function () {
-        if (textname.contenteditable == false){
-          textname.setAttribute("class", "editable");
-          textname.contenteditable = true;
-
-        }  else {
+      editthis.addEventListener('click', function (e) {
+        if (e.currentTarget.classList.contains("toggled")) {
+          e.currentTarget.classList.remove("toggled");
           textname.setAttribute("class", "");
           textname.contenteditable = false;
+          // textname.contenteditable = true;
+
+        }  else {
+          e.currentTarget.classList.add("toggled");
+          textname.setAttribute("class", "editable");
+          textname.setAttribute("contenteditable", "true");
         }
         // textname.setAttribute("class", "editable");
         // textname.setAttribute("contenteditable", "true");
       })
+
 
 
 
