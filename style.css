@@ -350,7 +350,10 @@ entry p {
     text-align: center;
   }
 
-  header { height: 25%;}
+  header {
+    height: inherit;
+    padding: 0 0 25px 0;
+  }
 
   .theplayer {
     padding: 1.05em;
@@ -374,7 +377,8 @@ entry p {
 
   .submit {
     font-size: 1.5em;
-    width: 50%;
+    width: inherit;
     height: 10%;
+    padding: 0 15px;
   }
 }

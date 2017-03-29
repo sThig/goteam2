@@ -32,6 +32,7 @@ function myClickFunc(e) {
 
     editthis.innerHTML = "Edit";
     editthis.setAttribute("class", "pushRight");
+
     editthis.id = "edit";
 
     eraseit.innerHTML = "X";
@@ -52,36 +53,36 @@ function myClickFunc(e) {
     document.getElementById("load").appendChild(x);
     document.getElementById('bind').value= "";
 
-
-
-
-
-
-    function toggleClass(){
-      }
-
       editthis.addEventListener('click', function (e) {
+        // function inputKeyUp() {
+        //   if(e.keyCode == 13) {
+        //     textname.setAttribute("contenteditable", "false");
+        //   }
+        // }
         if (e.currentTarget.classList.contains("toggled")) {
           e.currentTarget.classList.remove("toggled");
           textname.setAttribute("class", "");
           textname.contenteditable = false;
+          textname.setAttribute("contenteditable", "false");
           // textname.contenteditable = true;
 
-        }  else {
+        } else {
+          textname.setAttribute("onkeyup", "inputKeyUp(e)")
           e.currentTarget.classList.add("toggled");
           textname.setAttribute("class", "editable");
           textname.setAttribute("contenteditable", "true");
-        }
-        // textname.setAttribute("class", "editable");
-        // textname.setAttribute("contenteditable", "true");
-      })
+        //   if (e.keyCode == 13)  {
+        //     textname.setAttribute("contenteditable", "false");
+        // }
+      }
+    })
 
 
 
 
 
 
-    const toggleEdit = document.querySelector('#editName') // Using a class instead, see note below.
+    const toggleEdit = document.querySelector('#editName')
     toggleEdit.classList.toggle('hidden-phone');
 
 
@@ -152,9 +153,11 @@ function reload() {
   const myArray = map(listItems, getText);
 
   document.getElementById('bind').onkeydown = function(e) {
+
     if (e.keyCode == 13) {
       myClickFunc();
       setTimeout(() => {
+
         document.getElementById("go").className = "submit";
 
       }, 800);

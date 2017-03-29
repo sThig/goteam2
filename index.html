@@ -9,36 +9,38 @@
 <body>
     <container id="form">
         <header>
-          <div class="headitem1">
+            <div class="headitem1">
 
-          <h1>SPORTS!</h1>
-          <p>GO TEAM GO</p>
-        </div>
-          <div class="ball"></div>
-          <div class="headitem2">
-            <p>Do the thing, make the point!</p>
-          </div>
+                <h1>SPORTS!</h1>
+                <p>GO TEAM GO</p>
+            </div>
+            <div class="ball"></div>
+            <div class="headitem2">
+                <p>Do the thing, make the point!</p>
+            </div>
         </header>
         <entry id="pre">
             <h3>Create your team</h3>
             <p>
-              Enter in the players into the box below, create as many as you want and hit submit and watch the magic happen!
+                Enter in the players into the box below, create as many as you want and hit submit and watch the magic happen!
             </p>
-            <input type="text" class="theplayer pre" name="Player" id="bind" value="Enter Names" onclick='javascript: this.value = ""'/>
-            <button type="button" id="thego" class="pre enterteam" value="Go">Go</button><br />
-            <ul id="load"></ul>
-            <div id="maketeam" class="maketeam">
-              <button type="button" id="go" class="hide" value="Press For Team">Press For Team</button><br />
-            </div>
+            <!-- <form> -->
+                <input type="text" class="theplayer pre" name="Player" id="bind" value="Enter Names" onclick='javascript: this.value = ""' />
+                <button type="button" id="thego" class="pre enterteam" value="Go">Go</button><br />
+                <ul id="load"></ul>
+                <div id="maketeam" class="maketeam">
+                    <button type="submit" id="go" class="hide" value="Press For Team">Press For Team</button><br />
+                </div>
+            <!-- </form> -->
         </entry>
         <result id="result">
             <h3 id="captain" class="captain"></h3>
             <h3 id="cocaptain" class="cocaptain"></h3>
             <br />
             <h3 class="theteamresult" style="text-align: center;">The Team</h2>
-            <hr class="teamline"/>
-            <ul class="teammateys" id="teammateys"></ul>
-        </result>
+              <hr class="teamline"/>
+              <ul class="teammateys" id="teammateys"></ul>
+            </result>
         <footer>
           <hr />
           <p>
