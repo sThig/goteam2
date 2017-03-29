@@ -42,6 +42,10 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
 
           console.log(toSlug('JS Cheerleader')); // 'js-cheerleader'
           ```
+  * fix this
+
+# March 28
+Frustrated AF
 
 # March 23 update
 I'm rolling down on a few extra things before finessing a few things.  There are a few big ticket issues and smaller ones.
