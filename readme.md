@@ -12,7 +12,7 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * fix spacing (✅)
   * animated gif for the sports ball (✅)
   * space sports title out (✅)
-  * update footer (💹)
+  * update footer (✅)
   * add remove button on name (✅)
   * responsiveness is incorrect on Android phone (✅)
   * buttons on iOS are weird AF, but only on the front page.  The second page they are fine. (✅)

@@ -142,7 +142,7 @@ container {
     justify-content: center;
     /*flex-direction: column;*/
     flex-wrap: wrap;
-    width: 50%;
+    width: 500px;
     /*height: 40%;*/
     margin-left: auto;
     margin-right: auto;
@@ -154,10 +154,12 @@ header {
     align-items: center;
     color: white;
     background: #78DE92;
-    height: 191px;
+    height: 183px;
     flex-basis: 100%;
     padding-top: 10px;
     margin-top: 25px;
+    background-image: url(bg.svg);
+    background-repeat:no-repeat;
 }
 
 header h1 {
@@ -352,7 +354,9 @@ entry p {
 
   header {
     height: inherit;
-    padding: 0 0 25px 0;
+    padding: 0 0 83px 0;
+    background-image: url(bg.svg);
+    background-size: 100% 100%;
   }
 
   .theplayer {
