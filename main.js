@@ -2,9 +2,10 @@
 
 
 function myClickFunc(e) {
-  if (document.getElementById("bind").value == ("" || 'Enter Names'))
+  if (document.getElementById("bind").value == (" " || 'Enter Names'))
    {
        alert("Please enter a name");
+       return false;
    }
   else
    {
@@ -53,12 +54,16 @@ function myClickFunc(e) {
     document.getElementById("load").appendChild(x);
     document.getElementById('bind').value= "";
 
+    textname.addEventListener("keypress", function(event) {
+      if (event.keyCode == 13) {
+        event.preventDefault();
+        textname.setAttribute("contenteditable", "false");
+        textname.setAttribute("class", "");
+      }
+    });
+
       editthis.addEventListener('click', function (e) {
-        // function inputKeyUp() {
-        //   if(e.keyCode == 13) {
-        //     textname.setAttribute("contenteditable", "false");
-        //   }
-        // }
+
         if (e.currentTarget.classList.contains("toggled")) {
           e.currentTarget.classList.remove("toggled");
           textname.setAttribute("class", "");
@@ -67,13 +72,11 @@ function myClickFunc(e) {
           // textname.contenteditable = true;
 
         } else {
-          textname.setAttribute("onkeyup", "inputKeyUp(e)")
+          // textname.setAttribute("onkeyup", "inputKeyUp(e)")
+
           e.currentTarget.classList.add("toggled");
           textname.setAttribute("class", "editable");
           textname.setAttribute("contenteditable", "true");
-        //   if (e.keyCode == 13)  {
-        //     textname.setAttribute("contenteditable", "false");
-        // }
       }
     })
 
