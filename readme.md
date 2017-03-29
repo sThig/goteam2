@@ -33,6 +33,8 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * prevent user from entering in an empty value on <li> (✅)
   * fix errors that say "delete" on the results (✅)
   * remove edit on second page (✅)
+  * If full name, put space in and interject a funny nickname
+  * One name, keep as is
   * somehow get this to share stats on social media
   * add edit button on name
   * draw background for header (the sports field)
