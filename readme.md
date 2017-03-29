@@ -4,6 +4,7 @@ Working link (in progress) can be found [here](https://sthig.github.io/goteam2/)
 This is a Js/UI/UX project where I'm going to have it to enter in several names and it creates a team with a captain and co-captain (chosen at random).  Also a randomly generated team name will be added as well (for added humor and to keep the user engaged).
 
 ### Immediate Todo:
+
   * Fix flexbox centering in css (✅)
   * Make style sheet in Sketch
   * have make-team button fade in (✅)
@@ -28,20 +29,6 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * fit togggled class
   * entering in blank fields
   * extra click on edit function
-  * Capitalize the first letter of name with this way:
-  ```  
-  const toSlug = input => encodeURIComponent(
-    join('-')(
-      map(toLowerCase)(
-        split(' ')(
-          input
-          )
-          )
-          )
-          );
-
-          console.log(toSlug('JS Cheerleader')); // 'js-cheerleader'
-          ```
   * fix this
 
 # March 28
