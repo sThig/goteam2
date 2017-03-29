@@ -22,22 +22,24 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * Make style sheet in Sketch
   * have make-team button fade in (✅)
   * highlight the `<li>` button in full green (✅)
-  * fix spacing
+  * fix spacing (✅)
   * animated gif for the sports ball (✅)
   * space sports title out (✅)
   * update footer (💹)
-  * make copy paragraph funnier and more concise (enlist Kate on that)
-  * add edit button on name
   * add remove button on name (✅)
-  * draw background for header (the sports field)
-  * somehow get this to share stats on social media
   * responsiveness is incorrect on Android phone (✅)
   * buttons on iOS are weird AF, but only on the front page.  The second page they are fine. (✅)
   * fix errors of undefined (💹)
   * prevent user from entering in an empty value on <li> (✅)
   * fix errors that say "delete" on the results (✅)
   * remove edit on second page (✅)
-  * fit togggled class 
+  * somehow get this to share stats on social media
+  * add edit button on name
+  * draw background for header (the sports field)
+  * make copy paragraph funnier and more concise (enlist Kate on that)
+  * fit togggled class
+  * entering in blank fields
+  * extra click on edit function
 
 # March 23 update
 I'm rolling down on a few extra things before finessing a few things.  There are a few big ticket issues and smaller ones.
