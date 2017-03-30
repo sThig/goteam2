@@ -5,7 +5,6 @@ function myClickFunc(e) {
   if (document.getElementById("bind").value == (" " || 'Enter Names'))
    {
        alert("Please enter a name");
-       return false;
    }
   else
    {
