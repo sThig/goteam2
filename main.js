@@ -2,12 +2,12 @@
 
 
 function myClickFunc(e) {
-  if (document.getElementById("bind").value == (" " || 'Enter Names'))
-   {
-       alert("Please enter a name");
-   }
-  else
-   {
+  // when thego is clicked, check to see if bind is empty
+  // alert that it's empty
+   if (document.getElementById("bind").value == "") {
+        alert("Please enter a name");
+        return false;
+  } else {
     const input = document.getElementById("bind");
     const mapObj = {
       bryan:("\uD83D\uDCA9"),
