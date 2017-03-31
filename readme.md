@@ -20,16 +20,18 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * prevent user from entering in an empty value on <li> (✅)
   * fix errors that say "delete" on the results (✅)
   * remove edit on second page (✅)
+  * add edit button on name (✅)
+  * draw background for header (the sports field) (✅)
+  * entering in blank fields (✅)
+  * reverse what you have, enter things into array then into html, not visa versa
+  * make copy paragraph funnier and more concise (enlist Kate on that)
   * If full name, put space in and interject a funny nickname
   * One name, keep as is
   * somehow get this to share stats on social media
-  * add edit button on name
-  * draw background for header (the sports field)
-  * make copy paragraph funnier and more concise (enlist Kate on that)
-  * fit togggled class
-  * entering in blank fields
   * extra click on edit function
-  * fix this
+
+# March 31
+Made a lot of progress on this and mostly due to memory (also there was one part on the preventDefault that it just magically worked.  I don't know why and still am confused by that).  The project is nearing completion and I honestly can't wait to style it and get v1 out.  
 
 # March 28
 Frustrated AF

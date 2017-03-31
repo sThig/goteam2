@@ -72,10 +72,10 @@ function myClickFunc(e) {
 
         } else {
           // textname.setAttribute("onkeyup", "inputKeyUp(e)")
-
           e.currentTarget.classList.add("toggled");
           textname.setAttribute("class", "editable");
           textname.setAttribute("contenteditable", "true");
+          document.getElementById('editName').focus();
       }
     })
 
@@ -178,12 +178,18 @@ function reload() {
       const inputs = document.querySelectorAll(".player")
       let listItems = Array.from(inputs).map(input => input.innerHTML)
       shuffle(listItems);
+
       const [captain, id, ...teammates] = listItems;
       const elem = document.getElementById("pre");
       const d = document.getElementById("result");
       d.className += "see";
       let namedteam = generateName();
       elem.className = 'hide';
+
+      // const cappy = captainlistItem[0].innerText;
+      // const pirate = cappy.split();
+      // console.log();
+
       document.getElementById('captain').innerHTML += (`<h1 style="text-align: center;">Team ${namedteam}!</h1>`);
       document.getElementById('captain').innerHTML += (`<p class="congrats">Congrats! You're <b style="color: black;">${namedteam}</b> possibly one of the top teams in the NHFL Basketball league around most of the world. Here is your captain, co-captain and teammates.  Now go do the thing, win the touchdown and sink the goals!</p>`);
       document.getElementById('captain').innerHTML += (`<h2 class="thecaptain" style="text-align: center;">\u2B50 ${captain} is the captain! \u2B50</h2>`);
