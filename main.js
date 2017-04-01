@@ -1,4 +1,13 @@
 
+function myArr() {
+  let namesOfPlayers = [];
+   let input = document.getElementById("bind");
+   let button = input.nextElementSibling;
+   button.addEventListener("click", function() {
+     namesOfPlayers.push(input.value);
+     console.log(namesOfPlayers);
+   });
+}
 //When Clicked, value is placed into a list
 
 function myClickFunc(e) {
