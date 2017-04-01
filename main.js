@@ -1,16 +1,9 @@
+//
 
-function myArr() {
-  let namesOfPlayers = [];
-   let input = document.getElementById("bind");
-   let button = input.nextElementSibling;
-   button.addEventListener("click", function() {
-     namesOfPlayers.push(input.value);
-     console.log(namesOfPlayers);
-   });
-}
 //When Clicked, value is placed into a list
 
 function myClickFunc(e) {
+
   // when thego is clicked, check to see if bind is empty
   // alert that it's empty
    if (document.getElementById("bind").value == "") {
@@ -33,10 +26,8 @@ function myClickFunc(e) {
     input.value = input.value.toLowerCase().replace(/bryan|ethan|emma|melissa|kate|matt|kevin|chris|andrew/gi, function(matched){
       return mapObj[matched];
     });
-    const currentValue = document.getElementById("bind").value;
-    let namesOfPlayers = [];
-    namesOfPlayers.push(currentValue);
-    console.log('namesOfPlayers', namesOfPlayers);
+    let currentValue = document.getElementById("bind").value;
+
 
     const eraseit = document.createElement('span');
     const textname = document.createElement('span');
@@ -54,6 +45,7 @@ function myClickFunc(e) {
     textname.id = "editName";
     const x = document.createElement("LI");
     const t = document.createTextNode(currentValue);
+
     textname.appendChild(t);
 
     x.appendChild(eraseit);
@@ -96,6 +88,15 @@ function myClickFunc(e) {
   });
  }
 }
+
+function myArr() {
+  let namesOfPlayers = [];
+  let input = document.getElementById("bind").addEventListener('click', function(){
+      namesOfPlayers.push(input.value);
+});
+console.log('namesOfPlayers', namesOfPlayers);
+}
+
 
 
 function map(arrayLike, fn) {
@@ -152,11 +153,11 @@ function reload() {
 
   gobutton[window.addEventListener ? 'addEventListener' : 'attachEvent']( window.addEventListener ? 'click' : 'onclick', myClickFunc, false);
   const myArray = map(listItems, getText);
-
   document.getElementById('bind').onkeydown = function(e) {
 
     if (e.keyCode == 13) {
       myClickFunc();
+      myArr();
       setTimeout(() => {
 
         document.getElementById("go").className = "submit";
@@ -179,6 +180,7 @@ function reload() {
       shuffle(listItems);
 
       const [captain, id, ...teammates] = listItems;
+
       const elem = document.getElementById("pre");
       const d = document.getElementById("result");
       d.className += "see";

@@ -1,0 +1,26 @@
+<html lang='eng'>
+
+<head>
+    <title>ARRAY TEST</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Slabo+27px" rel="stylesheet">
+</head>
+
+<body>
+<input type="text"
+       class="theplayer pre"
+       name="Player"
+       id="bind"
+       placeholder="Enter Names" />
+<input type="button" value="click" />
+<script>
+  let namesOfPlayers = [];
+  let input = document.getElementById("bind");
+  let button = input.nextElementSibling;
+  button.addEventListener("click", function() {
+    namesOfPlayers.push(input.value);
+    console.log(namesOfPlayers);
+  });
+</script>
+</body>
+</html>
