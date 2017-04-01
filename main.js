@@ -1,5 +1,5 @@
-// button is greyed out until text is entered
 
+//When Clicked, value is placed into a list
 
 function myClickFunc(e) {
   // when thego is clicked, check to see if bind is empty
@@ -32,7 +32,6 @@ function myClickFunc(e) {
 
     editthis.innerHTML = "Edit";
     editthis.setAttribute("class", "pushRight");
-
     editthis.id = "edit";
 
     eraseit.innerHTML = "X";
@@ -41,7 +40,6 @@ function myClickFunc(e) {
 
     textname.setAttribute("contenteditable", "false");
     textname.id = "editName";
-
     const x = document.createElement("LI");
     const t = document.createTextNode(currentValue);
     textname.appendChild(t);
@@ -52,7 +50,6 @@ function myClickFunc(e) {
     x.appendChild(textname);
     document.getElementById("load").appendChild(x);
     document.getElementById('bind').value= "";
-
     textname.addEventListener("keypress", function(event) {
       if (event.keyCode == 13) {
         event.preventDefault();
@@ -79,14 +76,8 @@ function myClickFunc(e) {
       }
     })
 
-
-
-
-
-
     const toggleEdit = document.querySelector('#editName')
     toggleEdit.classList.toggle('hidden-phone');
-
 
     eraseit.addEventListener('click', function () {
       this.parentNode.remove(x);
@@ -124,9 +115,6 @@ function reload() {
     location.reload();
 }
 
-
-
-
   function capFirst(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
   }
@@ -142,7 +130,6 @@ function reload() {
 
     var name = capFirst(name1[getRandomInt(0, name1.length + 1)]) + ' ' + capFirst(name2[getRandomInt(0, name2.length + 1)]);
     return name;
-
   }
 
   const formreset = document.getElementById('result')
@@ -186,9 +173,6 @@ function reload() {
       let namedteam = generateName();
       elem.className = 'hide';
 
-      // const cappy = captainlistItem[0].innerText;
-      // const pirate = cappy.split();
-      // console.log();
 
       document.getElementById('captain').innerHTML += (`<h1 style="text-align: center;">Team ${namedteam}!</h1>`);
       document.getElementById('captain').innerHTML += (`<p class="congrats">Congrats! You're <b style="color: black;">${namedteam}</b> possibly one of the top teams in the NHFL Basketball league around most of the world. Here is your captain, co-captain and teammates.  Now go do the thing, win the touchdown and sink the goals!</p>`);
