@@ -24,8 +24,11 @@ function myClickFunc(e) {
     input.value = input.value.toLowerCase().replace(/bryan|ethan|emma|melissa|kate|matt|kevin|chris|andrew/gi, function(matched){
       return mapObj[matched];
     });
-
     const currentValue = document.getElementById("bind").value;
+    let namesOfPlayers = [];
+    namesOfPlayers.push(currentValue);
+    console.log('namesOfPlayers', namesOfPlayers);
+
     const eraseit = document.createElement('span');
     const textname = document.createElement('span');
     const editthis = document.createElement('span');
