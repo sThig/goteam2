@@ -26,19 +26,28 @@ function myClickFunc(e) {
     input.value = input.value.toLowerCase().replace(/bryan|ethan|emma|melissa|kate|matt|kevin|chris|andrew/gi, function(matched){
       return mapObj[matched];
     });
-    let arraylike = []
-    let currentValue = document.getElementById("bind").value;
-    let throwIn = currentValue;
-    function run() {
-    arraylike.push(throwIn);
-    console.log(arraylike);
-    console.log('currentValue', inputt);
-  }
+  //   let arraylike = []
+  //   let throwIn = currentValue;
+  //   function run() {
+  //   arraylike.push(throwIn);
+  //   console.log(arraylike);
+  //   console.log('currentValue', inputt);
+  // }
+  //
+  // run()
+  let namesOfPlayers = [];
+  let currentValue = document.getElementById("bind").value;
+  // console.log('currentValue', currentValue);
+  let button = currentValue.nextElementSibling;
+  document.addEventListener('click', function (e) {
+    namesOfPlayers.push(currentValue);
+    console.log('namesOfPlayers', namesOfPlayers);
 
-  run()
-
-
-
+  });
+  // button.addEventListener("click", function() {
+  //   namesOfPlayers.push(currentValue.value);
+  //   console.log(namesOfPlayers);
+  // });
 
     const eraseit = document.createElement('span');
     const textname = document.createElement('span');
