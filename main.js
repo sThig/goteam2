@@ -1,11 +1,5 @@
-//
-
-//When Clicked, value is placed into a list
-
 function myClickFunc(e) {
 
-  // when thego is clicked, check to see if bind is empty
-  // alert that it's empty
    if (document.getElementById("bind").value == "") {
         alert("Please enter a name");
         return false;
