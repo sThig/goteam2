@@ -27,17 +27,8 @@ function myClickFunc(e) {
       return mapObj[matched];
     });
 
-  let namesOfPlayers = [];
-  let currentValue = document.getElementById("bind").value;
-  let button = currentValue.nextElementSibling;
-  button.addEventListener('keypress', function (e) {
-    const key = e.which || e.keyCode;
-    if (key === 13) {
-    namesOfPlayers.push(currentValue);
-    console.log('namesOfPlayers', namesOfPlayers);
-  }
-  });
 
+  let currentValue = document.getElementById("bind").value;
 
     const eraseit = document.createElement('span');
     const textname = document.createElement('span');
@@ -55,9 +46,7 @@ function myClickFunc(e) {
     textname.id = "editName";
     const x = document.createElement("LI");
     const t = document.createTextNode(currentValue);
-    // let arrayish = [];
-    // arrayish.unshift(currentValue);
-    // console.log('arrayish', arrayish);
+
     textname.appendChild(t);
     x.appendChild(eraseit);
     x.className = 'player'
@@ -80,10 +69,10 @@ function myClickFunc(e) {
           textname.setAttribute("class", "");
           textname.contenteditable = false;
           textname.setAttribute("contenteditable", "false");
-          // textname.contenteditable = true;
+
 
         } else {
-          // textname.setAttribute("onkeyup", "inputKeyUp(e)")
+
           e.currentTarget.classList.add("toggled");
           textname.setAttribute("class", "editable");
           textname.setAttribute("contenteditable", "true");
@@ -99,16 +88,6 @@ function myClickFunc(e) {
   });
  }
 }
-
-// function myArr() {
-//   let namesOfPlayers = [];
-//   let input = document.getElementById("bind").addEventListener('click', function(){
-//       namesOfPlayers.push(input.value);
-// });
-// console.log('namesOfPlayers', namesOfPlayers);
-// }
-
-
 
 function map(arrayLike, fn) {
   var ret = [],
