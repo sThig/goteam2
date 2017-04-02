@@ -26,7 +26,18 @@ function myClickFunc(e) {
     input.value = input.value.toLowerCase().replace(/bryan|ethan|emma|melissa|kate|matt|kevin|chris|andrew/gi, function(matched){
       return mapObj[matched];
     });
+    let arraylike = []
     let currentValue = document.getElementById("bind").value;
+    let throwIn = currentValue;
+    function run() {
+    arraylike.push(throwIn);
+    console.log(arraylike);
+    console.log('currentValue', inputt);
+  }
+
+  run()
+
+
 
 
     const eraseit = document.createElement('span');
@@ -45,9 +56,10 @@ function myClickFunc(e) {
     textname.id = "editName";
     const x = document.createElement("LI");
     const t = document.createTextNode(currentValue);
-
+    // let arrayish = [];
+    // arrayish.unshift(currentValue);
+    // console.log('arrayish', arrayish);
     textname.appendChild(t);
-
     x.appendChild(eraseit);
     x.className = 'player'
     x.appendChild(editthis);
@@ -89,13 +101,13 @@ function myClickFunc(e) {
  }
 }
 
-function myArr() {
-  let namesOfPlayers = [];
-  let input = document.getElementById("bind").addEventListener('click', function(){
-      namesOfPlayers.push(input.value);
-});
-console.log('namesOfPlayers', namesOfPlayers);
-}
+// function myArr() {
+//   let namesOfPlayers = [];
+//   let input = document.getElementById("bind").addEventListener('click', function(){
+//       namesOfPlayers.push(input.value);
+// });
+// console.log('namesOfPlayers', namesOfPlayers);
+// }
 
 
 
@@ -157,7 +169,7 @@ function reload() {
 
     if (e.keyCode == 13) {
       myClickFunc();
-      myArr();
+      // myArr();
       setTimeout(() => {
 
         document.getElementById("go").className = "submit";
