@@ -7,20 +7,55 @@
 </head>
 
 <body>
-<input type="text"
-       class="theplayer pre"
-       name="Player"
-       id="bind"
-       placeholder="Enter Names" />
-<input type="button" value="click" />
-<script>
-  let namesOfPlayers = [];
-  let input = document.getElementById("bind");
-  let button = input.nextElementSibling;
-  button.addEventListener("click", function() {
-    namesOfPlayers.push(input.value);
-    console.log(namesOfPlayers);
-  });
-</script>
+    <container id="form">
+        <header>
+            <div class="headitem1">
+
+                <h1>SPORTS!</h1>
+                <p>GO TEAM GO</p>
+            </div>
+            <div class="ball"></div>
+            <div class="headitem2">
+                <p>Do the thing, make the point!</p>
+            </div>
+        </header>
+        <entry id="pre">
+            <h3>Create your team</h3>
+            <p>
+                Enter in the players into the box below, create as many as you want and hit submit and watch the magic happen!
+            </p>
+            <form>
+              <input type="text"
+                     class="theplayer pre"
+                     name="Player"
+                     id="bind"
+                     placeholder="Enter Names" />
+            <button type="button" id="thego" class="pre enterteam" value="click">Go</button>
+                <br />
+                <ul id="load"></ul>
+                <div id="maketeam" class="maketeam">
+                    <button type="submit" id="go" class="hide" value="Press For Team">Press For Team</button><br />
+                </div>
+              </form>
+        </entry>
+        <result id="result">
+            <h3 id="captain" class="captain"></h3>
+            <h3 id="cocaptain" class="cocaptain"></h3>
+            <br />
+            <h3 class="theteamresult" style="text-align: center;">The Team</h2>
+              <hr class="teamline"/>
+              <ul class="teammateys" id="teammateys"></ul>
+            </result>
+        <footer>
+          <hr />
+          <p>
+          <span><a href="https://github.com/sThig/goteam2" alt="git hub project"><img class="imgshrink" alt="git hub project" src="git.svg" /></a></span>
+          | By Scott Thigpen
+          </p>
+        </footer>
+    </container>
+
+    <script src="test.js"></script>
 </body>
+
 </html>

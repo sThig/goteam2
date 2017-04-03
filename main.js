@@ -39,7 +39,7 @@ function myClickFunc(e) {
     textname.setAttribute("contenteditable", "false");
     textname.id = "editName";
     const x = document.createElement("LI");
-    const t = document.createTextNode(currentValue);
+    const t = buildPlayerName(currentValue)
 
     textname.appendChild(t);
     x.appendChild(eraseit);
@@ -83,6 +83,22 @@ function myClickFunc(e) {
  }
 }
 
+// If 2 words return a middle nickname
+// function buildPlayerName(fullName) {
+//   let words = fullName.split(' ');
+//   if (words.length != 2) return document.createTextNode(fullName);
+//
+//   words = words.splice(1, 0, pickNickname())
+//   return document.createTextNode(words.join(' '));
+// }
+//
+// function pickNickname() {
+//   const nickNames = ['one', 'two']
+//
+//   return nickNames[Math.floor(Math.random() * nickNames.length)];
+// }
+
+// write better code here
 function map(arrayLike, fn) {
   var ret = [],
   i = -1,
