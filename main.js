@@ -66,12 +66,11 @@ function editSwitcher() {
 function nameManipulator() {
   const input = document.getElementById("bind");
   const mapObj = {
-    bryan:("\uD83D\uDCA9"),
     ethan:("Ethan Gamer Nerd Cleveland"),
     andrew:("Bromera"),
     };
 
-  input.value = input.value.toLowerCase().replace(/bryan|ethan|andrew/gi, function(matched){
+  input.value = input.value.toLowerCase().replace(/ethan|andrew/gi, function(matched){
     return mapObj[matched];
   });
 }
