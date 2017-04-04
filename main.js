@@ -10,8 +10,8 @@ function myClickFunc(e) {
     const editButton = addEdit();
     let currentValue = document.getElementById("bind").value;
     const switchEdit = editSwitcher();
-
     const t = buildPlayerName(currentValue)
+
     switchEdit.appendChild(t);
 
     const x = document.createElement("LI");
@@ -62,7 +62,7 @@ function editSwitcher() {
   return textname;
 }
 
-// Easter Egg, name manipulation
+// Easter Egg, name manipulation - change function name to "manipulate Player Name"
 function nameManipulator() {
   const input = document.getElementById("bind");
   const mapObj = {
@@ -102,20 +102,12 @@ function addDelete() {
 
 // If 2 words return a middle nickname
 function buildPlayerName(fullName) {
-  let words = fullName.split(' ');
+  const words = fullName.split(' ');
   if (words.length != 2) return document.createTextNode(fullName);
 
-  words = words.splice(1, 0, pickNickname());
+  words.splice(1, 0, generateName());
   return document.createTextNode(words.join(' '));
 }
-
-
-// Have Justin Help here!
-function pickNickname() {
-  let  nickNames = ['one', 'two'];
-  return nickNames[Math.floor(Math.random() * nickNames.length)];
-}
-
 
 // Shuffles
 function map(arrayLike, fn) {
