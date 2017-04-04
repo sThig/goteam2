@@ -128,7 +128,7 @@ function reload() {
 
 //Create Nick Name
 function generateMiddleNickname() {
-  const adjective = ["Angry", "Spunky", "Crabby", "Breaded", "Fat", "Fun", "Wobble", "Jiggle", "Greedy", "Naked", "Zippy", "Home", "Flabby", "Drunken", "Snuggle", "Twisted", "Loose", "Feckless", "Stanky", "Double", "Deep-Fried", "Limpid", "Mordant", "Tenacious"];
+  const adjective = ["Angry", "Spunky", "Meaty", "Meat", "Crabby", "Chocolate", "Fat", "Fun", "Wobble", "Jiggle", "Greedy", "Naked", "Zippy", "Home", "Flabby", "Drunken", "Snuggle", "Twisted", "Loose", "Fuzzy", "Stanky", "Double", "Leggy", "Fried", "Triple", "Tenacious"];
   const noun = ["Donkey", "Patties", "Monkey", "Crab", "Dawg", "Cat", "Whoppers", "Cow", "Whale", "Muscles", "Ankles", "Bubbles", "Hammer", "Chick", "Leg", "Wheels", "Pants", "Nylon", "Lube", "Timbers", "Fuzz", "Chin", "Belly"];
   var nickname = '\"' + capFirst(adjective[getRandomInt(0, adjective.length + 1)]) + ' ' + capFirst(noun[getRandomInt(0, noun.length + 1)] + '\"');
   return nickname;
