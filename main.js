@@ -1,75 +1,46 @@
-function myClickFunc(e) {
+//Create the <li>
 
-   if (document.getElementById("bind").value == "") {
+function myClickFunc(e) {
+  if (document.getElementById("bind").value == "") {
         alert("Please enter a name");
         return false;
   } else {
-    const input = document.getElementById("bind");
-    const mapObj = {
-      bryan:("\uD83D\uDCA9"),
-      ethan:("Ethan Gamer Nerd Cleveland"),
-      emma:("Pork Fatty Britches"),
-      melissa:("Melissa... or Satan"),
-      kate:("Kate Hot Cleveland"),
-      matt:("Matt Jaeh, most awesome boss in the world!"),
-      kevin:("OMG Kevin go away, no one asked you"),
-      chris:("/r/onesneakymofo"),
-      andrew:("Bromera"),
-    };
+    nameManipulator();
+    const deleteButton = addDelete();
+    const editButton = addEdit();
+    let currentValue = document.getElementById("bind").value;
+    const switchEdit = editSwitcher();
 
-    input.value = input.value.toLowerCase().replace(/bryan|ethan|emma|melissa|kate|matt|kevin|chris|andrew/gi, function(matched){
-      return mapObj[matched];
-    });
-
-
-  let currentValue = document.getElementById("bind").value;
-
-    const eraseit = document.createElement('span');
-    const textname = document.createElement('span');
-    const editthis = document.createElement('span');
-
-    editthis.innerHTML = "Edit";
-    editthis.setAttribute("class", "pushRight");
-    editthis.id = "edit";
-
-    eraseit.innerHTML = "X";
-    eraseit.setAttribute("class", "pushRight");
-    eraseit.id = "goAway"
-
-    textname.setAttribute("contenteditable", "false");
-    textname.id = "editName";
-    const x = document.createElement("LI");
     const t = buildPlayerName(currentValue)
+    switchEdit.appendChild(t);
 
-    textname.appendChild(t);
-    x.appendChild(eraseit);
+    const x = document.createElement("LI");
+    x.appendChild(deleteButton);
     x.className = 'player'
-    x.appendChild(editthis);
-    x.appendChild(textname);
+    x.appendChild(editButton);
+    x.appendChild(switchEdit);
     document.getElementById("load").appendChild(x);
     document.getElementById('bind').value= "";
-    textname.addEventListener("keypress", function(event) {
+
+    switchEdit.addEventListener("keypress", function(event) {
       if (event.keyCode == 13) {
-        event.preventDefault();
-        textname.setAttribute("contenteditable", "false");
-        textname.setAttribute("class", "");
+          event.preventDefault();
+          switchEdit.setAttribute("contenteditable", "false");
+          switchEdit.setAttribute("class", "");
       }
     });
 
-      editthis.addEventListener('click', function (e) {
-
-        if (e.currentTarget.classList.contains("toggled")) {
+    editButton.addEventListener('click', function (e) {
+      if (e.currentTarget.classList.contains("toggled")) {
           e.currentTarget.classList.remove("toggled");
-          textname.setAttribute("class", "");
-          textname.contenteditable = false;
-          textname.setAttribute("contenteditable", "false");
-
+          switchEdit.setAttribute("class", "");
+          switchEdit.contenteditable = false;
+          switchEdit.setAttribute("contenteditable", "false");
 
         } else {
-
           e.currentTarget.classList.add("toggled");
-          textname.setAttribute("class", "editable");
-          textname.setAttribute("contenteditable", "true");
+          switchEdit.setAttribute("class", "editable");
+          switchEdit.setAttribute("contenteditable", "true");
           document.getElementById('editName').focus();
       }
     })
@@ -77,28 +48,76 @@ function myClickFunc(e) {
     const toggleEdit = document.querySelector('#editName')
     toggleEdit.classList.toggle('hidden-phone');
 
-    eraseit.addEventListener('click', function () {
+    deleteButton.addEventListener('click', function () {
       this.parentNode.remove(x);
   });
  }
 }
 
-// If 2 words return a middle nickname
-// function buildPlayerName(fullName) {
-//   let words = fullName.split(' ');
-//   if (words.length != 2) return document.createTextNode(fullName);
-//
-//   words = words.splice(1, 0, pickNickname())
-//   return document.createTextNode(words.join(' '));
-// }
-//
-// function pickNickname() {
-//   const nickNames = ['one', 'two']
-//
-//   return nickNames[Math.floor(Math.random() * nickNames.length)];
-// }
+// toggle edit switch
+function editSwitcher() {
+  const textname = document.createElement('span');
+  textname.setAttribute("contenteditable", "false");
+  textname.id = "editName";
+  return textname;
+}
 
-// write better code here
+// Easter Egg, name manipulation
+function nameManipulator() {
+  const input = document.getElementById("bind");
+  const mapObj = {
+    bryan:("\uD83D\uDCA9"),
+    ethan:("Ethan Gamer Nerd Cleveland"),
+    emma:("Pork Fatty Britches"),
+    melissa:("Melissa... or Satan"),
+    kate:("Kate Hot Cleveland"),
+    matt:("Matt Jaeh, most awesome boss in the world!"),
+    kevin:("OMG Kevin go away, no one asked you"),
+    chris:("/r/onesneakymofo"),
+    andrew:("Bromera"),
+    };
+
+  input.value = input.value.toLowerCase().replace(/bryan|ethan|emma|melissa|kate|matt|kevin|chris|andrew/gi, function(matched){
+    return mapObj[matched];
+  });
+}
+
+// Add edit button
+function addEdit() {
+  const editthis = document.createElement('span');
+  editthis.innerHTML = "Edit";
+  editthis.setAttribute("class", "pushRight");
+  editthis.id = "edit";
+  return editthis;
+}
+
+// Add Delete button
+function addDelete() {
+  const eraseit = document.createElement('span');
+  eraseit.innerHTML = "X";
+  eraseit.setAttribute("class", "pushRight");
+  eraseit.id = "goAway"
+  return eraseit;
+}
+
+// If 2 words return a middle nickname
+function buildPlayerName(fullName) {
+  let words = fullName.split(' ');
+  if (words.length != 2) return document.createTextNode(fullName);
+
+  words = words.splice(1, 0, pickNickname());
+  return document.createTextNode(words.join(' '));
+}
+
+
+// Have Justin Help here!
+function pickNickname() {
+  let  nickNames = ['one', 'two'];
+  return nickNames[Math.floor(Math.random() * nickNames.length)];
+}
+
+
+// Shuffles
 function map(arrayLike, fn) {
   var ret = [],
   i = -1,
@@ -157,7 +176,6 @@ function reload() {
 
     if (e.keyCode == 13) {
       myClickFunc();
-      // myArr();
       setTimeout(() => {
 
         document.getElementById("go").className = "submit";
