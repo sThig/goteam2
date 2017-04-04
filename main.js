@@ -70,14 +70,13 @@ function nameManipulator() {
     ethan:("Ethan Gamer Nerd Cleveland"),
     emma:("Pork Fatty Britches"),
     melissa:("Melissa... or Satan"),
-    kate:("Kate Hot Cleveland"),
     matt:("Matt Jaeh, most awesome boss in the world!"),
     kevin:("OMG Kevin go away, no one asked you"),
     chris:("/r/onesneakymofo"),
     andrew:("Bromera"),
     };
 
-  input.value = input.value.toLowerCase().replace(/bryan|ethan|emma|melissa|kate|matt|kevin|chris|andrew/gi, function(matched){
+  input.value = input.value.toLowerCase().replace(/bryan|ethan|emma|melissa|matt|kevin|chris|andrew/gi, function(matched){
     return mapObj[matched];
   });
 }
