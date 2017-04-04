@@ -36,7 +36,7 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * add cursor pointer over hover of icons
   * add hover animation on icon hover (like a tilt or rotate)
 
-#April 4t update
+# April 4th update
 Been pretty frustrated at this project as it was supposed to be just a simple rest operator for ES6, I had no idea it'd spin into something like this.  I like it but jesus this is crazy.  I fix one thing and three other things pop up.
 
 # March 31
