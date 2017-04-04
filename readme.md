@@ -23,12 +23,18 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * add edit button on name (✅)
   * draw background for header (the sports field) (✅)
   * entering in blank fields (✅)
-  * reverse what you have, enter things into array then into html, not visa versa
+  * reverse what you have, enter things into array then into html, not visa versa (😥)
   * make copy paragraph funnier and more concise (enlist Kate on that)
-  * If full name, put space in and interject a funny nickname
-  * One name, keep as is
+  * If full name, put space in and interject a funny nickname (✅)
+  * One name, keep as is (✅)
+  * Make Capitalization work
   * somehow get this to share stats on social media
-  * extra click on edit function
+  * extra click on edit function (✅)
+  * fix edit focus
+  * refactor js
+
+#April 4t update
+Been pretty frustrated at this project as it was supposed to be just a simple rest operator for ES6, I had no idea it'd spin into something like this.  I like it but jesus this is crazy.  I fix one thing and three other things pop up.
 
 # March 31
 Made a lot of progress on this and mostly due to memory (also there was one part on the preventDefault that it just magically worked.  I don't know why and still am confused by that).  The project is nearing completion and I honestly can't wait to style it and get v1 out.  
