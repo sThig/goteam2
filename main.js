@@ -5,7 +5,6 @@ function myClickFunc(e) {
         alert("Please enter a name");
         return false;
   } else {
-    nameManipulator();
     const deleteButton = addDelete();
     const editButton = addEdit();
     let currentValue = document.getElementById("bind").value;
@@ -62,23 +61,10 @@ function editSwitcher() {
   return textname;
 }
 
-// Easter Egg, name manipulation - change function name to "manipulate Player Name"
-function nameManipulator() {
-  const input = document.getElementById("bind");
-  const mapObj = {
-    ethan:("Ethan Gamer Nerd Cleveland"),
-    andrew:("Bromera"),
-    };
-
-  input.value = input.value.toLowerCase().replace(/ethan|andrew/gi, function(matched){
-    return mapObj[matched];
-  });
-}
-
 // Add edit button
 function addEdit() {
   const editthis = document.createElement('span');
-  editthis.innerHTML = "Edit";
+  editthis.innerHTML = "<i class=\"fa fa-pencil color-icon\" aria-hidden=\"true\"></i>";
   editthis.setAttribute("class", "pushRight");
   editthis.id = "edit";
   return editthis;
@@ -87,7 +73,7 @@ function addEdit() {
 // Add Delete button
 function addDelete() {
   const eraseit = document.createElement('span');
-  eraseit.innerHTML = "X";
+  eraseit.innerHTML = "<i class=\"fa fa-trash color-icon\" aria-hidden=\"true\"></i>";
   eraseit.setAttribute("class", "pushRight");
   eraseit.id = "goAway"
   return eraseit;
@@ -142,8 +128,8 @@ function reload() {
 
 //Create Nick Name
 function generateMiddleNickname() {
-  const adjective = ["Angry", "Breaded", "Fat", "Wobble", "Jiggle", "Greedy", "Naked", "Zippy", "Home", "Flabby", "Drunken", "Snuggle", "Twisted", "Loose", "Feckless", "Stanky", "Deep-Fried", "Limpid", "Mordant", "Tenacious", "Turgid", "Verdant", "Wheedling"];
-  const noun = ["Donkey", "Monkey", "Dawg", "Cat", "Cow", "Whale", "Muscles", "Ankles", "Bubbles", "Hammer", "Chick", "Leg", "Wheels", "Pants", "Nylon"];
+  const adjective = ["Angry", "Spunky", "Crabby", "Breaded", "Fat", "Fun", "Wobble", "Jiggle", "Greedy", "Naked", "Zippy", "Home", "Flabby", "Drunken", "Snuggle", "Twisted", "Loose", "Feckless", "Stanky", "Double", "Deep-Fried", "Limpid", "Mordant", "Tenacious"];
+  const noun = ["Donkey", "Patties", "Monkey", "Crab", "Dawg", "Cat", "Whoppers", "Cow", "Whale", "Muscles", "Ankles", "Bubbles", "Hammer", "Chick", "Leg", "Wheels", "Pants", "Nylon", "Lube", "Timbers", "Fuzz", "Chin", "Belly"];
   var nickname = '\"' + capFirst(adjective[getRandomInt(0, adjective.length + 1)]) + ' ' + capFirst(noun[getRandomInt(0, noun.length + 1)] + '\"');
   return nickname;
 }
@@ -202,8 +188,8 @@ function generateMiddleNickname() {
 
       document.getElementById('captain').innerHTML += (`<h1 style="text-align: center;">Team ${namedteam}!</h1>`);
       document.getElementById('captain').innerHTML += (`<p class="congrats">Congrats! You're <b style="color: black;">${namedteam}</b> possibly one of the top teams in the NHFL Basketball league around most of the world. Here is your captain, co-captain and teammates.  Now go do the thing, win the touchdown and sink the goals!</p>`);
-      document.getElementById('captain').innerHTML += (`<h2 class="thecaptain" style="text-align: center;">\u2B50 ${captain} is the captain! \u2B50</h2>`);
-      document.getElementById('cocaptain').innerHTML += (`<h3 class="thecocaptain" style="text-align: center;">\u2B51 ${id} is the co-captain! \u2B51</h3>`);
+      document.getElementById('captain').innerHTML += (`<h2 class="thecaptain rainbow" style="text-align: center;">\u2B50 ${captain} \u2B50 <p class="captain-subtext">is the captain!</p></h2> `);
+      document.getElementById('cocaptain').innerHTML += (`<h3 class="thecocaptain" style="text-align: center;">\u2B51 ${id} \u2B51 <p class="captain-subtext">is the co-captain!</p></h3>`);
       teammates.forEach(function(teammates) {
         document.getElementById('teammateys').innerHTML += (`<li>${teammates}</li>`);
       });

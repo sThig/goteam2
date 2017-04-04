@@ -31,16 +31,25 @@ li:first-letter {
   margin-top: -15px;
 }
 
-.thecaptain:first-letter {
-    text-transform: uppercase;
-}
-
-.thecocaptain:first-letter {
-    text-transform: uppercase;
+.theplayer:focus {
+    outline: none !important;
+    border:1px solid #78DE92;
 }
 
 #teammateys {
   text-align: center;
+}
+
+#load li .color-icon{
+color: MintCream;
+  font-size: 20px;
+  padding-top: 3px;
+}
+
+#load li:nth-child(even) .color-icon{
+color: #78DE92;
+  font-size: 20px;
+  padding-top: 3px;
 }
 
 #load li {
@@ -62,6 +71,19 @@ li:first-letter {
    -ms-animation: fadein 0.5s; /* Internet Explorer */
     -o-animation: fadein 0.5s; /* Opera < 12.1 */
        animation: fadein 0.5s;
+}
+
+.captain-subtext {
+  color: grey;
+  margin-top: 0;
+}
+
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 ul {
