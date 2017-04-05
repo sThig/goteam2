@@ -4,28 +4,6 @@ var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = [
 
 function _toArray(arr) { return Array.isArray(arr) ? arr : Array.from(arr); }
 
-//Spread variables into myClickFunc
-function deployVariables() {
-  var deleteButton = addDelete();
-  var editButton = addEdit();
-  var currentValue = document.getElementById("bind").value;
-  var switchEdit = editSwitcher();
-  var t = buildPlayerName(currentValue);
-  switchEdit.appendChild(t);
-  return [deleteButton, editButton, currentValue, switchEdit, t];
-};
-
-//build the LI
-function buildList() {
-  var x = document.createElement("LI");
-  x.appendChild(deleteButton);
-  x.className = 'player';
-  x.appendChild(editButton);
-  x.appendChild(switchEdit);
-  document.getElementById("load").appendChild(x);
-  return [x];
-}
-
 //main function
 function myClickFunc(e) {
   if (document.getElementById("bind").value == "") {
@@ -77,6 +55,27 @@ function myClickFunc(e) {
   }
 }
 
+//Spread variables into myClickFunc
+function deployVariables() {
+  var deleteButton = addDelete();
+  var editButton = addEdit();
+  var currentValue = document.getElementById("bind").value;
+  var switchEdit = editSwitcher();
+  var t = buildPlayerName(currentValue);
+  switchEdit.appendChild(t);
+  return [deleteButton, editButton, currentValue, switchEdit, t];
+};
+
+//build the LI
+function buildList() {
+  var x = document.createElement("LI");
+  x.appendChild(deleteButton);
+  x.className = 'player';
+  x.appendChild(editButton);
+  x.appendChild(switchEdit);
+  document.getElementById("load").appendChild(x);
+  return [x];
+}
 // toggle edit switch
 function editSwitcher() {
   var textname = document.createElement('span');

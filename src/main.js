@@ -1,27 +1,3 @@
-//Spread variables into myClickFunc
-function deployVariables() {
-  const deleteButton = addDelete();
-  const editButton = addEdit();
-  let currentValue = document.getElementById("bind").value;
-  const switchEdit = editSwitcher();
-  const t = buildPlayerName(currentValue);
-  switchEdit.appendChild(t);
-  return [deleteButton, editButton, currentValue, switchEdit, t];
-};
-
-//build the LI
-function buildList() {
-  const x = document.createElement("LI");
-  x.appendChild(deleteButton);
-  x.className = 'player'
-  x.appendChild(editButton);
-  x.appendChild(switchEdit);
-  document.getElementById("load").appendChild(x);
-  return [x];
-}
-
-
-
 //main function
 function myClickFunc(e) {
   if (document.getElementById("bind").value == "") {
@@ -65,6 +41,27 @@ function myClickFunc(e) {
  }
 }
 
+//Spread variables into myClickFunc
+function deployVariables() {
+  const deleteButton = addDelete();
+  const editButton = addEdit();
+  let currentValue = document.getElementById("bind").value;
+  const switchEdit = editSwitcher();
+  const t = buildPlayerName(currentValue);
+  switchEdit.appendChild(t);
+  return [deleteButton, editButton, currentValue, switchEdit, t];
+};
+
+//build the LI
+function buildList() {
+  const x = document.createElement("LI");
+  x.appendChild(deleteButton);
+  x.className = 'player'
+  x.appendChild(editButton);
+  x.appendChild(switchEdit);
+  document.getElementById("load").appendChild(x);
+  return [x];
+}
 // toggle edit switch
 function editSwitcher() {
   const textname = document.createElement('span');
