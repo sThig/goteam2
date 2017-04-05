@@ -43,6 +43,12 @@ li:first-letter {
 
 #teammateys {
   text-align: center;
+  font-size: 0.74em;
+  margin-bottom: 1em;
+}
+
+#teammateys li {
+  margin-bottom: 7px;
 }
 
 
@@ -108,7 +114,7 @@ ul {
 }
 
 .theplayer {
-  width: 89%;
+  width: 80%;
   border-radius: 4;
   height: 50px;
   padding: 5px;

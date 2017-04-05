@@ -129,18 +129,19 @@ function shuffle(a) {
 }
 
 
-
+//Capitalize the first letter of a word
   function capFirst(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
+//Randominize Team Name
   function getRandomInt(min, max) {
       return Math.floor(Math.random() * (max - min)) + min;
   }
 
 //Create Nick Name
 function generateMiddleNickname() {
-  const adjective = ["Angry", "Spunky", "Meaty", "Meat", "Crabby", "Small", "Poop", "Pony", "baby", "Chocolate", "Fat", "Fun", "Wobble", "Jiggle", "Greedy", "Naked", "Zippy", "Home", "Flabby", "Drunken", "Snuggle", "Thunder", "Thigh", "Twisted", "Loose", "Fuzzy", "Stanky", "Double", "Leggy", "Fried", "Triple", "Tenacious"];
+  const adjective = ["Angry", "Spunky", "Meaty", "Meat", "Crabby", "Small", "Poop", "Pony", "Baby", "Chocolate", "Fat", "Fun", "Wobble", "Jiggle", "Greedy", "Naked", "Zippy", "Home", "Flabby", "Drunken", "Snuggle", "Thunder", "Thigh", "Twisted", "Loose", "Fuzzy", "Stanky", "Double", "Leggy", "Fried", "Triple", "Hump", "Tenacious"];
   const noun = ["Donkey", "Patties", "Monkey", "Crab", "Dawg", "Cat", "Whoppers", "Cow", "Pony", "Poop", "Whale", "Muscles", "Ankles", "Bubbles", "Hammer", "Chick", "Leg", "Wheels", "Pants", "Nylon", "Lube", "Timbers", "Thighs", "Fuzz", "Chin", "Belly"];
   var nickname = '\"' + capFirst(adjective[getRandomInt(0, adjective.length + 1)]) + ' ' + capFirst(noun[getRandomInt(0, noun.length + 1)] + '\"');
   return nickname;
@@ -176,7 +177,7 @@ function generateMiddleNickname() {
     }
   };
 
-
+//check to make sure at least 3 names are entered
   document.getElementById("go").addEventListener("click", function() {
     if (document.getElementById('load').getElementsByTagName('li').length <= 2)
      {
@@ -188,9 +189,7 @@ function generateMiddleNickname() {
       const inputs = document.querySelectorAll(".player")
       let listItems = Array.from(inputs).map(input => input.innerHTML)
       shuffle(listItems);
-
       const [captain, id, ...teammates] = listItems;
-
       const elem = document.getElementById("pre");
       const d = document.getElementById("result");
       d.className += "see";
@@ -205,10 +204,8 @@ function generateMiddleNickname() {
       teammates.forEach(function(teammates) {
         document.getElementById('teammateys').innerHTML += (`<li>${teammates}</li>`);
       });
-      document.getElementById("result").innerHTML += (`<div id="maketeam" class="maketeam"><button class="submit" id="resetform" onclick="reloadPage()">Reset</button></div>`);
-      function reloadPage() {
-          window.location.reload();
-      }
+      document.getElementById("result").innerHTML += (`<div id="maketeam" class="maketeam"><button class="submit" id="resetform" onClick="window.location.reload()">Reset</button></div>`);
+
       const span = document.querySelectorAll('#goAway, #edit');
       [].forEach.call(span, function(span) {
         span.className = 'hide';
