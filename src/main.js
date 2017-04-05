@@ -50,13 +50,12 @@ function deployVariables() {
 
 // main function
 function myClickFunc(e) {
-  const x = buildList(deleteButton, editButton, switchEdit);
   if (document.getElementById("bind").value == "") {
         alert("Please enter a name");
         return false;
   } else {
     const [deleteButton, editButton, currentValue, switchEdit, t] = deployVariables();
-    const x = buildList();
+    const x = buildList(deleteButton, editButton, switchEdit);
     document.getElementById('bind').value= "";
 
     switchEdit.addEventListener("keypress", function(event) {
