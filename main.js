@@ -1,30 +1,42 @@
-//Create the <li>
+//Spread variables into myClickFunc
+function deployVariables() {
+  const deleteButton = addDelete();
+  const editButton = addEdit();
+  let currentValue = document.getElementById("bind").value;
+  const switchEdit = editSwitcher();
+  const t = buildPlayerName(currentValue);
+  switchEdit.appendChild(t);
+  return [deleteButton, editButton, currentValue, switchEdit, t];
+};
 
+//build the LI
+function buildList() {
+  const x = document.createElement("LI");
+  x.appendChild(deleteButton);
+  x.className = 'player'
+  x.appendChild(editButton);
+  x.appendChild(switchEdit);
+  document.getElementById("load").appendChild(x);
+  return [x];
+}
+
+
+
+//main function
 function myClickFunc(e) {
   if (document.getElementById("bind").value == "") {
         alert("Please enter a name");
         return false;
   } else {
-    const deleteButton = addDelete();
-    const editButton = addEdit();
-    let currentValue = document.getElementById("bind").value;
-    const switchEdit = editSwitcher();
-    const t = buildPlayerName(currentValue)
-
-    switchEdit.appendChild(t);
-
-    const x = document.createElement("LI");
-    x.appendChild(deleteButton);
-    x.className = 'player'
-    x.appendChild(editButton);
-    x.appendChild(switchEdit);
-    document.getElementById("load").appendChild(x);
+    [deleteButton, editButton, currentValue, switchEdit, t] = deployVariables();
+    x = buildList();
     document.getElementById('bind').value= "";
 
     switchEdit.addEventListener("keypress", function(event) {
       if (event.keyCode == 13) {
           event.preventDefault();
           switchEdit.setAttribute("contenteditable", "false");
+          switchEdit.setAttribute("autofocus","true");
           switchEdit.setAttribute("class", "");
       }
     });
@@ -128,8 +140,8 @@ function reload() {
 
 //Create Nick Name
 function generateMiddleNickname() {
-  const adjective = ["Angry", "Spunky", "Meaty", "Meat", "Crabby", "Small", "Poop", "Pony", "Chocolate", "Fat", "Fun", "Wobble", "Jiggle", "Greedy", "Naked", "Zippy", "Home", "Flabby", "Drunken", "Snuggle", "Twisted", "Loose", "Fuzzy", "Stanky", "Double", "Leggy", "Fried", "Triple", "Tenacious"];
-  const noun = ["Donkey", "Patties", "Monkey", "Crab", "Dawg", "Cat", "Whoppers", "Cow", "Pony", "Poop", "Whale", "Muscles", "Ankles", "Bubbles", "Hammer", "Chick", "Leg", "Wheels", "Pants", "Nylon", "Lube", "Timbers", "Fuzz", "Chin", "Belly"];
+  const adjective = ["Angry", "Spunky", "Meaty", "Meat", "Crabby", "Small", "Poop", "Pony", "baby", "Chocolate", "Fat", "Fun", "Wobble", "Jiggle", "Greedy", "Naked", "Zippy", "Home", "Flabby", "Drunken", "Snuggle", "Thunder", "Thigh", "Twisted", "Loose", "Fuzzy", "Stanky", "Double", "Leggy", "Fried", "Triple", "Tenacious"];
+  const noun = ["Donkey", "Patties", "Monkey", "Crab", "Dawg", "Cat", "Whoppers", "Cow", "Pony", "Poop", "Whale", "Muscles", "Ankles", "Bubbles", "Hammer", "Chick", "Leg", "Wheels", "Pants", "Nylon", "Lube", "Timbers", "Thighs", "Fuzz", "Chin", "Belly"];
   var nickname = '\"' + capFirst(adjective[getRandomInt(0, adjective.length + 1)]) + ' ' + capFirst(noun[getRandomInt(0, noun.length + 1)] + '\"');
   return nickname;
 }

@@ -36,9 +36,15 @@ li:first-letter {
     border:1px solid #78DE92;
 }
 
+.editable:focus {
+  outline: none !important;
+  border:1px solid #78DE92;
+}
+
 #teammateys {
   text-align: center;
 }
+
 
 #load li .color-icon{
 color: MintCream;
@@ -50,6 +56,11 @@ color: MintCream;
 color: #78DE92;
   font-size: 20px;
   padding-top: 3px;
+}
+
+#load li .color-icon:hover{
+  color: black;
+  cursor: pointer;
 }
 
 #load li {
