@@ -128,9 +128,7 @@ function shuffle(a) {
   }
 }
 
-function reload() {
-    location.reload();
-}
+
 
   function capFirst(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
@@ -207,7 +205,10 @@ function generateMiddleNickname() {
       teammates.forEach(function(teammates) {
         document.getElementById('teammateys').innerHTML += (`<li>${teammates}</li>`);
       });
-      document.getElementById("result").innerHTML += (`<div id="maketeam" class="maketeam"><button class="submit" id="resetform" onclick="reload()">Reset</button></div>`);
+      document.getElementById("result").innerHTML += (`<div id="maketeam" class="maketeam"><button class="submit" id="resetform" onclick="reloadPage()">Reset</button></div>`);
+      function reloadPage() {
+          location.reload();
+      }
       const span = document.querySelectorAll('#goAway, #edit');
       [].forEach.call(span, function(span) {
         span.className = 'hide';
