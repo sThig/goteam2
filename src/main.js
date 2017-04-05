@@ -26,7 +26,7 @@ function editSwitcher() {
 }
 
 //build the LI
-function buildList() {
+function buildList(deleteButton, editButton, switchEdit) {
   const x = document.createElement("LI");
   x.appendChild(deleteButton);
   x.className = 'player'
