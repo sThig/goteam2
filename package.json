@@ -1,23 +1,10 @@
 {
-  "name": "08team",
+  "name": "my-project",
   "version": "1.0.0",
-  "description": "Working link (in progress) can be found [here](https://sthig.github.io/goteam2/).",
-  "main": "main.js",
-  "scripts": {
-    "build": "babel --presets es2015 src -d dist"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sThig/goteam2.git"
-  },
-  "author": "Scott Thigpen",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sThig/goteam2/issues"
-  },
-  "homepage": "https://github.com/sThig/goteam2#readme",
+   "scripts": {
+     "build": "babel src -d dist"
+   },
   "devDependencies": {
-    "babel-cli": "^6.24.0",
-    "babel-preset-env": "^1.3.2",
+    "babel-cli": "^6.0.0"
   }
 }
