@@ -1,4 +1,54 @@
-//main function
+
+// Add edit button
+function addEdit() {
+  const editthis = document.createElement('span');
+  editthis.innerHTML = "<i class=\"fa fa-pencil color-icon\" aria-hidden=\"true\"></i>";
+  editthis.setAttribute("class", "pushRight");
+  editthis.id = "edit";
+  return editthis;
+}
+
+// Add Delete button
+function addDelete() {
+  const eraseit = document.createElement('span');
+  eraseit.innerHTML = "<i class=\"fa fa-trash color-icon\" aria-hidden=\"true\"></i>";
+  eraseit.setAttribute("class", "pushRight");
+  eraseit.id = "goAway"
+  return eraseit;
+}
+
+// toggle edit switch
+function editSwitcher() {
+  const textname = document.createElement('span');
+  textname.setAttribute("contenteditable", "false");
+  textname.id = "editName";
+  return textname;
+}
+
+//build the LI
+function buildList() {
+  const x = document.createElement("LI");
+  x.appendChild(deleteButton);
+  x.className = 'player'
+  x.appendChild(editButton);
+  x.appendChild(switchEdit);
+  document.getElementById("load").appendChild(x);
+  return [x];
+}
+
+
+//Spread variables into myClickFunc
+function deployVariables() {
+  const deleteButton = addDelete();
+  const editButton = addEdit();
+  let currentValue = document.getElementById("bind").value;
+  const switchEdit = editSwitcher();
+  const t = buildPlayerName(currentValue);
+  switchEdit.appendChild(t);
+  return [deleteButton, editButton, currentValue, switchEdit, t];
+};
+
+// main function
 function myClickFunc(e) {
   if (document.getElementById("bind").value == "") {
         alert("Please enter a name");
@@ -41,52 +91,6 @@ function myClickFunc(e) {
  }
 }
 
-//Spread variables into myClickFunc
-function deployVariables() {
-  const deleteButton = addDelete();
-  const editButton = addEdit();
-  let currentValue = document.getElementById("bind").value;
-  const switchEdit = editSwitcher();
-  const t = buildPlayerName(currentValue);
-  switchEdit.appendChild(t);
-  return [deleteButton, editButton, currentValue, switchEdit, t];
-};
-
-//build the LI
-function buildList() {
-  const x = document.createElement("LI");
-  x.appendChild(deleteButton);
-  x.className = 'player'
-  x.appendChild(editButton);
-  x.appendChild(switchEdit);
-  document.getElementById("load").appendChild(x);
-  return [x];
-}
-// toggle edit switch
-function editSwitcher() {
-  const textname = document.createElement('span');
-  textname.setAttribute("contenteditable", "false");
-  textname.id = "editName";
-  return textname;
-}
-
-// Add edit button
-function addEdit() {
-  const editthis = document.createElement('span');
-  editthis.innerHTML = "<i class=\"fa fa-pencil color-icon\" aria-hidden=\"true\"></i>";
-  editthis.setAttribute("class", "pushRight");
-  editthis.id = "edit";
-  return editthis;
-}
-
-// Add Delete button
-function addDelete() {
-  const eraseit = document.createElement('span');
-  eraseit.innerHTML = "<i class=\"fa fa-trash color-icon\" aria-hidden=\"true\"></i>";
-  eraseit.setAttribute("class", "pushRight");
-  eraseit.id = "goAway"
-  return eraseit;
-}
 
 // If 2 words return a middle nickname
 function buildPlayerName(fullName) {
