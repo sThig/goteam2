@@ -54,8 +54,8 @@ function myClickFunc(e) {
         alert("Please enter a name");
         return false;
   } else {
-    [deleteButton, editButton, currentValue, switchEdit, t] = deployVariables();
-    x = buildList();
+    const [deleteButton, editButton, currentValue, switchEdit, t] = deployVariables();
+    const x = buildList();
     document.getElementById('bind').value= "";
 
     switchEdit.addEventListener("keypress", function(event) {
