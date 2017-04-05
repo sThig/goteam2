@@ -50,6 +50,7 @@ function deployVariables() {
 
 // main function
 function myClickFunc(e) {
+  const x = buildList(deleteButton, editButton, switchEdit);
   if (document.getElementById("bind").value == "") {
         alert("Please enter a name");
         return false;
