@@ -25,6 +25,17 @@ function editSwitcher() {
   return textname;
 }
 
+//Spread variables into myClickFunc
+function deployVariables() {
+  const deleteButton = addDelete();
+  const editButton = addEdit();
+  let currentValue = document.getElementById("bind").value;
+  const switchEdit = editSwitcher();
+  const t = buildPlayerName(currentValue);
+  switchEdit.appendChild(t);
+  return [deleteButton, editButton, currentValue, switchEdit, t];
+};
+
 //build the LI
 function buildList(deleteButton, editButton, switchEdit) {
   const x = document.createElement("LI");
@@ -37,16 +48,6 @@ function buildList(deleteButton, editButton, switchEdit) {
 }
 
 
-//Spread variables into myClickFunc
-function deployVariables() {
-  const deleteButton = addDelete();
-  const editButton = addEdit();
-  let currentValue = document.getElementById("bind").value;
-  const switchEdit = editSwitcher();
-  const t = buildPlayerName(currentValue);
-  switchEdit.appendChild(t);
-  return [deleteButton, editButton, currentValue, switchEdit, t];
-};
 
 // main function
 function myClickFunc(e) {
