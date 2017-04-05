@@ -207,7 +207,7 @@ function generateMiddleNickname() {
       });
       document.getElementById("result").innerHTML += (`<div id="maketeam" class="maketeam"><button class="submit" id="resetform" onclick="reloadPage()">Reset</button></div>`);
       function reloadPage() {
-          location.reload();
+          window.location.reload();
       }
       const span = document.querySelectorAll('#goAway, #edit');
       [].forEach.call(span, function(span) {
