@@ -1,11 +1,11 @@
 body {
     background: #ffa84c;
     /* Old browsers */
-    background: -moz-linear-gradient(45deg, #ffa84c 0%, #ff7b0d 100%);
+    background: -moz-linear-gradient(90deg, #ffa84c 0%, #ff7b0d 100%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(45deg, #ffa84c 0%, #ff7b0d 100%);
+    background: -webkit-linear-gradient(90deg, #ffa84c 0%, #ff7b0d 100%);
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg, #ffa84c 0%, #ff7b0d 100%);
+    background: linear-gradient(90deg, #ffa84c 0%, #ff7b0d 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#ff7b0d', GradientType=1);
     /* IE6-9 fallback on horizontal gradient */
@@ -168,7 +168,8 @@ footer {
   display: inline-block;
   font-size: 16px;
   width: 10%;
-  height: 50px;
+  padding-top: 4px;
+  height: 52px;
   cursor: pointer;
   border-radius: 4px;
 }
@@ -203,7 +204,7 @@ header {
 }
 
 header h1 {
-    margin-top: 15%;
+    margin-top: 26%;
     margin-bottom: 0;
     position: relative;
 
@@ -243,8 +244,8 @@ result {
     height: 55px;
     background-color: orange;
     border-radius: 100%;
-    -moz-animation: bounce 2s infinite;
-    -webkit-animation: bounce 2s infinite;
+    -moz-animation: bounce 2s 1;
+    -webkit-animation: bounce 2s 1;
     animation: bounce 2s 1;
     animation-delay: 1s;
 }
@@ -355,7 +356,7 @@ entry p {
   }
 
   .theplayer {
-    width: 75%;
+    width: 71%;
   }
 
   body { font-size: 1.5em; }
@@ -393,7 +394,7 @@ entry p {
   }
 
   header {
-    height: inherit;
+    height: 303px;
     padding: 0 0 83px 0;
     background-image: url(bg.svg);
     background-size: 100% 100%;
@@ -411,7 +412,7 @@ entry p {
   .enterteam {
     font-size: 1.5em;
     width: 15%;
-    height: 103px;
+    height: 151px;
     cursor: pointer;
     border-radius: 4px;
   }
@@ -427,7 +428,7 @@ entry p {
     font-size: 1.5em;
     width: inherit;
     height: 10%;
-    padding: 0 15px;
+    padding: 20px 45px;
   }
 
   #load li .color-icon {
