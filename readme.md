@@ -35,6 +35,11 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * fix responsiveness with too small of icons (use media query) and captain font is off (✅)
   * add cursor pointer over hover of icons (✅)
   * add hover animation on icon hover (like a tilt or rotate) (❌)
+  * clean up CSS
+  * Fix "undefined" in the nickname generator
+
+# April 5th update
+Spent many hours fixing the Gulp/Babel files, I had no idea what that stuff was at first, now I know and now I know to use a boilerplate in the future to skip all that crap.  Jesus, what a nightmare.  After many tears Kyle really helped out a lot.
 
 # April 4th update
 Been pretty frustrated at this project as it was supposed to be just a simple rest operator for ES6, I had no idea it'd spin into something like this.  I like it but jesus this is crazy.  I fix one thing and three other things pop up.
