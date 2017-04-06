@@ -168,6 +168,7 @@ function generateMiddleNickname() {
   document.getElementById('bind').onkeydown = function(e) {
 
     if (e.keyCode == 13) {
+      console.log('helloworld');
       myClickFunc();
       setTimeout(() => {
 
