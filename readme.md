@@ -17,7 +17,7 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * responsiveness is incorrect on Android phone (✅)
   * buttons on iOS are weird AF, but only on the front page.  The second page they are fine. (✅)
   * fix errors of undefined (✅)
-  * prevent user from entering in an empty value on <li> (✅)
+  * prevent user from entering in an empty value on `<li>` (✅)
   * fix errors that say "delete" on the results (✅)
   * remove edit on second page (✅)
   * add edit button on name (✅)
