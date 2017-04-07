@@ -112,6 +112,7 @@ function map(arrayLike, fn) {
   return ret;
 }
 
+// Shuffles names to create a captain, cocaptain and teams
 function getText(node) {
   if (node.nodeType === 3) return node.data;
   var txt = '';
@@ -167,15 +168,13 @@ function generateMiddleNickname() {
   gobutton[window.addEventListener ? 'addEventListener' : 'attachEvent']( window.addEventListener ? 'click' : 'onclick', revealSubmitButton, false);
   const myArray = map(listItems, getText);
 
+//slowly reveal the submit button
   function revealSubmitButton() {
     myClickFunc();
     setTimeout(() => {
-
       document.getElementById("go").className = "submit";
-
     }, 800);
   }
-
   document.getElementById('bind').onkeydown = function(e) {
     if (e.keyCode == 13) {
       revealSubmitButton();
