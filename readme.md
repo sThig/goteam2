@@ -32,6 +32,7 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * extra click on edit function (✅)
   * fix edit focus
   * refactor js
+  * fix bug where click was not making the submit button appear (✅)
   * fix responsiveness with too small of icons (use media query) and captain font is off (✅)
   * add cursor pointer over hover of icons (✅)
   * add hover animation on icon hover (like a tilt or rotate) (❌)

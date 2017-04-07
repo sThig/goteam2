@@ -163,18 +163,21 @@ function generateMiddleNickname() {
   let nameOfPlayer = el.value;
   let listItems = document.getElementById('teammateys').getElementsByTagName('li');
 
-  gobutton[window.addEventListener ? 'addEventListener' : 'attachEvent']( window.addEventListener ? 'click' : 'onclick', myClickFunc, false);
+  gobutton[window.addEventListener ? 'addEventListener' : 'attachEvent']( window.addEventListener ? 'click' : 'onclick', revealSubmitButton, false);
   const myArray = map(listItems, getText);
+
+  function revealSubmitButton() {
+    myClickFunc();
+    setTimeout(() => {
+
+      document.getElementById("go").className = "submit";
+
+    }, 800);
+  }
+
   document.getElementById('bind').onkeydown = function(e) {
-
     if (e.keyCode == 13) {
-      console.log('helloworld');
-      myClickFunc();
-      setTimeout(() => {
-
-        document.getElementById("go").className = "submit";
-
-      }, 800);
+      revealSubmitButton();
     }
   };
 
