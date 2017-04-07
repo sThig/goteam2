@@ -57,7 +57,7 @@ function myClickFunc(e) {
   } else {
     const [deleteButton, editButton, currentValue, switchEdit, t] = deployVariables();
     const x = buildList(deleteButton, editButton, switchEdit);
-    document.getElementById('bind').value= "";
+     document.getElementById('bind').value= "";
 
     switchEdit.addEventListener("keypress", function(event) {
       if (event.keyCode == 13) {
@@ -97,6 +97,7 @@ function myClickFunc(e) {
 function buildPlayerName(fullName) {
   const words = fullName.split(' ');
   if (words.length != 2) return document.createTextNode(fullName);
+  capFirst(words[1]);
 
   words.splice(1, 0, generateMiddleNickname());
   return document.createTextNode(words.join(' '));
