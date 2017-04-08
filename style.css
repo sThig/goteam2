@@ -150,11 +150,11 @@ color: #78DE92;
   border-radius: 50%;
   border: 2px solid #bf6607;
   opacity: .3;
-  position: relative;
+  position:relative;
   width: 55px;
   height: 55px;
-  right: 127px;
-  top: 122px;
+  right: 27px;
+  top: -42px;
 }
 
 .captain-subtext {
@@ -395,6 +395,9 @@ result {
 }
 
 @-moz-keyframes bounce {
+  to {
+  stroke-dashoffset: 1000;
+  }
   0%, 20%, 50%, 80%, 100% {
     -moz-transform: translateY(0);
     transform: translateY(0);
