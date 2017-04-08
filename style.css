@@ -117,7 +117,6 @@ color: #78DE92;
   margin-bottom: 7px;
 }
 
-
 .ball {
     display: block;
     width: 55px;
@@ -428,6 +427,7 @@ result {
     transform: translateY(-15px);
   }
 }
+
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     -moz-transform: translateY(0);
@@ -448,8 +448,6 @@ result {
     transform: translateY(-15px);
   }
 }
-
-
 
 @keyframes fadein {
   from { opacity: 0; }
