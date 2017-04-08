@@ -91,7 +91,6 @@ color: #78DE92;
 #load li {
  background: #78DE92;
  padding: 2%;
-/*li:nth-child(odd) { background: red; }*/
 -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 0.5s; /* Firefox < 16 */
    -ms-animation: fadein 0.5s; /* Internet Explorer */
@@ -101,7 +100,6 @@ color: #78DE92;
 
 #load li:nth-child(even) {
  background: MintCream;
-/*li:nth-child(odd) { background: red; }*/
 -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 0.5s; /* Firefox < 16 */
    -ms-animation: fadein 0.5s; /* Internet Explorer */
@@ -130,6 +128,33 @@ color: #78DE92;
     -webkit-animation: bounce 2s 1;
     animation: bounce 2s 1;
     animation-delay: 1s;
+    overflow: hidden;
+}
+
+.ball::before {
+  content:'';
+  display: block;
+  border-radius: 50%;
+  border: 2px solid #bf6607;
+  opacity: .3;
+  position: relative;
+  width: 55px;
+  height: 55px;
+  right: -27px;
+  top: -22px;
+}
+
+.ball::after {
+  content:'';
+  display: block;
+  border-radius: 50%;
+  border: 2px solid #bf6607;
+  opacity: .3;
+  position: relative;
+  width: 55px;
+  height: 55px;
+  right: 127px;
+  top: 122px;
 }
 
 .captain-subtext {
@@ -173,11 +198,6 @@ color: #78DE92;
 }
 
 .rainbow {
-  /*background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  color:transparent;
-  -webkit-background-clip: text;
-  background-clip: text;*/
   animation:rainbow 1s infinite;
 }
 
