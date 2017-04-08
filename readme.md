@@ -33,12 +33,16 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * add cursor pointer over hover of icons (✅)
   * clean up CSS (✅)
   * add hover animation on icon hover (like a tilt or rotate) (❌)
+  * static path for bg.svg not working unless I put it in css folder (not right)
   * Make Capitalization work
   * somehow get this to share stats on social media
   * fix edit focus
   * refactor js
   * Fix "undefined" in the nickname generator
-  * set timeout for fake loading page (for fun)
+  * set timeout for fake loading page (for fun) (✅)
+
+# April 8th update
+Converted all styles over to Sass using gulp, that worked for the most part but now some things are off even thought I did a mass find-n-replace.  Organized my sass file to do the colors right now too.  Added in loader animation and it has some bugs but not many.  This project is like a hydra, I figure out one thing and 2 problems arise.  I guess that's coding in general.  The spinning square (currently) was found on CodePen, I wrote it line by line to figure out how the author did it (it also seems to be fairly common on CodePen so I don't feel like I stole anything)
 
 # April 5th update
 Spent many hours fixing the Gulp/Babel files, I had no idea what that stuff was at first, now I know and now I know to use a boilerplate in the future to skip all that crap.  Jesus, what a nightmare.  After many tears Kyle really helped out a lot.
@@ -68,19 +72,19 @@ Using Sketch to comp out my look and layout and will start building out the styl
 
 On the landing page the user is presented with instructions to enter in names to create a team.
 
-![alt text](sports1.png "Landing page where user can enter in names")
+![alt text](static/sports1.png "Landing page where user can enter in names")
 
 ## Entering in data
 
 Here a user can enter in names, a "make your team" button appears to create the team
 
-![alt text](sports2.png "user adds in data to create team")
+![alt text](static/sports2.png "user adds in data to create team")
 
 ## Team created
 
 A randomly generated (and silly) team name will be created, a team captain will be picked at random as well as a co-captain and the team formed using ES6 rest operator in an array.
 
-![alt text](sports3.png "user adds in data to create team")
+![alt text](static/sports3.png "user adds in data to create team")
 
 
 # Old Notes

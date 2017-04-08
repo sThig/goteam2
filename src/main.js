@@ -1,3 +1,10 @@
+function openLoader() {
+  document.getElementById("loading").style.height = "100%";
+}
+
+function closeLoader() {
+    document.getElementById("loading").style.height = "0%";
+}
 
 // Add edit button
 function addEdit() {
@@ -80,6 +87,7 @@ function myClickFunc(e) {
           switchEdit.setAttribute("class", "editable");
           switchEdit.setAttribute("contenteditable", "true");
           document.getElementById('editName').focus();
+
       }
     })
 
@@ -189,7 +197,10 @@ function generateMiddleNickname() {
      }
     else
      {
-    setTimeout(() => {
+      openLoader();
+
+      setTimeout(() => {
+      closeLoader()
       const inputs = document.querySelectorAll(".player")
       let listItems = Array.from(inputs).map(input => input.innerHTML)
       shuffle(listItems);
@@ -199,7 +210,6 @@ function generateMiddleNickname() {
       d.className += "see";
       let namedteam = generateName();
       elem.className = 'hide';
-
 
       document.getElementById('captain').innerHTML += (`<h1 style="text-align: center;">Team ${namedteam}!</h1>`);
       document.getElementById('captain').innerHTML += (`<p class="congrats">Congrats! You're <b style="color: black;">${namedteam}</b> possibly one of the top teams in the NHFL Basketball league around most of the world. Here is your captain, co-captain and teammates.  Now go do the thing, win the touchdown and sink the goals!</p>`);
@@ -213,7 +223,7 @@ function generateMiddleNickname() {
       const span = document.querySelectorAll('#goAway, #edit');
       [].forEach.call(span, function(span) {
         span.className = 'hide';
-    }, 500);
     });
+           }, 2000);
 }
   });

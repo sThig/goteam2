@@ -25,7 +25,7 @@ header {
   flex-basis: 100%;
   padding-top: 10px;
   margin-top: 25px;
-  background-image: url(bg.svg);
+  background-image: url(static/bg.svg);
   background-repeat:no-repeat;
 }
 
@@ -192,9 +192,67 @@ color: #78DE92;
     display: none;
 }
 
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  top: 50%;
+  animation: loader 2s infinite ease;
+}
+
+.overlay h1 {
+  display: inline-block;
+      color: #fff;
+      position: absolute;
+      top: 30%;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
 .maketeam {
   display: flex;
 }
+
+.overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay p {
+    margin-top: 15%;
+    padding: 8px;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+
+}
+
 
 .rainbow {
   animation:rainbow 1s infinite;
@@ -332,7 +390,7 @@ result {
   header {
     height: 303px;
     padding: 0 0 83px 0;
-    background-image: url(bg.svg);
+    background-image: url(static/bg.svg);
     background-size: 100% 100%;
   }
 
@@ -476,4 +534,48 @@ result {
 @-o-keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
+}
+
+@keyframes loader {
+ 0% {
+   transform: rotate(0deg);
+ }
+
+ 25% {
+   transform: rotate(180deg);
+ }
+
+ 50% {
+   transform: rotate(180deg);
+ }
+
+ 75% {
+   transform: rotate(360deg);
+ }
+
+ 100% {
+   transform: rotate(360deg);
+ }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+
+  25% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
 }

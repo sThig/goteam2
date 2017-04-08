@@ -3,12 +3,19 @@
 <head>
   	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Team Picker</title>
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
     <link href="https://fonts.googleapis.com/css?family=Roboto|Slabo+27px" rel="stylesheet">
     <script src="https://use.fontawesome.com/73c1129005.js"></script>
 </head>
 
 <body>
+  <container id="loading" class="overlay">
+    <h1>Creating Your Team</h1>
+    <br />
+    <span class="loader">
+      <span class="loader-inner"></span>
+    </span>
+  </container>
     <container id="form">
         <header>
             <div class="headitem1">
@@ -49,12 +56,12 @@
         <footer>
           <hr />
           <p>
-          <span><a href="https://github.com/sThig/goteam2" alt="git hub project"><img class="imgshrink" alt="git hub project" src="git.svg" /></a></span>
+          <span><a href="https://github.com/sThig/goteam2" alt="git hub project"><img class="imgshrink" alt="git hub project" src="static/git.svg" /></a></span>
           | By Scott Thigpen
           </p>
         </footer>
     </container>
-    <!-- <script src="src/main.js"></script> -->
-    <script src="dist/js/main.js"></script>
+    <script src="src/main.js"></script>
+    <!-- <script src="dist/js/main.js"></script> -->
 </body>
 </html>
