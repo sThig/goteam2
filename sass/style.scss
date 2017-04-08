@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Slabo+27px');
+
+//fonts
+$font_0: Roboto;
+$font_1: sans-serif;
+$font_2: Slabo 27px;
+$font_3: serif;
+
 //colors
 $main-bg: #78de92;
 $fire-engine-red: #ff0000;
@@ -55,11 +63,6 @@ $black_90: rgba(0,0,0, 0.9);
 }
 
 
-//fonts
-$font_0: Roboto;
-$font_1: sans-serif;
-$font_2: Slabo 27px;
-$font_3: serif;
 
 //urls
 $url_0: url(static/bg.svg);
@@ -125,7 +128,6 @@ ul {
 }
 .theplayer {
 	width: 80%;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
 	border-radius: 4;
 	height: 50px;
 	padding: 5px;
@@ -133,8 +135,6 @@ ul {
 	color: $subtext;
 	font-size: 16px;
 	border: 1px solid $subtext;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-	border-radius: 4px;
 	padding: 0 0 0 25px;
 	&:focus {
 		outline: none !important;
@@ -165,7 +165,7 @@ ul {
 	width: 55px;
 	height: 55px;
 	background-color: $bg-color;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+
 	border-radius: 100%;
 	animation: bounce 2s 1;
 	animation-delay: 1s;
@@ -174,7 +174,7 @@ ul {
 .ball::before {
 	content: '';
 	display: block;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+
 	border-radius: 50%;
 	border: 2px solid $bg-color-grad-dark;
 	opacity: .3;
@@ -187,7 +187,7 @@ ul {
 .ball::after {
 	content: '';
 	display: block;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+
 	border-radius: 50%;
 	border: 2px solid $bg-color-grad-dark;
 	opacity: .3;
@@ -216,7 +216,7 @@ ul {
 	padding-top: 4px;
 	height: 52px;
 	cursor: pointer;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+
 	border-radius: 4px;
 }
 .hide {
@@ -241,7 +241,6 @@ ul {
 	background-color: $black;
 	background-color: $black_90;
 	overflow-x: hidden;
-	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
 	transition: 0.5s;
 	h1 {
 		display: inline-block;
@@ -290,7 +289,7 @@ ul {
 	background: $bg-color-grad-step;
 	height: 50px;
 	color: $white;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+
 	border-radius: 4px;
 	font-size: 15px;
 	width: 250px;
@@ -392,7 +391,7 @@ result {
 		width: 15%;
 		height: 151px;
 		cursor: pointer;
-		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+
 		border-radius: 4px;
 	}
 	.imgshrink {
@@ -514,6 +513,7 @@ result {
 		height: 0;
 	}
 }
+
 #load li {
 	background: $main-bg;
 	padding: 2%;
