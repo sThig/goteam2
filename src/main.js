@@ -224,8 +224,6 @@ function generateMiddleNickname() {
       [].forEach.call(span, function(span) {
         span.className = 'hide';
     });
-
-
-           }, 2000);
+        }, 2000);
 }
   });
