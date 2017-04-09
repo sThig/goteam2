@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Slabo+27px');
-
-//fonts
-$font_0: Roboto;
-$font_1: sans-serif;
-$font_2: Slabo 27px;
-$font_3: serif;
+$font_0: 'Roboto', sans-serif;
+$font_2: 'Slabo 27px', serif;
 
 //colors
 $main-bg: #78de92;
@@ -72,15 +68,10 @@ body {
 	background: linear-gradient(90deg, $bg-color-grad-step 0, $bg-color-grad 100%);
 	filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$bg-color-grad-step', endcolorstr='$bg-color-grad', gradienttype=1);
 }
-h1 {
-	font-family: $font_0, $font_1;
+h1, h2, h3 {
+	font-family: $font_0;
 }
-h2 {
-	font-family: $font_0, $font_1;
-}
-h3 {
-	font-family: $font_0, $font_1;
-}
+
 header {
 	display: flex;
 	flex-direction: column;
@@ -105,19 +96,19 @@ header {
 }
 li {
 	font-size: 1.5em;
-	font-family: $font_2, $font_3;
+	font-family: $font_2;
 	&:first-letter {
 		text-transform: uppercase;
 	}
 }
 p {
-	font-family: $font_2, $font_3;
+	font-family: $font_2;
 }
 .load {
-	font-family: $font_2, $font_3;
+	font-family: $font_2;
 }
 .player {
-	font-family: $font_2, $font_3;
+	font-family: $font_2;
 }
 ul {
 	padding: 0;

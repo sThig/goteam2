@@ -4,14 +4,8 @@ body {
   background: linear-gradient(90deg, #ffa84c 0, #ff7b0d 100%);
   filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$bg-color-grad-step', endcolorstr='$bg-color-grad', gradienttype=1); }
 
-h1 {
-  font-family: Roboto, sans-serif; }
-
-h2 {
-  font-family: Roboto, sans-serif; }
-
-h3 {
-  font-family: Roboto, sans-serif; }
+h1, h2, h3 {
+  font-family: "Roboto", sans-serif; }
 
 header {
   display: flex;
@@ -35,18 +29,18 @@ header {
 
 li {
   font-size: 1.5em;
-  font-family: Slabo 27px, serif; }
+  font-family: "Slabo 27px", serif; }
   li:first-letter {
     text-transform: uppercase; }
 
 p {
-  font-family: Slabo 27px, serif; }
+  font-family: "Slabo 27px", serif; }
 
 .load {
-  font-family: Slabo 27px, serif; }
+  font-family: "Slabo 27px", serif; }
 
 .player {
-  font-family: Slabo 27px, serif; }
+  font-family: "Slabo 27px", serif; }
 
 ul {
   padding: 0;
