@@ -227,3 +227,16 @@ function generateMiddleNickname() {
            }, 2000);
 }
   });
+
+  document.getElementById('shareBtn').onclick = function() {
+
+    FB.ui({
+        display: 'popup',
+        method: 'share',
+        title: 'I got ' + namedteam + '! How about you?',
+        description: 'What kind of rock are you? Find out now!',
+    link: 'THIS IS A LINK TO YOUR QUIZ'S PAGE ON YOUR WEBSITE',
+    picture: 'THIS PICTURE WILL BE THE FACEBOOK SHARE IMAGE',
+    href: 'THIS IS YOUR WEBSITE'S HOME ADDRESS',
+
+  }, function(response){});
