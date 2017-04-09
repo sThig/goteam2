@@ -225,17 +225,6 @@ function generateMiddleNickname() {
         span.className = 'hide';
     });
 
-    document.getElementById('shareBtn').onclick = function() {
-
-      FB.ui({
-          display: 'popup',
-          method: 'share',
-          title: 'I got ' + variable_name + '! How about you?',
-          description: 'What kind of rock are you? Find out now!',
-      link: 'https://sthig.github.io/goteam2/',
-      picture: 'https://sthig.github.io/goteam2/static/sports1.png',
-      href: 'https://sthig.github.io/goteam2/',
-    }, function(response){});
 
            }, 2000);
 }
