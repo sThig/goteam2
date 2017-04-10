@@ -235,8 +235,7 @@ function generateMiddleNickname() {
       FB.ui({
           display: 'popup',
           method: 'feed',
-          name: "I got "+namedteam+"! What team are you?",
-          link: "http://advice.uk.match.com/quizzes/which-european-are-you-destined-date",
+          name: "I got "namedteam"! What team are you?",
           description: teammates
 
     }, function(response){});}
