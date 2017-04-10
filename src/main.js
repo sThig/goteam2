@@ -227,3 +227,18 @@ function generateMiddleNickname() {
         }, 2000);
 }
   });
+
+
+
+  document.getElementById('shareBtn').onclick = function() {
+
+      FB.ui({
+          display: 'popup',
+          method: 'share',
+          title: 'I got ' + variable_name + '! How about you?',
+          description: 'What kind of rock are you? Find out now!',
+      link: 'http://www.thigpendesigns.com',
+      picture: 'THIS PICTURE WILL BE THE FACEBOOK SHARE IMAGE',
+      href: 'http://www.thigpendesigns.com',
+
+    }, function(response){});}
