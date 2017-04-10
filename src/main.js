@@ -224,15 +224,6 @@ function generateMiddleNickname() {
       [].forEach.call(span, function(span) {
         span.className = 'hide';
     });
-    document.getElementById('shareBtn').onclick = function() {
-
-      FB.ui({
-        display: 'popup',
-        method: 'feed',
-        name: "I got "namedteam"! What team are you?",
-        description: teammates
-
-      }, function(response){});}
         }, 2000);
 }
   });
