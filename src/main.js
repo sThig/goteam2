@@ -237,7 +237,6 @@ function generateMiddleNickname() {
           method: 'feed',
           name: "I got "+namedteam+"! What team are you?",
           link: "http://advice.uk.match.com/quizzes/which-european-are-you-destined-date",
-          picture: response.image,
-          description: response.body
+          description: teammates
 
     }, function(response){});}
