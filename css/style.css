@@ -17,7 +17,7 @@ header {
   flex-basis: 100%;
   padding-top: 10px;
   margin-top: 25px;
-  background-image: url(static/bg.svg);
+  background-image: url(../static/bg.svg);
   background-repeat: no-repeat; }
   header h1 {
     margin-bottom: 0;
@@ -278,7 +278,7 @@ result {
   header {
     height: 303px;
     padding: 0 0 83px 0;
-    background-image: url(static/bg.svg);
+    background-image: url(../static/bg.svg);
     background-size: 100% 100%; }
     header h1 {
       margin-top: 26%; }

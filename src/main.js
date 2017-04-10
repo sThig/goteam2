@@ -234,11 +234,10 @@ function generateMiddleNickname() {
 
       FB.ui({
           display: 'popup',
-          method: 'share',
-          title: 'I got ' + variable_name + '! How about you?',
-          description: 'What kind of rock are you? Find out now!',
-      link: 'http://www.thigpendesigns.com',
-      picture: 'THIS PICTURE WILL BE THE FACEBOOK SHARE IMAGE',
-      href: 'http://www.thigpendesigns.com',
+          method: 'feed',
+          name: "I got "+namedteam+"! What team are you?",
+          link: "http://advice.uk.match.com/quizzes/which-european-are-you-destined-date",
+          picture: response.image,
+          description: response.body
 
     }, function(response){});}

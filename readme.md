@@ -34,7 +34,7 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * clean up CSS (✅)
   * add hover animation on icon hover (like a tilt or rotate) (❌)
   * static path for bg.svg not working unless I put it in css folder (not right)
-  * Make Capitalization work
+  * Make Capitalization work (✅)
   * somehow get this to share stats on social media
   * fix edit focus
   * refactor js
