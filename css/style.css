@@ -50,7 +50,7 @@ ul {
   margin-top: -15px; }
 
 .theplayer {
-  width: 80%;
+  width: 83%;
   border-radius: 4;
   height: 50px;
   padding: 5px;
@@ -139,7 +139,20 @@ ul {
   color: white;
   margin-left: 30px;
   background: red;
-  padding: 5px; }
+  padding: 5px 12px;
+  opacity: 0;
+  border-radius: 4px;
+  transition: opacity 250ms ease-in-out; }
+  .err:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin-top: -10px;
+    margin-left: 45px;
+    background: red;
+    transform: rotate(45deg); }
 
 .hide {
   display: none; }
@@ -236,6 +249,16 @@ entry {
   entry p {
     color: grey; }
 
+.warningBorder {
+  width: 83%;
+  border: 1px solid red;
+  height: 50px;
+  padding: 5px;
+  display: inline-block;
+  color: grey;
+  font-size: 16px;
+  padding: 0 0 0 25px; }
+
 footer {
   background: white;
   width: 100%;
@@ -256,7 +279,7 @@ result {
   container {
     width: 100%; }
   .theplayer {
-    width: 71%; }
+    width: 68%; }
   body {
     font-size: 1.5em; }
   h1 {

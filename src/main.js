@@ -54,15 +54,27 @@ function buildList(deleteButton, editButton, switchEdit) {
   return [x];
 }
 
+function throwError() {
+  const error = document.getElementById('errfn');
+  error.style.opacity = "1";
+  error.innerHTML="this is invalid name";
+  const warningBorder = document.getElementById("bind");
+  warningBorder.setAttribute("class", "warningBorder");
+  error.setAttribute("class", "err");
+  document.addEventListener('keypress', function (e) {
+    error.style.opacity = "0";
+    warningBorder.setAttribute("class", "theplayer pre");
+  });
+}
 
 
 // main function
 function myClickFunc(e) {
   if (document.getElementById("bind").value == "") {
-        document.getElementById('errfn').innerHTML="this is invalid name";
-        alert("Please enter a name");
+    throwError()
         return false;
   } else {
+
     const [deleteButton, editButton, currentValue, switchEdit, t] = deployVariables();
     const x = buildList(deleteButton, editButton, switchEdit);
      document.getElementById('bind').value= "";
