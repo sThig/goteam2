@@ -38,6 +38,7 @@ function deployVariables() {
   const editButton = addEdit();
   let currentValue = document.getElementById("bind").value;
   const switchEdit = editSwitcher();
+  console.log('hello world' );
   const t = buildPlayerName(currentValue);
   switchEdit.appendChild(t);
   return [deleteButton, editButton, currentValue, switchEdit, t];
@@ -105,8 +106,7 @@ function myClickFunc(e) {
 function buildPlayerName(fullName) {
   const words = fullName.split(' ');
   if (words.length != 2) return document.createTextNode(fullName);
-  capFirst(words[1]);
-
+  words[1] = capFirst(words[1]);
   words.splice(1, 0, generateMiddleNickname());
   return document.createTextNode(words.join(' '));
 }
@@ -141,7 +141,7 @@ function shuffle(a) {
 
 //Capitalize the first letter of a word
   function capFirst(string) {
-      return string.charAt(0).toUpperCase() + string.slice(1);
+    return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
 //Randominize Team Name
@@ -153,7 +153,7 @@ function shuffle(a) {
 function generateMiddleNickname() {
   const adjective = ["Angry", "Spunky", "Meaty", "Meat", "Crabby", "Small", "Poop", "Pony", "Baby", "Chocolate", "Fat", "Fun", "Wobble", "Jiggle", "Greedy", "Naked", "Zippy", "Home", "Flabby", "Drunken", "Snuggle", "Thunder", "Thigh", "Twisted", "Loose", "Fuzzy", "Stanky", "Double", "Leggy", "Fried", "Triple", "Hump", "Tenacious"];
   const noun = ["Donkey", "Patties", "Monkey", "Crab", "Dawg", "Cat", "Whoppers", "Cow", "Pony", "Poop", "Whale", "Muscles", "Ankles", "Bubbles", "Hammer", "Chick", "Leg", "Wheels", "Pants", "Nylon", "Lube", "Timbers", "Thighs", "Fuzz", "Chin", "Belly"];
-  var nickname = '\"' + capFirst(adjective[getRandomInt(0, adjective.length + 1)]) + ' ' + capFirst(noun[getRandomInt(0, noun.length + 1)] + '\"');
+  var nickname = '\"' + capFirst(adjective[getRandomInt(0, adjective.length)]) + ' ' + capFirst(noun[getRandomInt(0, noun.length)] + '\"');
   return nickname;
 }
 
