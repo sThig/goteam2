@@ -38,7 +38,6 @@ function deployVariables() {
   const editButton = addEdit();
   let currentValue = document.getElementById("bind").value;
   const switchEdit = editSwitcher();
-  console.log('hello world' );
   const t = buildPlayerName(currentValue);
   switchEdit.appendChild(t);
   return [deleteButton, editButton, currentValue, switchEdit, t];
@@ -60,6 +59,7 @@ function buildList(deleteButton, editButton, switchEdit) {
 // main function
 function myClickFunc(e) {
   if (document.getElementById("bind").value == "") {
+        document.getElementById('errfn').innerHTML="this is invalid name";
         alert("Please enter a name");
         return false;
   } else {

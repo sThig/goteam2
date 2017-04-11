@@ -33,7 +33,7 @@ li {
   li:first-letter {
     text-transform: uppercase; }
 
-p {
+p, span {
   font-family: "Slabo 27px", serif; }
 
 .load {
@@ -135,6 +135,12 @@ ul {
   cursor: pointer;
   border-radius: 4px; }
 
+.err {
+  color: white;
+  margin-left: 30px;
+  background: red;
+  padding: 5px; }
+
 .hide {
   display: none; }
 
@@ -191,6 +197,9 @@ ul {
 
 .rainbow {
   animation: rainbow 1s infinite; }
+
+.redTextClass {
+  font-size: 25%; }
 
 .see {
   display: block; }
