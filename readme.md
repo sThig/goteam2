@@ -24,7 +24,6 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * draw background for header (the sports field) (✅)
   * entering in blank fields (✅)
   * reverse what you have, enter things into array then into html, not visa versa (😥)
-  * make copy paragraph funnier and more concise (enlist Kate on that)
   * If full name, put space in and interject a funny nickname (✅)
   * One name, keep as is (✅)
   * extra click on edit function (✅)
@@ -36,11 +35,12 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * static path for bg.svg not working unless I put it in css folder (not right) (✅)
   * Make Capitalization work (✅)
   * ~~somehow get this to share stats on social media~~
-  * create validator instead of alert 
-  * fix edit focus
-  * refactor js
+  * create validator instead of alert (✅)
   * Fix "undefined" in the nickname generator (✅)
   * set timeout for fake loading page (for fun) (✅)
+  * make copy paragraph funnier and more concise (enlist Kate on that)
+  * fix edit focus
+  * refactor js
 
 # April 8th update
 Converted all styles over to Sass using gulp, that worked for the most part but now some things are off even thought I did a mass find-n-replace.  Organized my sass file to do the colors right now too.  Added in loader animation and it has some bugs but not many.  This project is like a hydra, I figure out one thing and 2 problems arise.  I guess that's coding in general.  The spinning square (currently) was found on CodePen, I wrote it line by line to figure out how the author did it (it also seems to be fairly common on CodePen so I don't feel like I stole anything)
