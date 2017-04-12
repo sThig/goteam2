@@ -42,6 +42,9 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * fix edit focus
   * refactor js
 
+# April 11th update
+Home stretch.  Just a few more things left and I'm super excited to get this done 
+
 # April 8th update
 Converted all styles over to Sass using gulp, that worked for the most part but now some things are off even thought I did a mass find-n-replace.  Organized my sass file to do the colors right now too.  Added in loader animation and it has some bugs but not many.  This project is like a hydra, I figure out one thing and 2 problems arise.  I guess that's coding in general.  The spinning square (currently) was found on CodePen, I wrote it line by line to figure out how the author did it (it also seems to be fairly common on CodePen so I don't feel like I stole anything)
 
