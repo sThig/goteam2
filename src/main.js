@@ -39,6 +39,7 @@ function deployVariables() {
   let currentValue = document.getElementById("bind").value;
   const switchEdit = editSwitcher();
   const t = buildPlayerName(currentValue);
+
   switchEdit.appendChild(t);
   return [deleteButton, editButton, currentValue, switchEdit, t];
 };
