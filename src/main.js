@@ -54,6 +54,7 @@ function buildList(deleteButton, editButton, switchEdit) {
   return [x];
 }
 
+//if no name entered, run this function
 function throwError() {
   const error = document.getElementById('errfn');
   error.style.opacity = "1";
@@ -62,6 +63,7 @@ function throwError() {
   warningBorder.setAttribute("class", "warningBorder");
   error.setAttribute("class", "err");
   document.addEventListener('keypress', function (e) {
+    if (e.keyCode === 13) return;
     error.style.opacity = "0";
     warningBorder.setAttribute("class", "theplayer pre");
   });
@@ -70,9 +72,9 @@ function throwError() {
 
 // main function
 function myClickFunc(e) {
-  if (document.getElementById("bind").value == "") {
+  if (document.getElementById("bind").value === "") {
     throwError()
-        return false;
+    return false;
   } else {
 
     const [deleteButton, editButton, currentValue, switchEdit, t] = deployVariables();

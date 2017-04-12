@@ -25,7 +25,7 @@ gulp.task('build', function () {
 
 gulp.task('watch', ['build'], function () {
     livereload.listen();
-    gulp.watch('./src/js/*.js', ['build']);
+    gulp.watch('./src/*.js', ['build']);
 });
 
 gulp.task('default', ['watch']);
