@@ -116,7 +116,6 @@ function myClickFunc(e) {
  }
 }
 
-
 // If 2 words return a middle nickname
 function buildPlayerName(fullName) {
   const words = fullName.split(' ');
@@ -227,8 +226,8 @@ function generateMiddleNickname() {
       elem.className = 'hide';
 
       document.getElementById('captain').innerHTML += (`<h1 style="text-align: center;">Team ${namedteam}!</h1>`);
-      document.getElementById('captain').innerHTML += (`<p class="congrats">Congrats! You're <b style="color: black;">${namedteam}</b> possibly one of the top teams in the NHFL Basketball league around most of the world. Here is your captain, co-captain and teammates.  Now go do the thing, win the touchdown and sink the goals!</p>`);
-      document.getElementById('captain').innerHTML += (`<h2 class="thecaptain rainbow" style="text-align: center;">\u2B50 ${captain} \u2B50 <p class="captain-subtext">is the captain!</p></h2> `);
+      document.getElementById('captain').innerHTML += (`<p class="congrats">Congrats! You're <b style="color: black;">${namedteam}</b> Now go win the touchdown and the free throws! SPORTS!</p>`);
+      document.getElementById('captain').innerHTML += (`<h2 class="thecaptain" style="text-align: center;">\u2B50 ${captain} \u2B50 <p class="captain-subtext">is the captain!</p></h2> `);
       document.getElementById('cocaptain').innerHTML += (`<h3 class="thecocaptain" style="text-align: center;">\u2B51 ${id} \u2B51 <p class="captain-subtext">is the co-captain!</p></h3>`);
       teammates.forEach(function(teammates) {
         document.getElementById('teammateys').innerHTML += (`<li>${teammates}</li>`);

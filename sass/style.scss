@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto|Slabo+27px');
-$font_0: 'Roboto', sans-serif;
-$font_2: 'Slabo 27px', serif;
+@import url('https://fonts.googleapis.com/css?family=Francois+One|Lato');
+$font_0: 'Francois', sans-serif;
+$font_2: 'Lato', sans-serif;
 
 //colors
 $main-bg: #78de92;
@@ -95,6 +95,7 @@ header {
 	}
 }
 li {
+	display: flex;
 	font-size: 1.5em;
 	font-family: $font_2;
 	&:first-letter {
@@ -137,12 +138,50 @@ ul {
 	font-style: italic;
 	padding: 5px;
 	color: $subtext;
+  margin-right: 5%;
 	padding: 0 38px 0 15px;
 	&:focus {
 		outline: none !important;
 		border: 1px solid $main-bg;
 	}
 }
+#editName {
+	order: 1;
+	flex-grow: 3;
+}
+
+#edit {
+	order: 2;
+}
+
+#goAway {
+	order: 3;
+}
+
+#load li {
+	background: $main-bg;
+	padding: 2%;
+	animation: fadein 0.5s;
+	.color-icon {
+		color: MintCream;
+		font-size: 20px;
+		padding-top: 3px;
+		&:hover {
+			color: $black;
+			cursor: pointer;
+		}
+	}
+	&:nth-child(even) {
+		background: MintCream;
+		animation: fadein 0.5s;
+		.color-icon {
+			color: $main-bg;
+			font-size: 20px;
+			padding-top: 3px;
+		}
+	}
+}
+
 #teammateys {
 	text-align: center;
 	font-size: 0.74em;
@@ -235,7 +274,6 @@ ul {
 	display: none;
 }
 
-
 .loader {
 	display: inline-block;
 	width: 30px;
@@ -275,6 +313,7 @@ ul {
 .loader-inner {
 	vertical-align: top;
 	display: inline-block;
+	position: absolute;
 	width: 100%;
 	background-color: $white;
 	animation: loader-inner 2s infinite ease-in;
@@ -289,9 +328,7 @@ ul {
 	text-align: center;
 	margin-top: 30px;
 }
-.rainbow {
-	animation: rainbow 1s infinite;
-}
+
 .redTextClass {
   font-size: 25%;
 }
@@ -361,12 +398,13 @@ result {
 	padding: 1% 5% 5%;
 	min-height: 300px;
 }
+
 @media(max-width:1000px) {
 	container {
 		width: 100%;
 	}
 	.theplayer {
-		width: 68%;
+		width: 72%;
 	}
 	body {
 		font-size: 1.5em;
@@ -380,7 +418,6 @@ result {
 	}
 }
 .pushRight {
-	float: right;
 	margin-right: 15px;
 }
 .none {
@@ -392,6 +429,8 @@ result {
 	top: 3px;
 	padding-right: 3px;
 }
+
+//mobile screens
 @media screen and(max-width: 999px) and(min-width: 220px) {
 	body {
 		font-size: 2em;
@@ -436,46 +475,36 @@ result {
 		height: 10%;
 		padding: 20px 45px;
 	}
-	#load li .color-icon {
-		font-size: 40px;
-		padding-top: 9px;
+
+	.player {
+		padding: 40px 25px;
+	}
+
+	#load li {
+		background: $main-bg;
+		padding: 40px 25px;
+		animation: fadein 0.5s;
+		.color-icon {
+			color: MintCream;
+			font-size: 40px;
+			padding-top: 3px;
+			&:hover {
+				color: $black;
+				cursor: pointer;
+			}
+		}
+		&:nth-child(even) {
+			background: MintCream;
+			animation: fadein 0.5s;
+			.color-icon {
+				color: $main-bg;
+				font-size: 40px;
+				padding-top: 3px;
+			}
+		}
 	}
 }
-@keyframes rainbow {
-	0% {
-		color: $fire-engine-red;
-	}
-	10% {
-		color: $nectarine;
-	}
-	20% {
-		color: $lemon;
-	}
-	30% {
-		color: $lime;
-	}
-	40% {
-		color: $green;
-	}
-	50% {
-		color: $spring;
-	}
-	60% {
-		color: $cyan_aqua;
-	}
-	70% {
-		color: $color_azure_radiance_approx;
-	}
-	80% {
-		color: $blue;
-	}
-	90% {
-		color: $color_electric_violet_approx;
-	}
-	100% {
-		color: $color_rose_approx;
-	}
-}
+
 @keyframes bounce {
 	0% {
     @include translate (0, 0);
@@ -541,29 +570,5 @@ result {
 	}
 	100% {
 		height: 0;
-	}
-}
-
-#load li {
-	background: $main-bg;
-	padding: 2%;
-	animation: fadein 0.5s;
-	.color-icon {
-		color: MintCream;
-		font-size: 20px;
-		padding-top: 3px;
-		&:hover {
-			color: $black;
-			cursor: pointer;
-		}
-	}
-	&:nth-child(even) {
-		background: MintCream;
-		animation: fadein 0.5s;
-		.color-icon {
-			color: $main-bg;
-			font-size: 20px;
-			padding-top: 3px;
-		}
 	}
 }
