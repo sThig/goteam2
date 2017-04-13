@@ -41,6 +41,9 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * ~~make copy paragraph funnier and more concise (enlist Kate on that)~~
   * fix edit focus (✅)
   * refactor js (✅)
+  * capitalization of first word is off
+  * fix font issues
+  * fix background
 
 # April 12th update
 Version 1 is done.  Big thanks to Andrew, Kyle, Kevin and Justin who helped me out so much on this project. I'm happy to finally get to a point where I can say it's done (I'm sure there are a shit ton of bugs I've missed, starting with Safari).  This is also my 67th consecutive day coding, I'm rather happy to have that in the bank and hope to keep the fires burning going ahead.
