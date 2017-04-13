@@ -165,8 +165,8 @@ function shuffle(a) {
 
 //Create Nick Name
 function generateMiddleNickname() {
-  const adjective = ["Angry", "Spunky", "Meaty", "Meat", "Crabby", "Small", "Poop", "Pony", "Baby", "Chocolate", "Fat", "Fun", "Wobble", "Jiggle", "Greedy", "Naked", "Zippy", "Home", "Flabby", "Drunken", "Snuggle", "Thunder", "Thigh", "Twisted", "Loose", "Fuzzy", "Stanky", "Double", "Leggy", "Fried", "Triple", "Hump", "Tenacious"];
-  const noun = ["Donkey", "Patties", "Monkey", "Crab", "Dawg", "Cat", "Whoppers", "Cow", "Pony", "Poop", "Whale", "Muscles", "Ankles", "Bubbles", "Hammer", "Chick", "Leg", "Wheels", "Pants", "Nylon", "Lube", "Timbers", "Thighs", "Fuzz", "Chin", "Belly"];
+  const adjective = ["Angry", "Spunky", "Meaty", "Meat", "Crabby", "Small", "Poop", "Pony", "Baby", "Chocolate", "Ape", "Fun", "Wobble", "Angry", "Greedy", "Naked", "Zippy", "Home", "Flabby", "Drunken", "Snuggle", "Crushing", "Thigh", "Twisted", "Loose", "Fuzzy", "Double", "Leggy", "Fried", "Triple", "Hump", "Tenacious"];
+  const noun = ["Donkey", "Patties", "Monkey", "Crab", "Dawg", "Cat", "Whoppers", "Cow", "Pony", "Poop", "Whale", "Muscles", "Ankles", "Bubbles", "Hammer", "Chick", "Leg", "Wheels", "Pants", "Lube", "Timbers", "Fuzz", "Chin", "Belly"];
   var nickname = '\"' + capFirst(adjective[getRandomInt(0, adjective.length)]) + ' ' + capFirst(noun[getRandomInt(0, noun.length)] + '\"');
   return nickname;
 }
