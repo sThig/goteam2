@@ -28,10 +28,11 @@
             </div>
         </header>
         <entry id="pre">
-            <h3>No one is picked last!</h3>
+            <h3 class="title">No one is picked last!</h3>
             <p>
               Add three or more names hitting enter after each name to make your team!
             </p>
+        <row>
             <input type="text"
                    class="theplayer pre"
                    name="Player"
@@ -40,6 +41,7 @@
                    placeholder="Type a full name and hit enter" />
             <button type="button" id="thego" class="pre enterteam" value="click">Go</button>
             <span class="hide" id="errfn"></span>
+        </row>
                 <br />
                 <ul id="load"></ul>
                 <div id="maketeam" class="maketeam">
@@ -47,9 +49,7 @@
                 </div>
         </entry>
         <result id="result">
-            <h3 id="captain" class="captain"></h3>
-            <h3 id="cocaptain" class="cocaptain"></h3>
-            <br />
+            <div id="captain" class="captain"></div>
             <h3 class="theteamresult" style="text-align: center;">The Team</h2>
               <hr class="teamline"/>
               <ul class="teammateys" id="teammateys"></ul>
