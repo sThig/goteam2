@@ -64,7 +64,7 @@ h1, h2, h3 {
 	margin: 20px 0;
 }
 
-row {
+#row {
 	flex-grow: 1;
 	width: 100%;
 }
@@ -96,9 +96,6 @@ li {
 	font-family: $font_2;
 }
 
-// p, span {
-// 	font-family: $font_2;
-// }
 .load {
 	font-family: $font_2;
 }
@@ -120,7 +117,6 @@ ul {
 	padding: 5px;
 	display: inline-block;
 	color: $subtext;
-	font-size: 1em;
 	border: 1px solid $subtext;
 	padding: 0 0 0 25px;
 	&:focus {
@@ -196,7 +192,6 @@ p {
 	animation: fadein 0.5s;
 	.color-icon {
 		color: $white;
-		font-size: 20px;
 		padding-top: 3px;
 		&:hover {
 			transition:  all 100ms;
@@ -209,7 +204,6 @@ p {
 		animation: fadein 0.5s;
 		.color-icon {
 			color: lighten($subtext, 40%);
-			font-size: 20px;
 			padding-top: 3px;
 			&:hover {
 				transition:  all 100ms;
@@ -270,12 +264,11 @@ p {
 	width: 100%;
 	text-align: center;
 }
-.congrats{
+.congrats p{
 	color: $subtext;
 	font-family: $font_2;
 	margin: 10px 0 45px 0;
 	width: 85%;
-	font-size: 2rem;
 	text-align: center;
 }
 .enterteam {
@@ -286,7 +279,6 @@ p {
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 16px;
 	width: 10%;
 	padding-top: 4px;
 	height: 52px;
@@ -356,7 +348,6 @@ p {
 	p {
 		margin-top: 15%;
 		padding: 8px;
-		font-size: 36px;
 		color: $subtext;
 		display: block;
 	}
@@ -387,7 +378,6 @@ p {
 }
 
 .redTextClass {
-  font-size: 25%;
 }
 .see {
 	display: flex;
@@ -404,7 +394,7 @@ p {
 	height: 50px;
 	color: $white;
 	border-radius: 4px;
-	font-size: 15px;
+	// font-size: 15px;
 	width: 250px;
 	animation: fadein 0.5s;
 	&:hover {
@@ -431,7 +421,6 @@ entry {
 	background: $white;
 	flex-basis: 100%;
 	padding: 1% 5% 5%;
-	min-height: 300px;
 	p {
 		color: $subtext;
 	}
@@ -444,7 +433,6 @@ entry {
   padding: 5px;
   display: inline-block;
   color: $subtext;
-  font-size: 16px;
 
   padding: 0 0 0 25px;
 }
@@ -474,15 +462,13 @@ result {
 		width: 72%;
 	}
 	body {
-		font-size: 1.5em;
+
 	}
 	h1 {
-		// font-size: 1em;
+
 		text-align: center;
 	}
-	// header {
-	// 	background: $primary;
-	// }
+
 }
 .pushRight {
 	margin-right: 15px;
@@ -499,13 +485,7 @@ result {
 
 //mobile screens
 @media screen and(max-width: 999px) and(min-width: 220px) {
-	// body {
-	// 	font-size: 2em;
-	// }
-	// h1 {
-	// 	font-size: 2em;
-	// 	text-align: center;
-	// }
+
 	header {
 		height: 303px;
 		padding: 0 0 83px 0;
@@ -518,7 +498,7 @@ result {
 
 
 	p, .player span, .teammateys span, .pre, .submit, .fa  {
-		 font-size: 3rem;
+
 	}
 
 	footer {
@@ -526,13 +506,12 @@ result {
 	}
 	.theplayer {
 		padding: 3rem;
-    // font-size: 3rem;
+
 	}
 
-	.theteamresult p {
+	.theteamresult {
 		color: $subtext;
-		font: $font_2;
-		font-size: 200px;
+		font-family: $font_2;
 	}
 
 	.err {
@@ -550,7 +529,7 @@ result {
 	}
 
 	.title {
-	//  font-size: 4rem;
+
 	}
 
 	.warningBorder {
@@ -560,11 +539,11 @@ result {
     padding: 5px;
     display: inline-block;
     color: #7C7A7A;
-    // font-size: 2rem;
+
 	}
 
 	.enterteam {
-		// font-size: 2rem;
+
 		width: 15%;
 	  position: absolute;
 	  margin: -1px 5px 0 8px;
@@ -579,7 +558,7 @@ result {
 		padding-right: 3px;
 	}
 	.submit {
-		// font-size: 1.5em;
+
 		width: inherit;
 		height: 10%;
 		padding: 20px 45px;
@@ -607,14 +586,11 @@ result {
 	}
 
 .thecaptain, h3 {
-		font-size: 5rem;
+
 		color: $primary;
 	}
 
-	// .editli {
-	// 	font-size: 3rem;
-	// 	color: $subtext;
-	// }
+
 
 	#load li {
 		background: lighten($subtext, 40%);
@@ -622,7 +598,7 @@ result {
 		animation: fadein 0.5s;
 		.color-icon {
 			color: $white;
-			font-size: 40px;
+
 			padding-top: 3px;
 			&:hover {
 				transition:  all 100ms;
@@ -635,7 +611,7 @@ result {
 			animation: fadein 0.5s;
 			.color-icon {
 				color: lighten($subtext, 40%);
-				font-size: 40px;
+
 				padding-top: 3px;
 				&:hover {
 					transition:  all 100ms;

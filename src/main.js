@@ -231,6 +231,7 @@ function generateMiddleNickname() {
       document.getElementById('captain').innerHTML += (`<p class="congrats">Congrats! You're <b style="color: black;">${namedteam}</b> Now go win the touchdown and the free throws! SPORTS!</p>`);
       document.getElementById('captain').innerHTML += (`<p class="captain-subtext">Your captain is</p><h2 class="thecaptain">${captain}</h2>`);
       document.getElementById('captain').innerHTML += (`<p class="captain-subtext">Your co-captain is</p><h2 class="thecaptain">${id}</h2>`);
+      document.getElementById('captain').innerHTML += (`<p class="captain-subtext">Team ${namedteam} members are</p>`);
       teammates.forEach(function(teammates) {
         document.getElementById('teammateys').innerHTML += (`<li class="forcefont">${teammates}</li>`);
       });
