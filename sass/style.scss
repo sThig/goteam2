@@ -267,12 +267,16 @@ p {
 .captain-subtext {
 	color: $subtext;
   margin: -15px 0;
+	width: 100%;
+	text-align: center;
 }
 .congrats{
 	color: $subtext;
 	font-family: $font_2;
-	margin: -11px 0 45px 0;
+	margin: 10px 0 45px 0;
 	width: 85%;
+	font-size: 2rem;
+	text-align: center;
 }
 .enterteam {
 	background-color: $secondary;
@@ -495,13 +499,13 @@ result {
 
 //mobile screens
 @media screen and(max-width: 999px) and(min-width: 220px) {
-	body {
-		font-size: 2em;
-	}
-	h1 {
-		font-size: 2em;
-		text-align: center;
-	}
+	// body {
+	// 	font-size: 2em;
+	// }
+	// h1 {
+	// 	font-size: 2em;
+	// 	text-align: center;
+	// }
 	header {
 		height: 303px;
 		padding: 0 0 83px 0;
@@ -511,12 +515,24 @@ result {
 			margin-top: 26%;
 		}
 	}
+
+
+	p, .player span, .teammateys span, .pre, .submit, .fa  {
+		 font-size: 3rem;
+	}
+
 	footer {
 		margin-top: -1px;
 	}
 	.theplayer {
 		padding: 3rem;
-    font-size: 2rem;
+    // font-size: 3rem;
+	}
+
+	.theteamresult p {
+		color: $subtext;
+		font: $font_2;
+		font-size: 200px;
 	}
 
 	.err {
@@ -533,6 +549,10 @@ result {
     transition: opacity 100ms ease-in-out;
 	}
 
+	.title {
+	//  font-size: 4rem;
+	}
+
 	.warningBorder {
     width: 83%;
     border: 1px solid red;
@@ -540,11 +560,11 @@ result {
     padding: 5px;
     display: inline-block;
     color: #7C7A7A;
-    font-size: 2rem;
+    // font-size: 2rem;
 	}
 
 	.enterteam {
-		font-size: 2rem;
+		// font-size: 2rem;
 		width: 15%;
 	  position: absolute;
 	  margin: -1px 5px 0 8px;
@@ -559,15 +579,42 @@ result {
 		padding-right: 3px;
 	}
 	.submit {
-		font-size: 1.5em;
+		// font-size: 1.5em;
 		width: inherit;
 		height: 10%;
 		padding: 20px 45px;
 	}
 
+	.ball {
+    display: block;
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top: 250px;
+    background-color: #FE6D01;
+    border-radius: 100%;
+    animation: bounce 2s 1;
+    animation-delay: 1s;
+    overflow: hidden;
+}
+
 	.player {
 		padding: 40px 25px;
 	}
+
+	p {
+		font-family: $font_2;
+	}
+
+.thecaptain, h3 {
+		font-size: 5rem;
+		color: $primary;
+	}
+
+	// .editli {
+	// 	font-size: 3rem;
+	// 	color: $subtext;
+	// }
 
 	#load li {
 		background: lighten($subtext, 40%);
