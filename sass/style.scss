@@ -2,6 +2,39 @@
 $font_0: 'Work Sans', sans-serif;
 $font_2: 'PT Sans', sans-serif;
 
+$p-font-sizes: (
+  null  : 15px,
+  480px : 16px,
+  640px : 2rem,
+  1024px: 19px
+);
+
+$h1-font-sizes: (
+  null  : 28px,
+  480px : 31px,
+  640px : 33px,
+  1024px: 36px
+);
+
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    }
+    @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}
+
+p, ul, span, input, button {
+  @include font-size($p-font-sizes);
+}
+
+
+
 //colors
 $primary: #6109CA;
 $secondary: #3FA9F3;
@@ -61,6 +94,7 @@ background-attachment: fixed;
 }
 h1, h2, h3 {
 	font-family: $font_0;
+	@include font-size($h1-font-sizes);
 	margin: 20px 0;
 }
 
