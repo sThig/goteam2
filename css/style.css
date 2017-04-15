@@ -5,7 +5,8 @@ body {
   background-attachment: fixed; }
 
 h1, h2, h3 {
-  font-family: "Work Sans", sans-serif; }
+  font-family: "Work Sans", sans-serif;
+  margin: 20px 0; }
 
 row {
   flex-grow: 1;
@@ -34,11 +35,6 @@ header {
 li {
   display: flex;
   font-family: "PT Sans", sans-serif; }
-  li:first-letter {
-    text-transform: uppercase; }
-
-p, span {
-  font-family: "PT Sans", sans-serif; }
 
 .load {
   font-family: "PT Sans", sans-serif; }
@@ -52,7 +48,7 @@ ul {
   width: 100%; }
 
 .theteamresult {
-  margin-top: -15px; }
+  margin: -15 0 0 0; }
 
 .theplayer {
   width: 83%;
@@ -68,8 +64,11 @@ ul {
     outline: none !important;
     border: 1px solid #3FA9F3; }
 
-.title {
-  color: #26006A; }
+.forcefont {
+  font-family: "PT Sans", sans-serif; }
+
+p {
+  font-family: "PT Sans", sans-serif; }
 
 .editable {
   background: #FEFEFF;
@@ -87,11 +86,22 @@ ul {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  margin: 4px 0 52px 0px; }
+  margin: 4px 0 -4px 0px; }
+
+#pre p {
+  font-family: "PT Sans", sans-serif; }
+
+.thecaptain {
+  font-family: "Work Sans", sans-serif;
+  margin-bottom: 40px; }
 
 #editName {
   order: 1;
   flex-grow: 3; }
+  #editName span {
+    font-family: "PT Sans", sans-serif; }
+  #editName li span {
+    font-family: "PT Sans", sans-serif; }
 
 #edit {
   order: 2; }
@@ -108,6 +118,7 @@ ul {
     font-size: 20px;
     padding-top: 3px; }
     #load li .color-icon:hover {
+      transition: all 100ms;
       color: #494747;
       cursor: pointer; }
   #load li:nth-child(even) {
@@ -118,6 +129,7 @@ ul {
       font-size: 20px;
       padding-top: 3px; }
       #load li:nth-child(even) .color-icon:hover {
+        transition: all 100ms;
         color: #494747;
         cursor: pointer; }
 
@@ -166,10 +178,14 @@ ul {
   margin: -15px 0; }
 
 .congrats {
-  color: #7C7A7A; }
+  color: #7C7A7A;
+  font-family: "PT Sans", sans-serif;
+  margin: -11px 0 45px 0;
+  width: 85%; }
 
 .enterteam {
   background-color: #3FA9F3;
+  transition: all 100ms;
   border: none;
   color: #FEFEFF;
   text-align: center;
@@ -181,16 +197,20 @@ ul {
   height: 52px;
   cursor: pointer;
   border-radius: 4px; }
+  .enterteam:hover {
+    transition: all 100ms;
+    background: #FE6D01; }
 
 .err {
   color: white;
+  font-family: "PT Sans", sans-serif;
   margin-left: 30px;
   background: red;
   padding: 5px 12px;
   opacity: 0;
   position: absolute;
   border-radius: 4px;
-  transition: opacity 250ms ease-in-out; }
+  transition: opacity 100ms ease-in-out; }
   .err:before {
     content: '';
     display: block;
@@ -270,20 +290,24 @@ ul {
 .see {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  flex-basis: 100%; }
 
 .submit {
   border: 0 solid #7C7A7A;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
-  background: #FE6D01;
+  background: #3FA9F3;
   height: 50px;
   color: #FEFEFF;
   border-radius: 4px;
   font-size: 15px;
   width: 250px;
   animation: fadein 0.5s; }
+  .submit:hover {
+    transition: all 100ms;
+    background: #FE6D01; }
 
 .teamline {
   width: 25%; }
@@ -342,9 +366,7 @@ result {
   body {
     font-size: 1.5em; }
   h1 {
-    text-align: center; }
-  header {
-    background: #6109CA; } }
+    text-align: center; } }
 
 .pushRight {
   margin-right: 15px; }
@@ -367,19 +389,40 @@ result {
   header {
     height: 303px;
     padding: 0 0 83px 0;
-    background-image: url(../static/bg.svg);
     background-size: 100% 100%; }
     header h1 {
       margin-top: 26%; }
   footer {
     margin-top: -1px; }
   .theplayer {
-    padding: 1.05em;
-    font-size: 1.5em; }
+    padding: 3rem;
+    font-size: 2rem; }
+  .err {
+    color: white;
+    font-family: "PT Sans", sans-serif;
+    background: red;
+    padding: 3px 18px;
+    text-align: center;
+    opacity: 0;
+    left: 55px;
+    display: inline-block;
+    position: relative;
+    border-radius: 4px;
+    transition: opacity 100ms ease-in-out; }
+  .warningBorder {
+    width: 83%;
+    border: 1px solid red;
+    height: 146px;
+    padding: 5px;
+    display: inline-block;
+    color: #7C7A7A;
+    font-size: 2rem; }
   .enterteam {
-    font-size: 1.5em;
+    font-size: 2rem;
     width: 15%;
-    height: 151px;
+    position: absolute;
+    margin: -1px 5px 0 8px;
+    height: 150px;
     cursor: pointer;
     border-radius: 4px; }
   .imgshrink {
@@ -395,23 +438,28 @@ result {
   .player {
     padding: 40px 25px; }
   #load li {
-    background: #6109CA;
+    background: #e1e1e1;
     padding: 40px 25px;
     animation: fadein 0.5s; }
     #load li .color-icon {
-      color: MintCream;
+      color: #FEFEFF;
       font-size: 40px;
       padding-top: 3px; }
       #load li .color-icon:hover {
-        color: #26006A;
+        transition: all 100ms;
+        color: #494747;
         cursor: pointer; }
     #load li:nth-child(even) {
-      background: MintCream;
+      background: #FEFEFF;
       animation: fadein 0.5s; }
       #load li:nth-child(even) .color-icon {
-        color: #6109CA;
+        color: #e1e1e1;
         font-size: 40px;
-        padding-top: 3px; } }
+        padding-top: 3px; }
+        #load li:nth-child(even) .color-icon:hover {
+          transition: all 100ms;
+          color: #494747;
+          cursor: pointer; } }
 
 @keyframes bounce {
   0% {

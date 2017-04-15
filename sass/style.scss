@@ -61,6 +61,7 @@ background-attachment: fixed;
 }
 h1, h2, h3 {
 	font-family: $font_0;
+	margin: 20px 0;
 }
 
 row {
@@ -92,15 +93,12 @@ header {
 }
 li {
 	display: flex;
-	// font-size: 1.5em;
-	font-family: $font_2;
-	&:first-letter {
-		text-transform: uppercase;
-	}
-}
-p, span {
 	font-family: $font_2;
 }
+
+// p, span {
+// 	font-family: $font_2;
+// }
 .load {
 	font-family: $font_2;
 }
@@ -113,7 +111,7 @@ ul {
 	width: 100%;
 }
 .theteamresult {
-	margin-top: -15px;
+	margin: -15 0 0 0;
 }
 .theplayer {
 	width: 83%;
@@ -131,8 +129,13 @@ ul {
 	}
 }
 
-.title {
-  color: $accent;
+
+.forcefont {
+	font-family: $font_2;
+}
+
+p {
+	font-family: $font_2;
 }
 
 .editable {
@@ -152,12 +155,31 @@ ul {
 	flex-direction: column;
 	flex-wrap: wrap;
 	align-items: center;
-	margin: 4px 0 52px 0px;
+	margin: 4px 0 -4px 0px;
 }
 
+#pre p {
+	font-family: $font_2;
+}
+
+.thecaptain {
+	font-family: $font_0;
+	margin-bottom: 40px;
+
+}
 #editName {
 	order: 1;
 	flex-grow: 3;
+	// font-family: $font_0;
+	span {
+		font-family: $font_2;
+	}
+	li {
+		span {
+			font-family: $font_2;
+		}
+
+	}
 }
 
 #edit {
@@ -177,6 +199,7 @@ ul {
 		font-size: 20px;
 		padding-top: 3px;
 		&:hover {
+			transition:  all 100ms;
 			color: darken($subtext, 20%);
 			cursor: pointer;
 		}
@@ -189,6 +212,7 @@ ul {
 			font-size: 20px;
 			padding-top: 3px;
 			&:hover {
+				transition:  all 100ms;
 				color: darken($subtext, 20%);
 				cursor: pointer;
 			}
@@ -198,7 +222,6 @@ ul {
 
 #teammateys {
 	text-align: center;
-	// font-size: 0.74em;
 	margin-bottom: 1em;
 	li {
 		margin-bottom: 7px;
@@ -245,11 +268,15 @@ ul {
 	color: $subtext;
   margin: -15px 0;
 }
-.congrats {
+.congrats{
 	color: $subtext;
+	font-family: $font_2;
+	margin: -11px 0 45px 0;
+	width: 85%;
 }
 .enterteam {
 	background-color: $secondary;
+	transition:  all 100ms;
 	border: none;
 	color: $white;
 	text-align: center;
@@ -260,18 +287,22 @@ ul {
 	padding-top: 4px;
 	height: 52px;
 	cursor: pointer;
-
 	border-radius: 4px;
+	&:hover {
+		transition:  all 100ms;
+		background: $orange;
+	}
 }
 .err {
   color: white;
+	font-family: $font_2;
   margin-left: 30px;
   background: red;
   padding: 5px 12px;
   opacity: 0;
 	position: absolute;
   border-radius: 4px;
-  transition: opacity 250ms ease-in-out;
+  transition: opacity 100ms ease-in-out;
   &:before{
     content: '';
     display: block;
@@ -358,20 +389,24 @@ ul {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	flex-basis: 100%;
 }
 .submit {
 	border: 0 solid $subtext;
 	margin-top: 10px;
 	margin-left: auto;
 	margin-right: auto;
-	background: $orange;
+	background: $secondary;
 	height: 50px;
 	color: $white;
-
 	border-radius: 4px;
 	font-size: 15px;
 	width: 250px;
 	animation: fadein 0.5s;
+	&:hover {
+		transition:  all 100ms;
+		background: $orange;
+	}
 }
 .teamline {
 	width: 25%;
@@ -441,9 +476,9 @@ result {
 		// font-size: 1em;
 		text-align: center;
 	}
-	header {
-		background: $primary;
-	}
+	// header {
+	// 	background: $primary;
+	// }
 }
 .pushRight {
 	margin-right: 15px;
@@ -470,8 +505,8 @@ result {
 	header {
 		height: 303px;
 		padding: 0 0 83px 0;
-		background-image: $url_0;
 		background-size: 100% 100%;
+		// background: $secondary;
 		h1 {
 			margin-top: 26%;
 		}
@@ -480,16 +515,42 @@ result {
 		margin-top: -1px;
 	}
 	.theplayer {
-		padding: 1.05em;
-		font-size: 1.5em;
+		padding: 3rem;
+    font-size: 2rem;
 	}
-	.enterteam {
-		font-size: 1.5em;
-		width: 15%;
-		height: 151px;
-		cursor: pointer;
 
-		border-radius: 4px;
+	.err {
+    color: white;
+    font-family: "PT Sans", sans-serif;
+    background: red;
+    padding: 3px 18px;
+    text-align: center;
+    opacity: 0;
+    left: 55px;
+    display: inline-block;
+    position: relative;
+    border-radius: 4px;
+    transition: opacity 100ms ease-in-out;
+	}
+
+	.warningBorder {
+    width: 83%;
+    border: 1px solid red;
+    height: 146px;
+    padding: 5px;
+    display: inline-block;
+    color: #7C7A7A;
+    font-size: 2rem;
+	}
+
+	.enterteam {
+		font-size: 2rem;
+		width: 15%;
+	  position: absolute;
+	  margin: -1px 5px 0 8px;
+	  height: 150px;
+	  cursor: pointer;
+	  border-radius: 4px;
 	}
 	.imgshrink {
 		width: 6%;
@@ -509,26 +570,33 @@ result {
 	}
 
 	#load li {
-		background: $primary;
+		background: lighten($subtext, 40%);
 		padding: 40px 25px;
 		animation: fadein 0.5s;
 		.color-icon {
-			color: MintCream;
+			color: $white;
 			font-size: 40px;
 			padding-top: 3px;
 			&:hover {
-				color: $accent;
+				transition:  all 100ms;
+				color: darken($subtext, 20%);
 				cursor: pointer;
 			}
 		}
 		&:nth-child(even) {
-			background: MintCream;
+			background: $white;
 			animation: fadein 0.5s;
 			.color-icon {
-				color: $primary;
+				color: lighten($subtext, 40%);
 				font-size: 40px;
 				padding-top: 3px;
+				&:hover {
+					transition:  all 100ms;
+					color: darken($subtext, 20%);
+					cursor: pointer;
+				}
 			}
+
 		}
 	}
 }

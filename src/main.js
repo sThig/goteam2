@@ -228,16 +228,17 @@ function generateMiddleNickname() {
 
       document.getElementById('captain').innerHTML += (`<h2 class="test">Team ${namedteam}!</h2>`);
       document.getElementById('captain').innerHTML += (`<p class="congrats">Congrats! You're <b style="color: black;">${namedteam}</b> Now go win the touchdown and the free throws! SPORTS!</p>`);
-      document.getElementById('captain').innerHTML += (`<h2 class="thecaptain">\u2B50 ${captain} \u2B50 </h2><p class="captain-subtext">is the captain!</p> `);
-      document.getElementById('captain').innerHTML += (`<h2 class="thecaptain">\u2B51 ${id} \u2B51 </h2><p class="captain-subtext">is the co-captain!</p>`);
+      document.getElementById('captain').innerHTML += (`<p class="captain-subtext">Your captain is</p><h2 class="thecaptain">\u2B51 \u2B51 ${captain} \u2B51 \u2B51 </h2>`);
+      document.getElementById('captain').innerHTML += (`<p class="captain-subtext">Your co-captain is</p><h2 class="thecaptain">\u2B51 ${id} \u2B51 </h2>`);
       teammates.forEach(function(teammates) {
-        document.getElementById('teammateys').innerHTML += (`<li>${teammates}</li>`);
+        document.getElementById('teammateys').innerHTML += (`<li class="forcefont">${teammates}</li>`);
       });
       document.getElementById("result").innerHTML += (`<div id="maketeam" class="maketeam"><button class="submit" id="resetform" onClick="window.location.reload()">Reset</button></div>`);
 
       const span = document.querySelectorAll('#goAway, #edit');
       [].forEach.call(span, function(span) {
-        span.className = 'hide';
+        span.setAttribute('class', 'hide');
+
     });
         }, 2000);
 }
