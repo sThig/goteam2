@@ -38,6 +38,7 @@ function deployVariables() {
   const deleteButton = addDelete();
   const editButton = addEdit();
   let currentValue = document.getElementById("bind").value;
+  currentValue = capFirst(currentValue);
   const switchEdit = editSwitcher();
   const t = buildPlayerName(currentValue);
 
@@ -121,6 +122,7 @@ function myClickFunc(e) {
 function buildPlayerName(fullName) {
   const words = fullName.split(' ');
   if (words.length != 2) return document.createTextNode(fullName);
+  words[0] = capFirst(words[0]);
   words[1] = capFirst(words[1]);
   words.splice(1, 0, generateMiddleNickname());
   return document.createTextNode(words.join(' '));
