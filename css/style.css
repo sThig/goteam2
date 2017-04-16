@@ -25,7 +25,7 @@ h1, h2, h3 {
       font-size: 31px; } }
   @media screen and (min-width: 640px) {
     h1, h2, h3 {
-      font-size: 33px; } }
+      font-size: 3rem; } }
   @media screen and (min-width: 1024px) {
     h1, h2, h3 {
       font-size: 36px; } }
@@ -113,8 +113,9 @@ p {
   font-family: "PT Sans", sans-serif; }
 
 .thecaptain {
-  font-family: "Work Sans", sans-serif;
-  margin-bottom: 40px; }
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+  width: 100%; }
 
 #editName {
   order: 1;
@@ -154,7 +155,7 @@ p {
 
 #teammateys {
   text-align: center;
-  margin-bottom: 1em; }
+  margin: 30px; }
   #teammateys li {
     margin-bottom: 7px; }
 
@@ -194,7 +195,7 @@ p {
 
 .captain-subtext {
   color: #7C7A7A;
-  margin: -15px 0;
+  margin: 0 0 -30px;
   width: 100%;
   text-align: center; }
 
@@ -325,8 +326,16 @@ p {
     transition: all 100ms;
     background: #FE6D01; }
 
+.teamInfo {
+  margin-top: 20px; }
+
 .teamline {
-  width: 25%; }
+  width: 25%;
+  margin: 34px 0 -5px 0px; }
+
+.teamlineTop {
+  width: 50%;
+  margin: -6px 0 9px 0px; }
 
 container {
   display: flex;
@@ -398,7 +407,7 @@ result {
     padding: 0 0 83px 0;
     background-size: 100% 100%; }
     header h1 {
-      margin-top: 26%; }
+      margin-top: 45%; }
   footer {
     margin-top: -1px; }
   .theplayer {
@@ -445,7 +454,6 @@ result {
     display: block;
     width: 55px;
     height: 55px;
-    position: absolute;
     top: 250px;
     background-color: #FE6D01;
     border-radius: 100%;
@@ -456,8 +464,6 @@ result {
     padding: 40px 25px; }
   p {
     font-family: "PT Sans", sans-serif; }
-  .thecaptain, h3 {
-    color: #6109CA; }
   #load li {
     background: #e1e1e1;
     padding: 40px 25px;

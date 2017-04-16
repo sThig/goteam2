@@ -12,7 +12,7 @@ $p-font-sizes: (
 $h1-font-sizes: (
   null  : 28px,
   480px : 31px,
-  640px : 33px,
+  640px : 3rem,
   1024px: 36px
 );
 
@@ -193,14 +193,18 @@ p {
 }
 
 .thecaptain {
-	font-family: $font_0;
-	margin-bottom: 40px;
+  text-align: center;
+	font-family: $font_2;
+	// margin-bottom: 40px;
+  // color: $primary;
+  // margin: 18px;
+  width: 100%;
 
 }
 #editName {
 	order: 1;
 	flex-grow: 3;
-	// font-family: $font_0;
+
 	span {
 		font-family: $font_2;
 	}
@@ -250,7 +254,7 @@ p {
 
 #teammateys {
 	text-align: center;
-	margin-bottom: 1em;
+	margin: 30px;
 	li {
 		margin-bottom: 7px;
 	}
@@ -294,7 +298,7 @@ p {
 }
 .captain-subtext {
 	color: $subtext;
-  margin: -15px 0;
+  margin: 0 0 -30px;
 	width: 100%;
 	text-align: center;
 }
@@ -436,8 +440,18 @@ p {
 		background: $orange;
 	}
 }
+
+.teamInfo {
+  margin-top: 20px;
+}
 .teamline {
 	width: 25%;
+  margin: 34px 0 -5px 0px;
+}
+
+.teamlineTop {
+	width: 50%;
+	margin: -6px 0 9px 0px;
 }
 container {
 	display: flex;
@@ -526,7 +540,7 @@ result {
 		background-size: 100% 100%;
 		// background: $secondary;
 		h1 {
-			margin-top: 26%;
+			margin-top: 45%;
 		}
 	}
 
@@ -602,7 +616,7 @@ result {
     display: block;
     width: 55px;
     height: 55px;
-    position: absolute;
+    // position: absolute;
     top: 250px;
     background-color: #FE6D01;
     border-radius: 100%;
@@ -619,10 +633,6 @@ result {
 		font-family: $font_2;
 	}
 
-.thecaptain, h3 {
-
-		color: $primary;
-	}
 
 
 
