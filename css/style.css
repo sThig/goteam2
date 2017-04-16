@@ -249,6 +249,9 @@ p {
     background: red;
     transform: rotate(45deg); }
 
+.headitem1 {
+  margin: -10px 0 0 0; }
+
 .hide {
   display: none; }
 
@@ -432,6 +435,8 @@ result {
     position: relative;
     border-radius: 4px;
     transition: opacity 100ms ease-in-out; }
+  .headitem1 {
+    margin: 0 0 0 0; }
   .warningBorder {
     width: 83%;
     border: 1px solid red;
