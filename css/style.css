@@ -11,6 +11,11 @@ p, ul, span, input, button {
     p, ul, span, input, button {
       font-size: 19px; } }
 
+html {
+  height: 100%;
+  background-image: linear-gradient(#6109CA, #3FA9F3);
+  background-size: 100% 100%; }
+
 body {
   background-image: linear-gradient(#6109CA, #3FA9F3);
   background-repeat: no-repeat;

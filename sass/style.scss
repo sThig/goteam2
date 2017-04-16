@@ -87,6 +87,12 @@ $subtext-light: #717171;
 //urls
 $url_0: url(../static/bg.svg);
 
+html {
+  height:100%;
+  background-image: linear-gradient($primary, $secondary);
+  background-size: 100% 100%;
+}
+
 body {
 	background-image: linear-gradient($primary, $secondary);
 	background-repeat: no-repeat;
