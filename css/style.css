@@ -364,6 +364,9 @@ entry {
   entry p {
     color: #7C7A7A; }
 
+.title {
+  margin: 7px 0 -7px 0; }
+
 .warningBorder {
   width: 83%;
   border: 1px solid red;
@@ -437,6 +440,8 @@ result {
     transition: opacity 100ms ease-in-out; }
   .headitem1 {
     margin: 0 0 0 0; }
+  .title {
+    margin: 20px 0 -15px; }
   .warningBorder {
     width: 83%;
     border: 1px solid red;

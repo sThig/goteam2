@@ -483,6 +483,10 @@ entry {
 	}
 }
 
+.title {
+  margin: 7px 0 -7px 0;
+}
+
 .warningBorder {
   width: 83%;
   border: 1px solid red;
@@ -590,7 +594,7 @@ result {
   }
 
 	.title {
-
+    margin: 20px 0 -15px;
 	}
 
 	.warningBorder {
