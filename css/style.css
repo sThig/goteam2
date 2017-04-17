@@ -6,7 +6,7 @@ p, ul, span, input, button {
       font-size: 16px; } }
   @media screen and (min-width: 640px) {
     p, ul, span, input, button {
-      font-size: 2rem; } }
+      font-size: 2.5rem; } }
   @media screen and (min-width: 1024px) {
     p, ul, span, input, button {
       font-size: 19px; } }
@@ -30,7 +30,7 @@ h1, h2, h3 {
       font-size: 31px; } }
   @media screen and (min-width: 640px) {
     h1, h2, h3 {
-      font-size: 3rem; } }
+      font-size: 5rem; } }
   @media screen and (min-width: 1024px) {
     h1, h2, h3 {
       font-size: 36px; } }
@@ -250,7 +250,7 @@ p {
     transform: rotate(45deg); }
 
 .headitem1 {
-  margin: -10px 0 0 0; }
+  margin: 0 0 0 0; }
 
 .hide {
   display: none; }
@@ -418,7 +418,7 @@ result {
     padding: 0 0 83px 0;
     background-size: 100% 100%; }
     header h1 {
-      margin-top: 45%; }
+      margin-top: 15%; }
   footer {
     margin-top: -1px; }
   .theplayer {
