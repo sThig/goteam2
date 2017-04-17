@@ -31,6 +31,7 @@ $h1-font-sizes: (
 
 p, ul, span, input, button {
   @include font-size($p-font-sizes);
+  -webkit-font-smoothing: antialiased;
 }
 
 
