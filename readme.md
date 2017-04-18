@@ -45,6 +45,10 @@ This is a Js/UI/UX project where I'm going to have it to enter in several names 
   * fix font issues (✅)
   * fix background (✅)
 
+# April 18th update
+Version 1.2
+Bug appeared to be hammered out, Kate helped with the verbiage and I feel like it's solid now.  Going to put it to rest until some other giant glaring bug pops out at me or I feel like monkeying around with it again.
+
 # April 16th update
 Version 1.1 and everything appears to be working, there are a few bugs to work out but I think I have the lion's share of stuff.  I think the UX needs to be considered as there are some issues where people enter in everything with a comma and then submit... not what I wanted.  So I need to think that one through, which will be fun as that's my realm of expertise and I like it.  Calling this one finished for now (unless I miss a giant glaring bug) and send it over to Matt.
 
