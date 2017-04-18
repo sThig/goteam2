@@ -6,6 +6,7 @@ function closeLoader() {
     document.getElementById("loading").style.height = "0%";
 }
 
+
 // Add edit button
 function addEdit() {
   const editthis = document.createElement('span');
@@ -41,7 +42,6 @@ function deployVariables() {
   currentValue = capFirst(currentValue);
   const switchEdit = editSwitcher();
   const t = buildPlayerName(currentValue);
-
   switchEdit.appendChild(t);
   return [deleteButton, editButton, currentValue, switchEdit, t];
 };
@@ -72,15 +72,35 @@ function throwError() {
   });
 }
 
+//if no name entered, run this function
+function throwErrorComma() {
+  const error = document.getElementById('errfn');
+  error.style.opacity = "1";
+  error.innerHTML="Enter a name individually without commas";
+  const warningBorder = document.getElementById("bind");
+  warningBorder.setAttribute("class", "warningBorder");
+  error.setAttribute("class", "err");
+  document.addEventListener('keypress', function (e) {
+    if (e.keyCode === 13) return;
+    error.style.opacity = "0";
+    warningBorder.setAttribute("class", "theplayer pre");
+  });
+}
+
+
 
 // main function
 function myClickFunc(e) {
+  const [deleteButton, editButton, currentValue, switchEdit, t] = deployVariables();
+  // var letters = /^,+$/;
+  // let currentValueComma = document.getElementById("bind").value;
   if (document.getElementById("bind").value === "") {
     throwError()
     return false;
+  } else if (currentValue.match(/,/)) {
+    throwErrorComma()
+    return false;
   } else {
-
-    const [deleteButton, editButton, currentValue, switchEdit, t] = deployVariables();
     const x = buildList(deleteButton, editButton, switchEdit);
      document.getElementById('bind').value= "";
 
@@ -183,6 +203,7 @@ function generateMiddleNickname() {
     var name = capFirst(name1[getRandomInt(0, name1.length + 1)]) + ' ' + capFirst(name2[getRandomInt(0, name2.length + 1)]);
     return name;
   }
+
 
   const formreset = document.getElementById('result')
   const el = document.getElementById('bind');
