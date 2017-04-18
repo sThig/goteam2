@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans|Work+Sans:200");
 p, ul, span, input, button {
-  font-size: 15px; }
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased; }
   @media screen and (min-width: 480px) {
     p, ul, span, input, button {
       font-size: 16px; } }
