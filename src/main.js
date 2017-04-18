@@ -61,7 +61,7 @@ function buildList(deleteButton, editButton, switchEdit) {
 function throwError() {
   const error = document.getElementById('errfn');
   error.style.opacity = "1";
-  error.innerHTML="this is invalid name";
+  error.innerHTML="<i class=\"fa fa-exclamation-circle color-icon\" aria-hidden=\"true\"></i> This is invalid name";
   const warningBorder = document.getElementById("bind");
   warningBorder.setAttribute("class", "warningBorder");
   error.setAttribute("class", "err");
@@ -76,7 +76,7 @@ function throwError() {
 function throwErrorComma() {
   const error = document.getElementById('errfn');
   error.style.opacity = "1";
-  error.innerHTML="Enter a name individually without commas";
+  error.innerHTML="<i class=\"fa fa-exclamation-circle color-icon\" aria-hidden=\"true\"></i>  Enter a name individually without commas";
   const warningBorder = document.getElementById("bind");
   warningBorder.setAttribute("class", "warningBorder");
   error.setAttribute("class", "err");
@@ -97,7 +97,7 @@ function myClickFunc(e) {
   if (document.getElementById("bind").value === "") {
     throwError()
     return false;
-  } else if (currentValue.match(/,/)) {
+  } else if (currentValue.match(/.,/)) {
     throwErrorComma()
     return false;
   } else {
